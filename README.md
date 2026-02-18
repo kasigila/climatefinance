@@ -21,6 +21,7 @@ Africa Climate Finance helps develop and manage projects that advance Climate Ac
 - **Services overview** — Market analysis, financial modelling, microfinance, gender assessment, stakeholder engagement, scientific assessment, climate risk
 - **Responsive layout** — Mobile-friendly with dark/light theme toggle
 - **Contact & about** — Clear calls to action and company information
+- **Form handling** — Google Apps Script (replaces Formspree); styled HTML emails to you and confirmation to submitters — see `google-apps-script/README.md` for setup
 
 ## Run Locally
 
