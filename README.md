@@ -4,13 +4,12 @@ Africa Climate Finance - Tanzania static website.
 
 ## GitHub Pages Deployment
 
-This site deploys automatically to GitHub Pages when you push to `main`.
-
-**To enable:**
+**To enable GitHub Pages:**
 1. Go to **Settings** → **Pages** in this repository
 2. Under **Build and deployment** → **Source**, select **GitHub Actions**
-3. Push to `main` — the workflow will deploy the site
+3. Add the workflow file: create `.github/workflows/deploy-pages.yml` (see repo for template) or push with a PAT that has `workflow` scope
+4. The site deploys automatically on push to `main`
 
-The site will be available at `https://<username>.github.io/climatefinance/`
+**Site URL:** `https://kasigila.github.io/climatefinance/`
 
-**Microfinance page:** `microfinance.php.html`
+**Microfinance page:** `/microfinance.php.html`
