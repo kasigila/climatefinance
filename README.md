@@ -74,7 +74,7 @@ Open [http://localhost:8000](http://localhost:8000)
 
 **Pages:** `/` (home), `/microfinance.php.html`, `/about.php.html`, `/contact.php.html`, etc.
 
-**If deploy fails:** The workflow must deploy from repo root (not `climatefinance.co.tz`). Edit `.github/workflows/deploy-pages.yml` via GitHub web and use the version in the repo (builds `_site` from root files).
+**If deploy fails:** Edit `.github/workflows/deploy-pages.yml` via GitHub web — workflow builds from repo root.
 
 ---
 
