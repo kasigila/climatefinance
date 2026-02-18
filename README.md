@@ -2,7 +2,7 @@
 
 Static website for **Africa Climate Finance**, providing climate finance advisory and project development services in Tanzania and across Africa.
 
-🌐 **Live site:** [climatefinance.co.tz](https://climatefinance.co.tz)
+🌐 **Live site:** [kasigila.github.io/climatefinance](https://kasigila.github.io/climatefinance)
 
 ---
 
@@ -30,23 +30,22 @@ Africa Climate Finance offers expertise in developing and managing projects and 
 
 ```
 climatefinance/
-├── climatefinance.co.tz/     # Site root (served by GitHub Pages)
-│   ├── index.html
-│   ├── about.php.html
-│   ├── contact.php.html
-│   ├── microfinance.php.html
-│   ├── financial-modelling.php.html
-│   ├── market-analysis.php.html
-│   ├── gender-assessment.php.html
-│   ├── stakeholders-engagement.php.html
-│   ├── scientific-assessment.php.html
-│   ├── climate-risk.php.html
-│   └── assets/
-│       ├── css/
-│       ├── js/
-│       └── img/
+├── index.html
+├── about.php.html
+├── contact.php.html
+├── microfinance.php.html
+├── financial-modelling.php.html
+├── market-analysis.php.html
+├── gender-assessment.php.html
+├── stakeholders-engagement.php.html
+├── scientific-assessment.php.html
+├── climate-risk.php.html
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── img/
 ├── .github/workflows/
-│   └── deploy-pages.yml      # GitHub Pages deployment
+│   └── deploy-pages.yml
 └── README.md
 ```
 
@@ -57,7 +56,6 @@ climatefinance/
 Serve the site locally:
 
 ```bash
-cd climatefinance.co.tz
 python3 -m http.server 8000
 # or: npx serve .
 ```
@@ -73,6 +71,8 @@ Open [http://localhost:8000](http://localhost:8000)
 3. Push to `main` — the workflow deploys automatically
 
 **GitHub Pages URL:** `https://kasigila.github.io/climatefinance/`
+
+**Pages:** `/` (home), `/microfinance.php.html`, `/about.php.html`, `/contact.php.html`, etc.
 
 ---
 
