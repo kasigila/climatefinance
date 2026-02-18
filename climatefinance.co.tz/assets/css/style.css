@@ -252,7 +252,7 @@ select {
 
   appearance: none;
 
-  background-image: url(https://climatefinance.co.tz/assets/img/down-arrow.png);
+  background-image: url(../img/down-arrow.png);
 
   background-repeat: no-repeat;
 
@@ -5604,7 +5604,7 @@ select {
 
 .br-1 {
 
-  background-image: url(https://climatefinance.co.tz/assets/img/breadcrumb/breadcrumb-1.jpg);
+  background-image: url(../img/breadcrumb/breadcrumb-1.jpg);
 
 }
 
@@ -6194,7 +6194,7 @@ select {
 
 .contact-widget {
 
-  background-image: url(https://climatefinance.co.tz/assets/img/promo-video-bg.jpg);
+  background-image: url(../img/promo-video-bg.jpg);
 
   position: relative;
 
@@ -6716,7 +6716,7 @@ select {
 
 .hero-slide-one {
 
-  background-image: url(https://climatefinance.co.tz/assets/img/hero/hero-slider-1.jpg);
+  background-image: url(../img/hero/hero-slider-1.jpg);
 
 }
 
@@ -6724,7 +6724,7 @@ select {
 
 .hero-slide-two {
 
-  background-image: url(https://climatefinance.co.tz/assets/img/hero/hero-slider-2.jpg);
+  background-image: url(../img/hero/hero-slider-2.jpg);
 
 }
 
@@ -6732,7 +6732,7 @@ select {
 
 .hero-slide-three {
 
-  background-image: url(https://climatefinance.co.tz/assets/img/hero/hero-slider-3.jpg);
+  background-image: url(../img/hero/hero-slider-3.jpg);
 
 }
 
@@ -8498,7 +8498,7 @@ select {
 
   position: relative;
 
-  background-image: url(https://climatefinance.co.tz/assets/img/about/about-img-1.jpg);
+  background-image: url(../img/about/about-img-1.jpg);
 
   height: 630px;
 
@@ -8640,7 +8640,7 @@ select {
 
 .donate-box {
 
-  background:url(https://climatefinance.co.tz/assets/img/green.jpg);
+  background:url(../img/green.jpg);
 
   background-size:cover;
 
@@ -9130,7 +9130,7 @@ select {
 
 .promo-video.style1 {
 
-  background-image: url(https://climatefinance.co.tz/assets/img/promo-video-bg.jpg);
+  background-image: url(../img/promo-video-bg.jpg);
 
   height: 100%;
 
@@ -9140,7 +9140,7 @@ select {
 
 .promo-video.style2 {
 
-  background-image: url(https://climatefinance.co.tz/assets/img/promo-video-bg-2.jpg);
+  background-image: url(../img/promo-video-bg-2.jpg);
 
 }
 
@@ -9164,7 +9164,7 @@ select {
 
 .promo-video.style3 {
 
-  background-image: url(https://climatefinance.co.tz/assets/img/promo-video-bg.jpg);
+  background-image: url(../img/promo-video-bg.jpg);
 
   height: 100%;
 
@@ -11492,7 +11492,7 @@ select {
 
   position: relative;
 
-  background-image: url(https://climatefinance.co.tz/assets/img/cta-bg-1.jpg);
+  background-image: url(../img/cta-bg-1.jpg);
 
   z-index: 1;
 
