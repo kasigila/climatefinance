@@ -662,16 +662,11 @@
                                     </div>
                                     <div class="sidebar-widget">
                                         <h4>Give Us A Message</h4>    
-                                        <form action="financial-modelling.php.html#" class="register-widget">
-                                            <div class="form-group">
-                                                <input type="text" placeholder="Name*">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" placeholder="Email*">
-                                            </div>
-                                            <div class="form-group">
-                                                <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea>
-                                            </div>
+                                        <form data-form-handler="gas" action="#" method="POST" class="register-widget">
+                                            <input type="hidden" name="_subject" value="Message from Financial Modelling page">
+                                            <div class="form-group"><input type="text" name="name" placeholder="Name*" required></div>
+                                            <div class="form-group"><input type="email" name="email" placeholder="Email*" required></div>
+                                            <div class="form-group"><textarea name="message" placeholder="Your Message" rows="10"></textarea></div>
                                             <button type="submit" class="btn style1 w-100 d-block">Send Message</button>
                                         </form>
                                     </div>
@@ -1565,6 +1560,8 @@
     <script src="assets/js/jquery.min.js"></script>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/form-config.js"></script>
 
     <script src="assets/js/form-validator.min.js"></script>
 

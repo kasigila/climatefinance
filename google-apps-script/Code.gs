@@ -14,6 +14,7 @@ const BRAND_GREEN = '#40865b';
 const BRAND_GREEN_DARK = '#265037';
 const TEXT_DARK = '#333333';
 const TEXT_MUTED = '#666666';
+const LOGO_URL = SITE_URL + 'assets/img/logo.png';
 
 /**
  * Handle form POST submissions
@@ -126,32 +127,35 @@ function buildOwnerEmail(sub, formType) {
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body style="margin:0;font-family:'Spline Sans',sans-serif;background:#f5f5f5;color:#333;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:24px;">
-    <tr><td align="center">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);">
-        <tr>
-          <td style="background:${BRAND_GREEN};color:#fff;padding:24px;text-align:center;">
-            <h1 style="font-family:'Readex Pro',sans-serif;font-size:1.4rem;font-weight:700;margin:0 0 4px 0;">${escapeHtml(title)}</h1>
-            <p style="margin:0;opacity:.9;font-size:.9rem;">Africa Climate Finance</p>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:24px;">
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
-              <tr><td style="padding:8px 0;border-bottom:1px solid #eee;"><strong style="color:${TEXT_MUTED};">Name</strong></td><td style="padding:8px 0;border-bottom:1px solid #eee;">${escapeHtml(sub.name)}</td></tr>
-              <tr><td style="padding:8px 0;border-bottom:1px solid #eee;"><strong style="color:${TEXT_MUTED};">Email</strong></td><td style="padding:8px 0;border-bottom:1px solid #eee;">${escapeHtml(sub.email)}</td></tr>
-              ${sub.phone ? `<tr><td style="padding:8px 0;border-bottom:1px solid #eee;"><strong style="color:${TEXT_MUTED};">Phone</strong></td><td style="padding:8px 0;border-bottom:1px solid #eee;">${escapeHtml(sub.phone)}</td></tr>` : ''}
-              ${sub.subject ? `<tr><td style="padding:8px 0;border-bottom:1px solid #eee;"><strong style="color:${TEXT_MUTED};">Subject</strong></td><td style="padding:8px 0;border-bottom:1px solid #eee;">${escapeHtml(sub.subject)}</td></tr>` : ''}
-            </table>
-            ${sub.message ? `<div style="margin-top:16px;padding-top:16px;border-top:1px solid #eee;"><strong style="color:${TEXT_MUTED};">Message</strong><p style="margin:8px 0 0 0;line-height:1.6;white-space:pre-wrap;">${escapeHtml(sub.message)}</p></div>` : ''}
-            <p style="margin:20px 0 0 0;font-size:.85rem;color:${TEXT_MUTED};">Submitted via <a href="${SITE_URL}" style="color:${BRAND_GREEN};">Africa Climate Finance</a></p>
-          </td>
-        </tr>
-      </table>
-    </td></tr>
+<body style="margin:0;font-family:'Spline Sans',Arial,sans-serif;background:#fff;color:${TEXT_DARK};">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:0 auto;">
+    <tr>
+      <td style="padding:32px 24px 24px;border-bottom:2px solid ${BRAND_GREEN};text-align:center;background:#fff;">
+        <a href="${SITE_URL}" style="text-decoration:none;"><img src="${LOGO_URL}" alt="Africa Climate Finance" width="180" height="auto" style="display:block;margin:0 auto;max-width:180px;"></a>
+        <p style="margin:12px 0 0;font-family:'Readex Pro',sans-serif;font-size:11px;color:${TEXT_MUTED};letter-spacing:0.5px;">TANZANIA &amp; BEYOND</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:28px 24px;">
+        <p style="margin:0 0 20px;font-size:13px;color:${TEXT_MUTED};text-transform:uppercase;letter-spacing:1px;">${escapeHtml(title)}</p>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:15px;">
+          <tr><td style="padding:12px 0;border-bottom:1px solid #eee;"><strong style="color:${TEXT_MUTED};font-weight:500;">Name</strong></td><td style="padding:12px 0;border-bottom:1px solid #eee;">${escapeHtml(sub.name)}</td></tr>
+          <tr><td style="padding:12px 0;border-bottom:1px solid #eee;"><strong style="color:${TEXT_MUTED};font-weight:500;">Email</strong></td><td style="padding:12px 0;border-bottom:1px solid #eee;">${escapeHtml(sub.email)}</td></tr>
+          ${sub.phone ? `<tr><td style="padding:12px 0;border-bottom:1px solid #eee;"><strong style="color:${TEXT_MUTED};font-weight:500;">Phone</strong></td><td style="padding:12px 0;border-bottom:1px solid #eee;">${escapeHtml(sub.phone)}</td></tr>` : ''}
+          ${sub.subject ? `<tr><td style="padding:12px 0;border-bottom:1px solid #eee;"><strong style="color:${TEXT_MUTED};font-weight:500;">Subject</strong></td><td style="padding:12px 0;border-bottom:1px solid #eee;">${escapeHtml(sub.subject)}</td></tr>` : ''}
+        </table>
+        ${sub.message ? `<div style="margin-top:24px;padding-top:20px;border-top:1px solid #eee;"><strong style="color:${TEXT_MUTED};font-weight:500;font-size:13px;">Message</strong><p style="margin:12px 0 0;line-height:1.6;color:${TEXT_DARK};white-space:pre-wrap;">${escapeHtml(sub.message)}</p></div>` : ''}
+        <p style="margin:28px 0 0;font-size:12px;color:${TEXT_MUTED};">Submitted via <a href="${SITE_URL}" style="color:${BRAND_GREEN};text-decoration:none;">Africa Climate Finance</a></p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:16px 24px;background:#f9f9f9;font-size:11px;color:${TEXT_MUTED};">
+        Africa Climate Finance &middot; Masaki, Dar es Salaam &middot; P.O. Box 6756
+      </td>
+    </tr>
   </table>
 </body>
 </html>`;
@@ -160,33 +164,37 @@ function buildOwnerEmail(sub, formType) {
 function buildConfirmationEmail(sub, formType) {
   const isEvent = formType === 'event';
   const intro = isEvent
-    ? 'Thank you for registering your interest in our event.'
-    : 'Thank you for reaching out. We have received your message and will respond within 1–2 business days.';
+    ? 'Thank you for registering your interest in our event. We will be in touch shortly with further details.'
+    : 'Thank you for contacting Africa Climate Finance. We have received your message and will respond within 1–2 business days.';
   return `
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body style="margin:0;font-family:'Spline Sans',sans-serif;background:#f5f5f5;color:#333;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:24px;">
-    <tr><td align="center">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:520px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);">
-        <tr>
-          <td style="background:${BRAND_GREEN};color:#fff;padding:24px;text-align:center;">
-            <h1 style="font-family:'Readex Pro',sans-serif;font-size:1.3rem;font-weight:700;margin:0 0 4px 0;">We Received Your Message</h1>
-            <p style="margin:0;opacity:.9;font-size:.9rem;">Africa Climate Finance</p>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:24px;">
-            <p style="margin:0 0 16px 0;line-height:1.7;color:${TEXT_MUTED};">Hi ${escapeHtml(sub.name) || 'there'},</p>
-            <p style="margin:0 0 20px 0;line-height:1.7;color:${TEXT_MUTED};">${intro}</p>
-            <a href="${SITE_URL}" style="display:inline-block;background:${BRAND_GREEN};color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;font-size:.95rem;">Visit Our Website</a>
-          </td>
-        </tr>
-      </table>
-    </td></tr>
+<body style="margin:0;font-family:'Spline Sans',Arial,sans-serif;background:#fff;color:${TEXT_DARK};">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:0 auto;">
+    <tr>
+      <td style="padding:32px 24px 24px;border-bottom:2px solid ${BRAND_GREEN};text-align:center;background:#fff;">
+        <a href="${SITE_URL}" style="text-decoration:none;"><img src="${LOGO_URL}" alt="Africa Climate Finance" width="180" height="auto" style="display:block;margin:0 auto;max-width:180px;"></a>
+        <p style="margin:12px 0 0;font-family:'Readex Pro',sans-serif;font-size:11px;color:${TEXT_MUTED};letter-spacing:0.5px;">TANZANIA &amp; BEYOND</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:32px 24px;">
+        <p style="margin:0 0 20px;font-size:16px;color:${TEXT_DARK};font-weight:500;">Dear ${escapeHtml(sub.name) || 'Valued Contact'},</p>
+        <p style="margin:0 0 24px;line-height:1.7;color:${TEXT_DARK};font-size:15px;">${intro}</p>
+        <p style="margin:0 0 28px;line-height:1.7;color:${TEXT_DARK};font-size:15px;">Best regards,</p>
+        <p style="margin:0 0 24px;font-weight:600;color:${TEXT_DARK};font-size:15px;">The Africa Climate Finance Team</p>
+        <a href="${SITE_URL}" style="display:inline-block;background:${BRAND_GREEN};color:#fff;padding:12px 24px;text-decoration:none;font-weight:600;font-size:14px;">Visit Our Website</a>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:16px 24px;background:#f9f9f9;font-size:11px;color:${TEXT_MUTED};">
+        Africa Climate Finance &middot; Masaki, Dar es Salaam &middot; P.O. Box 6756
+      </td>
+    </tr>
   </table>
 </body>
 </html>`;
