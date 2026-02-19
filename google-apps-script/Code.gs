@@ -5,7 +5,7 @@
  */
 
 // === CONFIGURE THESE ===
-const RECIPIENT_EMAIL = '';  // Your email to receive submissions (e.g. 'you@example.com')
+const RECIPIENT_EMAIL = 'karen_marie1@icloud.com';  // Your email to receive submissions
 const SITE_URL = 'https://kasigila.github.io/climatefinance/';
 const SUBMISSIONS_SHEET_ID = '1wFy-f1Aw0DPyfeSxA5Dq_y3lvZ6ZG4kLujAUsW7WjTI';  // africa-climate-finance
 
@@ -79,44 +79,11 @@ function createResponse(success, message) {
 }
 
 /**
- * Full HTML thank-you page returned after form POST (when using form action)
+ * Redirect to thank-you page on the site (seamless, same layout)
  */
 function createThankYouPage(submission, formType) {
-  const html = `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <title>Thank You - Africa Climate Finance</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Spline Sans', sans-serif; background: #f5f5f5; color: ${TEXT_DARK}; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem; }
-    .card { max-width: 480px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.08); }
-    .header { background: ${BRAND_GREEN}; color: #fff; padding: 2rem; text-align: center; }
-    .header h1 { font-family: 'Readex Pro', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: .5rem; }
-    .header p { opacity: .9; font-size: .95rem; }
-    .body { padding: 2rem; }
-    .body p { line-height: 1.7; color: ${TEXT_MUTED}; margin-bottom: 1rem; }
-    .btn { display: inline-block; background: ${BRAND_GREEN}; color: #fff !important; padding: .75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: .95rem; margin-top: .5rem; transition: background .2s; }
-    .btn:hover { background: ${BRAND_GREEN_DARK}; }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <div class="header">
-      <h1>Message Received</h1>
-      <p>Africa Climate Finance</p>
-    </div>
-    <div class="body">
-      <p>Thank you, ${escapeHtml(submission.name) || 'there'}! We have received your message and will get back to you soon.</p>
-      <p>We sent a confirmation to ${escapeHtml(submission.email) || 'your email'}.</p>
-      <a href="${SITE_URL}" class="btn">Return to Website</a>
-    </div>
-  </div>
-</body>
-</html>`;
+  const thankYouUrl = SITE_URL + 'thank-you.html';
+  const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${thankYouUrl}"><title>Thank You</title><script>window.location.replace("${thankYouUrl}");</script></head><body><p>Redirecting to <a href="${thankYouUrl}">thank you page</a>...</p></body></html>`;
   return HtmlService.createHtmlOutput(html).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
@@ -135,7 +102,6 @@ function buildOwnerEmail(sub, formType) {
     <tr>
       <td style="padding:32px 24px 24px;border-bottom:2px solid ${BRAND_GREEN};text-align:center;background:#fff;">
         <a href="${SITE_URL}" style="text-decoration:none;"><img src="${LOGO_URL}" alt="Africa Climate Finance" width="180" height="auto" style="display:block;margin:0 auto;max-width:180px;"></a>
-        <p style="margin:12px 0 0;font-family:'Readex Pro',sans-serif;font-size:11px;color:${TEXT_MUTED};letter-spacing:0.5px;">TANZANIA &amp; BEYOND</p>
       </td>
     </tr>
     <tr>
@@ -178,7 +144,6 @@ function buildConfirmationEmail(sub, formType) {
     <tr>
       <td style="padding:32px 24px 24px;border-bottom:2px solid ${BRAND_GREEN};text-align:center;background:#fff;">
         <a href="${SITE_URL}" style="text-decoration:none;"><img src="${LOGO_URL}" alt="Africa Climate Finance" width="180" height="auto" style="display:block;margin:0 auto;max-width:180px;"></a>
-        <p style="margin:12px 0 0;font-family:'Readex Pro',sans-serif;font-size:11px;color:${TEXT_MUTED};letter-spacing:0.5px;">TANZANIA &amp; BEYOND</p>
       </td>
     </tr>
     <tr>
