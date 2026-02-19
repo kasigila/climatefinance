@@ -83,7 +83,7 @@ function createResponse(success, message) {
  */
 function createThankYouPage(submission, formType) {
   const thankYouUrl = SITE_URL + 'thank-you.html';
-  const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${thankYouUrl}"><title>Thank You</title><script>window.location.replace("${thankYouUrl}");</script></head><body><p>Redirecting to <a href="${thankYouUrl}">thank you page</a>...</p></body></html>`;
+  const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${thankYouUrl}"><title>Thank You</title><script>try{window.top.location.replace("${thankYouUrl}");}catch(e){window.location.replace("${thankYouUrl}");}</script></head><body><p>Redirecting... <a href="${thankYouUrl}">Click here if not redirected</a></p></body></html>`;
   return HtmlService.createHtmlOutput(html).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
