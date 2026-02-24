@@ -44,6 +44,16 @@
 
         <link rel="icon" type="image/png" href="assets/img/favicon-f.png">
 
+        <style>
+            /* Team cards: show full info at first glance (no hover) */
+            .team-wrap.team-full-info .team-card.style1 { overflow: visible; }
+            .team-wrap.team-full-info .team-card.style1 .team-info {
+                position: relative;
+                bottom: auto;
+                border-radius: 0 0 5px 5px;
+            }
+            .team-wrap.team-full-info .team-card.style1 .team-info p { margin-bottom: 0; }
+        </style>
     </head>
 
 
@@ -649,12 +659,13 @@
                  <!-- Team Section Start -->
 
 
-                 <section class="team-wrap ptb-100 bg-sand">
+                 <section class="team-wrap team-full-info ptb-100 bg-sand">
                     <div class="container">
                         <div class="section-title style1 text-center mb-40">
                             <span>Our Team <img src="assets/img/section-shape.png" alt="Image"></span>
                             <h2>Leadership & Experts</h2>
                             <p>Executive leadership, financial inclusion, and technical implementation across Africa.</p>
+                            <p class="text-muted small"><i class="ri-information-line"></i> Kenneth and Karen have full profile pages — tap their cards or &quot;View Profile&quot; to read more.</p>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-lg-4 col-md-6 mb-4">
@@ -663,11 +674,12 @@
                                     <div class="team-info">
                                         <h3><a href="kenneth.html">Kenneth Davis Kasigila</a></h3>
                                         <span>Group CEO &amp; Founder</span>
+                                        <p class="small mt-2">Primary visionary behind the organization. Focuses on high-level capitalization, global partnerships with climate funds, and strategic expansion across the continent. GCF Focal Point for CRDB Bank; led Africa&apos;s first GCF-approved commercial bank funding proposal (US$200M).</p>
                                         <ul class="social-profile style1 list-style">
                                             <li><a href="mailto:kenneth.kasigila@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
                                             <li><a href="https://wa.me/255754763558" target="_blank"><i class="ri-phone-line"></i></a></li>
                                         </ul>
-                                        <a href="kenneth.html" class="btn style2 mt-3 w-100">View Profile</a>
+                                        <a href="kenneth.html" class="btn style2 mt-3 w-100">View Profile <i class="ri-arrow-right-line"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -677,11 +689,12 @@
                                     <div class="team-info">
                                         <h3><a href="karen.html">Karen Marie Kasigila</a></h3>
                                         <span>Director of Data Science</span>
+                                        <p class="small mt-2">Ensures every investment is backed by rigorous analytical modeling. Oversees proprietary risk-assessment tools, tracks real-time carbon sequestration data, and translates complex climate datasets into actionable financial strategies.</p>
                                         <ul class="social-profile style1 list-style">
                                             <li><a href="https://linkedin.com/in/karen-marie-kasigila-443b73242" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
                                             <li><a href="mailto:Karen_Marie1@icloud.com" target="_blank"><i class="ri-mail-line"></i></a></li>
                                         </ul>
-                                        <a href="karen.html" class="btn style2 mt-3 w-100">View Profile</a>
+                                        <a href="karen.html" class="btn style2 mt-3 w-100">View Profile <i class="ri-arrow-right-line"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -691,7 +704,7 @@
                                     <div class="team-info">
                                         <h3>Happy Kasigila</h3>
                                         <span>Manager</span>
-                                        <p class="small mt-2">Bridge between executive strategy and daily execution. Integrates Data Science insights into operations and manages human capital for the group&apos;s green targets.</p>
+                                        <p class="small mt-2">Bridge between executive strategy and daily execution. Integrates Data Science insights into operations, maintains institutional compliance, and manages human capital for the group&apos;s green targets.</p>
                                     </div>
                                 </div>
                             </div>
@@ -701,11 +714,11 @@
                                     <div class="team-info">
                                         <h3>Atupakisye Njalila</h3>
                                         <span>Sectoral Loans Officer</span>
+                                        <p class="small mt-2">Manages the portfolio for large-scale, industry-specific green projects including renewable energy and sustainable infrastructure. Deep environmental risk auditing ensures all funded projects meet international &quot;green&quot; standards.</p>
                                         <ul class="social-profile style1 list-style">
                                             <li><a href="mailto:atupakisyenjalila@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
                                             <li><a href="https://wa.me/255747022665" target="_blank"><i class="ri-phone-line"></i></a></li>
                                         </ul>
-                                        <p class="small mt-2">Manages green project portfolios for renewable energy and sustainable infrastructure. Environmental risk auditing for international green standards.</p>
                                     </div>
                                 </div>
                             </div>
@@ -715,11 +728,11 @@
                                     <div class="team-info">
                                         <h3>Rose Mgode</h3>
                                         <span>Group Loans Officer</span>
+                                        <p class="small mt-2">Focuses on grassroots financial resilience by facilitating micro-lending to cooperatives. Ensures climate finance is accessible to small-scale business groups, particularly those in high-vulnerability regions.</p>
                                         <ul class="social-profile style1 list-style">
                                             <li><a href="mailto:mgoderose2@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
                                             <li><a href="https://wa.me/255764641547" target="_blank"><i class="ri-phone-line"></i></a></li>
                                         </ul>
-                                        <p class="small mt-2">Facilitates micro-lending to cooperatives. Ensures climate finance reaches small-scale business groups in high-vulnerability regions.</p>
                                     </div>
                                 </div>
                             </div>
@@ -729,11 +742,11 @@
                                     <div class="team-info">
                                         <h3>Samson Mwalusambo</h3>
                                         <span>Agriculture, Livestock &amp; Market Linkage Coordinator</span>
+                                        <p class="small mt-2">Boots-on-the-ground technical expertise. De-risks loans by training borrowers in climate-smart farming and livestock management, and builds farm-to-market pipelines so sustainable products reach profitable buyers.</p>
                                         <ul class="social-profile style1 list-style">
                                             <li><a href="mailto:smwalusambo@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
                                             <li><a href="https://wa.me/255764572393" target="_blank"><i class="ri-phone-line"></i></a></li>
                                         </ul>
-                                        <p class="small mt-2">Technical expertise in climate-smart farming and livestock management. Builds farm-to-market pipelines for sustainable products.</p>
                                     </div>
                                 </div>
                             </div>
@@ -743,11 +756,11 @@
                                     <div class="team-info">
                                         <h3>Rehema Mwateba</h3>
                                         <span>Women&apos;s Inclusion Advisor</span>
+                                        <p class="small mt-2">Leads the organization&apos;s gender-smart investing mandate. Ensures women entrepreneurs have equal access to capital and designs specific financial products that address the unique climate challenges faced by women-led households and businesses.</p>
                                         <ul class="social-profile style1 list-style">
                                             <li><a href="mailto:rehema.mwateba@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
                                             <li><a href="https://wa.me/255757996470" target="_blank"><i class="ri-phone-line"></i></a></li>
                                         </ul>
-                                        <p class="small mt-2">Leads gender-smart investing. Ensures women entrepreneurs have equal access to capital and designs products for women-led households.</p>
                                     </div>
                                 </div>
                             </div>
