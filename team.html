@@ -53,15 +53,27 @@
                 border-radius: 0 0 5px 5px;
             }
             .team-wrap.team-full-info .team-card.style1 .team-info p { margin-bottom: 0; }
-            /* Mobile: 2-column grid, tighter cards */
+            /* Executive row: Kenneth & Karen side by side */
+            .team-wrap.team-full-info .team-exec-row .team-card.style1 .team-info { padding: 25px; }
+            /* Team grid: responsive */
+            .team-wrap.team-full-info .team-grid .team-card.style1 img { width: 100%; height: 100%; object-fit: cover; }
+            /* Mobile */
             @media (max-width: 767px) {
-                .team-wrap.team-full-info .row { margin: 0 -6px; }
-                .team-wrap.team-full-info .row > [class*="col-"] { padding: 0 6px; margin-bottom: 12px; }
-                .team-wrap.team-full-info .team-card.style1 .team-info { padding: 15px; }
-                .team-wrap.team-full-info .team-card.style1 .team-info p { font-size: 12px; line-height: 1.4; }
-                .team-wrap.team-full-info .team-card.style1 .team-info h3 { font-size: 16px; }
-                .team-wrap.team-full-info .team-card.style1 .team-info span { font-size: 12px; }
-                .team-wrap.team-full-info .team-card.style1 img { max-height: 140px; object-fit: cover; }
+                .team-wrap.team-full-info .team-exec-row { margin: 0 -8px; }
+                .team-wrap.team-full-info .team-exec-row > [class*="col-"] { padding: 0 8px; margin-bottom: 16px; }
+                .team-wrap.team-full-info .team-exec-row .team-card.style1 .team-info { padding: 15px; }
+                .team-wrap.team-full-info .team-exec-row .team-card.style1 .team-info p { font-size: 12px; line-height: 1.4; }
+                .team-wrap.team-full-info .team-exec-row .team-card.style1 .team-info h3 { font-size: 15px; }
+                .team-wrap.team-full-info .team-exec-row .team-card.style1 img { max-height: 160px; object-fit: cover; }
+                .team-wrap.team-full-info .team-grid { margin: 0 -6px; }
+                .team-wrap.team-full-info .team-grid > [class*="col-"] { padding: 0 6px; margin-bottom: 12px; }
+                .team-wrap.team-full-info .team-grid .team-card.style1 .team-info { padding: 12px; }
+                .team-wrap.team-full-info .team-grid .team-card.style1 .team-info p { font-size: 11px; line-height: 1.35; }
+                .team-wrap.team-full-info .team-grid .team-card.style1 .team-info h3 { font-size: 14px; }
+                .team-wrap.team-full-info .team-grid .team-card.style1 .team-info span { font-size: 11px; }
+                .team-wrap.team-full-info .team-grid .team-card.style1 img { max-height: 120px; object-fit: cover; }
+                .team-wrap.team-full-info .team-photo-bottom { padding: 0 10px; }
+                .team-wrap.team-full-info .team-photo-bottom img { max-height: 200px !important; }
             }
         </style>
     </head>
@@ -674,12 +686,11 @@
                         <div class="section-title style1 text-center mb-40">
                             <span>Our Team <img src="assets/img/section-shape.png" alt="Image"></span>
                             <h2>Leadership & Experts</h2>
-                            <div class="mb-5"><img src="assets/img/team/team-photo.png" alt="Africa Climate Finance Team" class="img-fluid rounded" style="max-height:280px;object-fit:cover;width:100%;"></div>
                             <p>Executive leadership, financial inclusion, and technical implementation across Africa.</p>
-                            <p class="text-muted small"><i class="ri-information-line"></i> Kenneth and Karen have full profile pages — tap their cards or &quot;View Profile&quot; to read more.</p>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col-6 col-lg-4 mb-4">
+                        <h4 class="text-center mb-4 green-dark">Executive Leadership</h4>
+                        <div class="row justify-content-center team-exec-row mb-5">
+                            <div class="col-12 col-md-6 col-lg-6 mb-4">
                                 <div class="team-card style1">
                                     <a href="kenneth.html"><img src="assets/img/team/kenneth.png" alt="Kenneth Davis Kasigila"></a>
                                     <div class="team-info">
@@ -694,7 +705,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4 mb-4">
+                            <div class="col-12 col-md-6 col-lg-6 mb-4">
                                 <div class="team-card style1">
                                     <a href="karen.html"><img src="assets/img/team/karen.png" alt="Karen Marie Kasigila"></a>
                                     <div class="team-info">
@@ -709,7 +720,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4 mb-4">
+                        </div>
+                        <h4 class="text-center mb-4 green-dark">Team</h4>
+                        <div class="row justify-content-center team-grid">
+                            <div class="col-6 col-md-4 col-lg-4 mb-4">
                                 <div class="team-card style1">
                                     <div><img src="assets/img/team/happy.png" alt="Happy Kasigila"></div>
                                     <div class="team-info">
@@ -719,7 +733,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4 mb-4">
+                            <div class="col-6 col-md-4 col-lg-4 mb-4">
                                 <div class="team-card style1">
                                     <div><img src="assets/img/team/atupakisye.png" alt="Atupakisye Njalila"></div>
                                     <div class="team-info">
@@ -733,7 +747,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4 mb-4">
+                            <div class="col-6 col-md-4 col-lg-4 mb-4">
                                 <div class="team-card style1">
                                     <div><img src="assets/img/team/rose.png" alt="Rose Mgode"></div>
                                     <div class="team-info">
@@ -747,7 +761,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4 mb-4">
+                            <div class="col-6 col-md-4 col-lg-4 mb-4">
                                 <div class="team-card style1">
                                     <div><img src="https://ui-avatars.com/api/?name=Samson+Mwalusambo&size=400&background=40865b&color=fff" alt="Samson Mwalusambo"></div>
                                     <div class="team-info">
@@ -761,7 +775,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 col-lg-4 mb-4">
+                            <div class="col-6 col-md-4 col-lg-4 mb-4">
                                 <div class="team-card style1">
                                     <div><img src="assets/img/team/rehema.png" alt="Rehema Mwateba"></div>
                                     <div class="team-info">
@@ -775,6 +789,10 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="section-title style1 text-center mt-5 pt-5 team-photo-bottom">
+                            <h4 class="green-dark mb-3">Our Team in the Field</h4>
+                            <img src="assets/img/team/team-photo.png" alt="Africa Climate Finance Team" class="img-fluid rounded" style="max-height:280px;object-fit:cover;width:100%;">
                         </div>
                     </div>
                 </section>
