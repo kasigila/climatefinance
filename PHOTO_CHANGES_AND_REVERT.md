@@ -8,7 +8,7 @@ This document describes the Highlight photos added to the website and how to rev
 
 **The new images will not display until you run the copy script.**
 
-1. Place your 136 Highlight photos in: `~/Downloads/Highlights/`
+1. Place your Highlight photos in: `~/Downloads/Highlights/` or `~/Desktop/Highlights/`
 2. Run from project root:
    ```bash
    ./scripts/copy-highlights-photos.sh

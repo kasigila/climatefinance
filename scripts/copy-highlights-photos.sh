@@ -3,12 +3,17 @@
 # Run from project root: ./scripts/copy-highlights-photos.sh
 # Or with custom source: ./scripts/copy-highlights-photos.sh /path/to/Highlights
 
-SOURCE="${1:-$HOME/Downloads/Highlights}"
 DEST="assets/img/highlights"
 
-if [ ! -d "$SOURCE" ]; then
-    echo "ERROR: Source folder not found: $SOURCE"
-    echo "Please place your 136 Highlight photos in that folder, or run:"
+if [ -n "$1" ]; then
+    SOURCE="$1"
+elif [ -d "$HOME/Downloads/Highlights" ]; then
+    SOURCE="$HOME/Downloads/Highlights"
+elif [ -d "$HOME/Desktop/Highlights" ]; then
+    SOURCE="$HOME/Desktop/Highlights"
+else
+    echo "ERROR: Source folder not found."
+    echo "Place your Highlight photos in ~/Downloads/Highlights or ~/Desktop/Highlights, or run:"
     echo "  $0 /path/to/your/Highlights"
     exit 1
 fi
