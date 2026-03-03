@@ -119,7 +119,7 @@ function buildOwnerEmail(sub, formType) {
     </tr>
     <tr>
       <td style="padding:16px 24px;background:#f9f9f9;font-size:11px;color:${TEXT_MUTED};">
-        Africa Climate Finance &middot; Masaki, Dar es Salaam &middot; P.O. Box 6756
+        Africa Climate Finance &middot; Box 82, Rungwe-Mbeya
       </td>
     </tr>
   </table>
@@ -157,7 +157,7 @@ function buildConfirmationEmail(sub, formType) {
     </tr>
     <tr>
       <td style="padding:16px 24px;background:#f9f9f9;font-size:11px;color:${TEXT_MUTED};">
-        Africa Climate Finance &middot; Masaki, Dar es Salaam &middot; P.O. Box 6756
+        Africa Climate Finance &middot; Box 82, Rungwe-Mbeya
       </td>
     </tr>
   </table>
