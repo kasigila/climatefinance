@@ -1,0 +1,138 @@
+/*-----------------------------------------------------------
+   Africa Climate Finance - Production Enhancements
+   Responsive, callouts, accordions, touch targets, mobile-first
+-----------------------------------------------------------*/
+
+/* ========== Callout & Pull Quote Boxes ========== */
+.content-callout {
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #40865b;
+  background: rgba(64, 134, 91, 0.08);
+  border-radius: 0 8px 8px 0;
+}
+.content-callout p:last-child { margin-bottom: 0; }
+
+.pull-quote {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #2d5a3d;
+  border-left: 4px solid #40865b;
+  background: #f8fbf9;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ========== Shorter Paragraph Spacing ========== */
+.about-content .content-title p,
+.project-info p,
+.section-title + p {
+  max-width: 60ch;
+  line-height: 1.65;
+}
+.about-wrap .content-title p + p { margin-top: 1rem; }
+
+/* ========== Accordion Improvements ========== */
+.accordion-item {
+  border: 1px solid #e5ebe8;
+  border-radius: 6px !important;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.accordion-button {
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+  min-height: 48px;
+}
+.accordion-button:not(.collapsed) {
+  background: rgba(64, 134, 91, 0.12);
+  color: #2d5a3d;
+}
+.accordion-body {
+  padding: 1rem 1.25rem 1.25rem;
+  line-height: 1.65;
+}
+
+/* ========== Touch Targets (min 44x44px) - Mobile ========== */
+@media (max-width: 991px) {
+  .nav-link,
+  .dropdown-item,
+  .btn,
+  .breadcrumb-menu a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .navbar-nav .nav-link { padding: 0.6rem 1rem; }
+  .btn { min-height: 48px; padding: 0.6rem 1.25rem; }
+  .footer-menu a { padding: 0.4rem 0; min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+/* ========== Mobile Optimizations ========== */
+@media (max-width: 767px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+  .ptb-100 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .section-title h2 { font-size: 1.6rem; }
+  .content-callout, .pull-quote { padding: 1rem 1.25rem; margin: 1rem 0; font-size: 0.95rem; }
+  .hero-content h1 { font-size: 1.75rem; }
+}
+
+@media (max-width: 575px) {
+  .hero-content h1 { font-size: 1.5rem; }
+  .section-title h2 { font-size: 1.45rem; }
+  .content-wrapper { margin-top: 200px; }
+}
+
+/* ========== Image Responsiveness ========== */
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.about-img-wrap img,
+.project-img img,
+[style*="object-fit:cover"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+/* ========== Ensure tables/wide content scroll on mobile ========== */
+@media (max-width: 767px) {
+  .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { min-width: 100%; }
+}
+
+/* ========== Service page sidebar - main content first on mobile ========== */
+@media (max-width: 1199px) {
+  .project-details-wrap .row.gx-5 { flex-direction: column; }
+  .project-details-wrap .col-xl-4 { order: 2; margin-top: 1.5rem; }
+  .project-details-wrap .col-xl-8 { order: 1; }
+}
+
+/* ========== Nav Overflow - Mobile Menu ========== */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    max-height: 80vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .main-menu-wrap .navbar-nav { padding-bottom: 1.5rem; }
+}
+
+/* ========== Safe Area for Notched Devices ========== */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .footer-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
+
+/* ========== Reduced Motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
