@@ -3,6 +3,53 @@
    Responsive, callouts, accordions, touch targets, mobile-first
 -----------------------------------------------------------*/
 
+/* ========== Grassroots Section Cards ========== */
+.grassroots-section { padding: 0 0.25rem; }
+.grassroots-card {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e8edea;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.grassroots-card:hover {
+  box-shadow: 0 6px 20px rgba(64, 134, 91, 0.1);
+  border-color: rgba(64, 134, 91, 0.35);
+}
+.grassroots-card-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(64, 134, 91, 0.5);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+.grassroots-card h4 { font-size: 1rem; }
+.grassroots-card-photo { background: linear-gradient(135deg, #f8fbf9 0%, #fff 100%); }
+
+/* ========== COP Engagement Cards ========== */
+.cop-section-card {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e8edea;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  margin-bottom: 2rem;
+}
+.cop-section-card.bg-sand { background: #faf9f7; }
+.cop-section-card h2 { margin-bottom: 1.5rem; }
+.cop-event-details {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(64, 134, 91, 0.06);
+  border-radius: 12px;
+  border-left: 4px solid #40865b;
+}
+.cop-event-details li { list-style: none; padding-left: 0; }
+.cop-highlights { padding-left: 1.25rem; }
+.cop-highlights li { margin-bottom: 0.5rem; }
+
 /* ========== Callout & Pull Quote Boxes ========== */
 .content-callout {
   padding: 1.5rem 1.75rem;
@@ -72,6 +119,73 @@
   .footer-menu a { padding: 0.4rem 0; min-height: 44px; display: inline-flex; align-items: center; }
 }
 
+/* ========== About Gallery - Clean layout ========== */
+.about-gallery { margin-bottom: 2rem; }
+.about-gallery-featured {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.about-gallery-main img,
+.about-gallery-side img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
+.about-gallery-side .mt-2 { margin-top: 0.5rem !important; }
+.about-gallery-strip {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.about-gallery-strip::-webkit-scrollbar { height: 6px; }
+.about-gallery-strip::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+.about-gallery-strip::-webkit-scrollbar-thumb { background: rgba(64, 134, 91, 0.4); border-radius: 3px; }
+.about-gallery-strip a {
+  flex: 0 0 120px;
+  min-width: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.about-gallery-strip a img { width: 100%; height: 90px; object-fit: cover; display: block; }
+@media (min-width: 768px) {
+  .about-gallery-strip { flex-wrap: wrap; overflow: visible; justify-content: center; }
+  .about-gallery-strip a { flex: 0 0 calc(20% - 0.5rem); min-width: calc(20% - 0.5rem); }
+  .about-gallery-strip a img { height: 100px; }
+}
+@media (max-width: 767px) {
+  .about-gallery-featured { grid-template-columns: 1fr; }
+  .about-gallery-main img { aspect-ratio: 16/10; }
+  .about-gallery-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    align-content: start;
+  }
+  .about-gallery-side .mt-2 { margin-top: 0 !important; }
+  .about-gallery-side > p { grid-column: 1 / -1; }
+}
+
+/* ========== Our Priority - Compact on mobile ========== */
+.priority-section .section-title { margin-bottom: 1.5rem !important; }
+.priority-section .p-exp {
+  font-size: 0.95rem;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .priority-section .p-exp { font-size: 0.9rem; max-width: 100%; }
+  .priority-section .project-wrap .row { row-gap: 1rem; }
+  .priority-section .project-card { margin-bottom: 0; }
+  .priority-section .project-info { height: auto !important; min-height: 0; padding: 1rem; }
+  .priority-section .project-info p { font-size: 0.875rem; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .priority-section .project-img img { height: 140px !important; object-fit: cover; }
+}
+@media (max-width: 575px) {
+  .priority-section .project-info p { -webkit-line-clamp: 2; }
+}
+
 /* ========== Mobile Optimizations ========== */
 @media (max-width: 767px) {
   .container { padding-left: 1rem; padding-right: 1rem; }
@@ -79,6 +193,8 @@
   .section-title h2 { font-size: 1.6rem; }
   .content-callout, .pull-quote { padding: 1rem 1.25rem; margin: 1rem 0; font-size: 0.95rem; }
   .hero-content h1 { font-size: 1.75rem; }
+  .grassroots-card { padding: 1rem; }
+  .grassroots-section .row.g-4 { gap: 0.75rem !important; }
 }
 
 @media (max-width: 575px) {
@@ -86,6 +202,28 @@
   .section-title h2 { font-size: 1.45rem; }
   .content-wrapper { margin-top: 200px; }
 }
+
+/* ========== Broader mobile polish ========== */
+@media (max-width: 767px) {
+  .breadcrumb-wrap .breadcrumb-title h2 { font-size: 1.35rem; }
+  .breadcrumb-menu { font-size: 0.875rem; }
+  .about-wrap .row.gx-5 { --bs-gutter-x: 1.5rem; }
+}
+
+/* ========== Site-wide Aesthetic Refinements ========== */
+.section-title.style1 h2 { letter-spacing: 0.01em; }
+.section-title.style1 span { opacity: 0.9; }
+.project-card.style1,
+.service-card.style1 {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project-card.style1:hover,
+.service-card.style1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(64, 134, 91, 0.12);
+}
+.content-title.style1 h2,
+.content-title.style1 h3 { line-height: 1.3; }
 
 /* ========== Image Responsiveness ========== */
 img.img-fluid {
@@ -113,6 +251,68 @@ img.img-fluid {
   .project-details-wrap .col-xl-8 { order: 1; }
 }
 
+/* ========== Solutions pages - Not textbook style ========== */
+.project-desc {
+  max-width: 65ch;
+  line-height: 1.7;
+}
+.project-desc h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #2d5a3d;
+}
+.project-desc h3 {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(64, 134, 91, 0.2);
+  color: #2d5a3d;
+}
+.project-desc h3:first-of-type { margin-top: 1.5rem; padding-top: 0; border-top: none; }
+.project-desc p + p { margin-top: 1rem; }
+.project-desc blockquote.wp-block-quote {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #40865b;
+  background: rgba(64, 134, 91, 0.06);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+.project-desc ol, .project-desc ul {
+  margin: 0.75rem 0 1rem 1.25rem;
+  padding-left: 1rem;
+}
+.project-desc li { margin-bottom: 0.35rem; }
+.project-desc .single-project-img {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.project-desc .single-project-img img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+}
+.project-details-wrap .sidebar .project-info-item-wrap a {
+  padding: 0.5rem 0;
+  display: block;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+.project-details-wrap .sidebar .project-info-item-wrap a:hover {
+  color: #40865b;
+  padding-left: 0.25rem;
+}
+@media (max-width: 767px) {
+  .project-desc h1 { font-size: 1.5rem; }
+  .project-desc { padding-right: 0; }
+  .project-desc h3 { margin-top: 1.5rem; padding-top: 0.75rem; }
+  .sidebar .sidebar-widget { margin-bottom: 1.5rem; }
+}
+
 /* ========== Nav Overflow - Mobile Menu ========== */
 @media (max-width: 991px) {
   .navbar-collapse {
@@ -121,6 +321,53 @@ img.img-fluid {
     -webkit-overflow-scrolling: touch;
   }
   .main-menu-wrap .navbar-nav { padding-bottom: 1.5rem; }
+}
+
+/* ========== Footer — All content, less overwhelming ========== */
+.footer-wrap .footer-top { padding-top: 2.5rem !important; padding-bottom: 2rem !important; }
+.footer-wrap .footer-main-row { align-items: flex-start; }
+.footer-wrap .comp-desc {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 0.88;
+  max-width: 26ch;
+}
+.footer-wrap .footer-widget-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+.footer-wrap .footer-menu li { margin-bottom: 0.25rem; }
+.footer-wrap .footer-menu a { font-size: 0.875rem; }
+.footer-wrap .footer-widget .contact-info li { margin-bottom: 0.5rem; }
+.footer-wrap .footer-widget .contact-info h6 { font-size: 0.75rem; margin-bottom: 0.15rem; }
+.footer-wrap .footer-widget .contact-info p,
+.footer-wrap .footer-widget .contact-info a { font-size: 0.85rem; }
+
+/* Resources grid — compact multi-column, low visual weight */
+.footer-resources-full { padding-left: 0.5rem; }
+.footer-resources-full .footer-widget-title { margin-bottom: 0.5rem; }
+.footer-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+.footer-resource-grid a {
+  opacity: 0.88;
+  text-decoration: none;
+  display: block;
+}
+.footer-resource-grid a:hover { opacity: 1; text-decoration: underline; }
+@media (max-width: 991px) {
+  .footer-resource-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .footer-wrap .row.pt-100.pb-75 { padding-top: 2rem !important; padding-bottom: 1.5rem !important; }
+  .footer-resources-full { padding-left: 0; margin-top: 0.5rem; }
+  .footer-resource-grid { font-size: 0.75rem; gap: 0.25rem 0.5rem; }
 }
 
 /* ========== Safe Area for Notched Devices ========== */
