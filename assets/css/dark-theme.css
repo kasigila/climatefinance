@@ -484,4 +484,84 @@ input:checked + .slider:before {
     border-color: rgba(255, 255, 255, 0.15);
   }
 }
-/*# sourceMappingURL=dark-theme.css.map */
+
+/* Dark mode: custom elements - readable text */
+.theme-dark .green-dark,
+.theme-dark .grassroots-card h4,
+.theme-dark .content-title .green-dark {
+  color: #fff !important;
+}
+.theme-dark .grassroots-card {
+  background-color: #191919 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+.theme-dark .grassroots-card p,
+.theme-dark .grassroots-card-num {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+.theme-dark .grassroots-card-num { opacity: 0.7; }
+.theme-dark .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.theme-dark .content-callout,
+.theme-dark .pull-quote {
+  background: rgba(64, 134, 91, 0.15) !important;
+  border-color: #40865b !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+.theme-dark .cop-section-card {
+  background-color: #191919 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+.theme-dark .project-desc h1,
+.theme-dark .project-desc h3 {
+  color: #fff !important;
+}
+.theme-dark .project-desc p,
+.theme-dark .project-desc li {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.theme-dark .about-gallery-featured,
+.theme-dark .about-gallery-strip,
+.theme-dark .about-gallery-needs {
+  color: inherit;
+}
+.theme-dark .section-title span,
+.theme-dark .content-title p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.theme-dark .content-title h2,
+.theme-dark .content-title h3 {
+  color: #fff !important;
+}
+.theme-dark .badge.bg-success {
+  background-color: #40865b !important;
+  color: #fff !important;
+}
+.theme-dark .priority-section .p-exp {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.theme-dark .project-card.style1 .project-info h3 a,
+.theme-dark .project-card.style1 .project-info p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+.theme-dark .project-card.style1 .project-info .link {
+  color: #40865b !important;
+}
+
+/* Theme switch: ensure visible and not overlapping */
+.switch-theme-mode {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+@media (max-width: 991px) {
+  .switch-theme-mode {
+    top: auto;
+    bottom: 80px;
+    right: 12px;
+    transform: none;
+  }
+}
