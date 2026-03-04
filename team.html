@@ -44,56 +44,19 @@
 
     <link rel="stylesheet" href="assets/css/footer-modern.css">
 
+    <link rel="stylesheet" href="assets/css/design-system.css">
+
+    <link rel="stylesheet" href="assets/css/team.css">
+
     <title>Our Team - Africa Climate Finance</title>
 
         <link rel="icon" type="image/png" href="assets/img/favicon-f.png">
 
-        <style>
-            /* Team cards: show full info at first glance (no hover) */
-            .team-wrap.team-full-info .team-card.style1 { overflow: visible; }
-            .team-wrap.team-full-info .team-card.style1 .team-info {
-                position: relative;
-                bottom: auto;
-                border-radius: 0 0 5px 5px;
-            }
-            .team-wrap.team-full-info .team-card.style1 .team-info p { margin-bottom: 0; }
-            /* Executive row: Kenneth & Karen side by side */
-            .team-wrap.team-full-info .team-exec-row .team-card.style1 .team-info { padding: 25px; }
-            /* Team grid: responsive */
-            .team-wrap.team-full-info .team-grid .team-card.style1 img { width: 100%; height: 100%; object-fit: cover; }
-            /* Mobile */
-            @media (max-width: 767px) {
-                .team-wrap.team-full-info .team-exec-row { margin: 0; }
-                .team-wrap.team-full-info .team-exec-row > [class*="col-"] { 
-                    flex: 0 0 100%; max-width: 100%; 
-                    padding: 0 0 20px 0; margin-bottom: 0; 
-                    width: 100%;
-                }
-                .team-wrap.team-full-info .team-exec-row .team-card.style1 { 
-                    max-width: 100%; margin: 0 auto 20px; 
-                }
-                .team-wrap.team-full-info .team-exec-row .team-card.style1 .team-info { padding: 20px; }
-                .team-wrap.team-full-info .team-exec-row .team-card.style1 .team-info p { font-size: 14px; line-height: 1.5; }
-                .team-wrap.team-full-info .team-exec-row .team-card.style1 .team-info h3 { font-size: 18px; }
-                .team-wrap.team-full-info .team-exec-row .team-card.style1 img { 
-                    width: 100%; height: auto; min-height: 220px; max-height: 280px; object-fit: cover; display: block;
-                }
-                .team-wrap.team-full-info .team-grid { margin: 0 -6px; }
-                .team-wrap.team-full-info .team-grid > [class*="col-"] { padding: 0 6px; margin-bottom: 12px; }
-                .team-wrap.team-full-info .team-grid .team-card.style1 .team-info { padding: 12px; }
-                .team-wrap.team-full-info .team-grid .team-card.style1 .team-info p { font-size: 11px; line-height: 1.35; }
-                .team-wrap.team-full-info .team-grid .team-card.style1 .team-info h3 { font-size: 14px; }
-                .team-wrap.team-full-info .team-grid .team-card.style1 .team-info span { font-size: 11px; }
-                .team-wrap.team-full-info .team-grid .team-card.style1 img { max-height: 120px; object-fit: cover; }
-                .team-wrap.team-full-info .team-photo-bottom { padding: 0 10px; }
-                .team-wrap.team-full-info .team-photo-bottom img { max-height: 200px !important; }
-            }
-        </style>
     </head>
 
 
 
-    <body>
+    <body class="team-page">
 
 
 
@@ -677,7 +640,7 @@
 
                 <!-- Breadcrumb Start -->
 
-                <div class="breadcrumb-wrap bg-f br-1">
+                <div class="breadcrumb-wrap bg-f br-1 ds-hero-override">
 
                     <div class="container">
 
@@ -704,120 +667,131 @@
 
 
                  <!-- Team Section Start -->
-
-
                  <section class="team-wrap team-full-info ptb-100 bg-sand">
                     <div class="container">
-                        <div class="section-title style1 text-center mb-40">
-                            <span>Our Team <img src="assets/img/section-shape.png" alt="Image"></span>
-                            <h2>Leadership & Experts</h2>
+                        <div class="team-section-header">
+                            <span class="team-eyebrow">Our Team</span>
+                            <h2>Leadership &amp; Experts</h2>
                             <p>Executive leadership, financial inclusion, and technical implementation across Africa.</p>
                         </div>
-                        <h4 class="text-center mb-4 green-dark">Executive Leadership</h4>
-                        <div class="row justify-content-center team-exec-row mb-5">
-                            <div class="col-12 col-md-6 col-lg-6 mb-4">
-                                <div class="team-card style1">
-                                    <a href="kenneth.html"><img src="assets/img/team/kenneth.png" alt="Kenneth Davis Kasigila"></a>
-                                    <div class="team-info">
-                                        <h3><a href="kenneth.html">Kenneth Davis Kasigila</a></h3>
-                                        <span>Group CEO &amp; Founder</span>
-                                        <p class="small mt-2">Primary visionary behind the organization. Focuses on high-level capitalization, global partnerships with climate funds, and strategic expansion across the continent. GCF Focal Point for CRDB Bank; led Africa&apos;s first GCF-approved commercial bank funding proposal (US$200M).</p>
+                        <h4 class="team-subsection-title">Executive Leadership</h4>
+                        <div class="team-exec-grid">
+                            <article class="team-card-modern">
+                                <a href="kenneth.html" class="team-card-media">
+                                    <img src="assets/img/team/kenneth.png" alt="Kenneth Davis Kasigila">
+                                </a>
+                                <div class="team-card-body">
+                                    <h3><a href="kenneth.html">Kenneth Davis Kasigila</a></h3>
+                                    <span class="team-role">Group CEO &amp; Founder</span>
+                                    <p class="team-excerpt">Primary visionary behind the organization. Focuses on high-level capitalization, global partnerships with climate funds, and strategic expansion across the continent. GCF Focal Point for CRDB Bank; led Africa&apos;s first GCF-approved commercial bank funding proposal (US$200M).</p>
+                                    <div class="team-card-actions">
                                         <ul class="social-profile style1 list-style">
-                                            <li><a href="mailto:kenneth.kasigila@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
-                                            <li><a href="https://wa.me/255754763558" target="_blank"><i class="ri-phone-line"></i></a></li>
+                                            <li><a href="mailto:kenneth.kasigila@gmail.com" target="_blank" aria-label="Email Kenneth"><i class="ri-mail-line"></i></a></li>
+                                            <li><a href="https://wa.me/255754763558" target="_blank" aria-label="WhatsApp Kenneth"><i class="ri-phone-line"></i></a></li>
                                         </ul>
-                                        <a href="kenneth.html" class="btn style2 mt-3 w-100">View Profile <i class="ri-arrow-right-line"></i></a>
+                                        <a href="kenneth.html" class="btn-profile">View Profile <i class="ri-arrow-right-line"></i></a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-6 mb-4">
-                                <div class="team-card style1">
-                                    <a href="karen.html"><img src="assets/img/team/karen.png" alt="Karen Marie Kasigila"></a>
-                                    <div class="team-info">
-                                        <h3><a href="karen.html">Karen Marie Kasigila</a></h3>
-                                        <span>Director of Data Science</span>
-                                        <p class="small mt-2">Ensures every investment is backed by rigorous analytical modeling. Oversees proprietary risk-assessment tools, tracks real-time carbon sequestration data, and translates complex climate datasets into actionable financial strategies.</p>
+                            </article>
+                            <article class="team-card-modern">
+                                <a href="karen.html" class="team-card-media">
+                                    <img src="assets/img/team/karen.png" alt="Karen Marie Kasigila">
+                                </a>
+                                <div class="team-card-body">
+                                    <h3><a href="karen.html">Karen Marie Kasigila</a></h3>
+                                    <span class="team-role">Director of Data Science</span>
+                                    <p class="team-excerpt">Ensures every investment is backed by rigorous analytical modeling. Oversees proprietary risk-assessment tools, tracks real-time carbon sequestration data, and translates complex climate datasets into actionable financial strategies.</p>
+                                    <div class="team-card-actions">
                                         <ul class="social-profile style1 list-style">
-                                            <li><a href="https://linkedin.com/in/karen-marie-kasigila-443b73242" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-                                            <li><a href="mailto:Karen_Marie1@icloud.com" target="_blank"><i class="ri-mail-line"></i></a></li>
+                                            <li><a href="https://linkedin.com/in/karen-marie-kasigila-443b73242" target="_blank" aria-label="LinkedIn Karen"><i class="ri-linkedin-fill"></i></a></li>
+                                            <li><a href="mailto:Karen_Marie1@icloud.com" target="_blank" aria-label="Email Karen"><i class="ri-mail-line"></i></a></li>
                                         </ul>
-                                        <a href="karen.html" class="btn style2 mt-3 w-100">View Profile <i class="ri-arrow-right-line"></i></a>
+                                        <a href="karen.html" class="btn-profile">View Profile <i class="ri-arrow-right-line"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-                        <h4 class="text-center mb-4 green-dark">Team</h4>
-                        <div class="row justify-content-center team-grid">
-                            <div class="col-6 col-md-4 col-lg-4 mb-4">
-                                <div class="team-card style1">
-                                    <div><img src="assets/img/team/happy.png" alt="Happy Kasigila"></div>
-                                    <div class="team-info">
-                                        <h3>Happy Kasigila</h3>
-                                        <span>Manager</span>
-                                        <p class="small mt-2">Bridge between executive strategy and daily execution. Integrates Data Science insights into operations, maintains institutional compliance, and manages human capital for the group&apos;s green targets.</p>
-                                    </div>
+                        <h4 class="team-subsection-title">Team</h4>
+                        <div class="team-grid-modern team-grid-three">
+                            <article class="team-card-modern">
+                                <div class="team-card-media">
+                                    <img src="assets/img/team/happy.png" alt="Happy Kasigila">
                                 </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 mb-4">
-                                <div class="team-card style1">
-                                    <div><img src="assets/img/team/atupakisye.png" alt="Atupakisye Njalila"></div>
-                                    <div class="team-info">
-                                        <h3>Atupakisye Njalila</h3>
-                                        <span>Sectoral Loans Officer</span>
-                                        <p class="small mt-2">Manages the portfolio for large-scale, industry-specific green projects including renewable energy and sustainable infrastructure. Deep environmental risk auditing ensures all funded projects meet international &quot;green&quot; standards.</p>
+                                <div class="team-card-body">
+                                    <h3>Happy Kasigila</h3>
+                                    <span class="team-role">Manager</span>
+                                    <p class="team-excerpt">Bridge between executive strategy and daily execution. Integrates Data Science insights into operations, maintains institutional compliance, and manages human capital for the group&apos;s green targets.</p>
+                                </div>
+                            </article>
+                            <article class="team-card-modern">
+                                <div class="team-card-media">
+                                    <img src="assets/img/team/atupakisye.png" alt="Atupakisye Njalila">
+                                </div>
+                                <div class="team-card-body">
+                                    <h3>Atupakisye Njalila</h3>
+                                    <span class="team-role">Sectoral Loans Officer</span>
+                                    <p class="team-excerpt">Manages the portfolio for large-scale, industry-specific green projects including renewable energy and sustainable infrastructure. Deep environmental risk auditing ensures all funded projects meet international &quot;green&quot; standards.</p>
+                                    <div class="team-card-actions">
                                         <ul class="social-profile style1 list-style">
-                                            <li><a href="mailto:atupakisyenjalila@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
-                                            <li><a href="https://wa.me/255747022665" target="_blank"><i class="ri-phone-line"></i></a></li>
+                                            <li><a href="mailto:atupakisyenjalila@gmail.com" target="_blank" aria-label="Email Atupakisye"><i class="ri-mail-line"></i></a></li>
+                                            <li><a href="https://wa.me/255747022665" target="_blank" aria-label="WhatsApp Atupakisye"><i class="ri-phone-line"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 mb-4">
-                                <div class="team-card style1">
-                                    <div><img src="assets/img/team/rose.png" alt="Rose Mgode"></div>
-                                    <div class="team-info">
-                                        <h3>Rose Mgode</h3>
-                                        <span>Group Loans Officer</span>
-                                        <p class="small mt-2">Focuses on grassroots financial resilience by facilitating micro-lending to cooperatives. Ensures climate finance is accessible to small-scale business groups, particularly those in high-vulnerability regions.</p>
+                            </article>
+                            <article class="team-card-modern">
+                                <div class="team-card-media">
+                                    <img src="assets/img/team/rose.png" alt="Rose Mgode">
+                                </div>
+                                <div class="team-card-body">
+                                    <h3>Rose Mgode</h3>
+                                    <span class="team-role">Group Loans Officer</span>
+                                    <p class="team-excerpt">Focuses on grassroots financial resilience by facilitating micro-lending to cooperatives. Ensures climate finance is accessible to small-scale business groups, particularly those in high-vulnerability regions.</p>
+                                    <div class="team-card-actions">
                                         <ul class="social-profile style1 list-style">
-                                            <li><a href="mailto:mgoderose2@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
-                                            <li><a href="https://wa.me/255764641547" target="_blank"><i class="ri-phone-line"></i></a></li>
+                                            <li><a href="mailto:mgoderose2@gmail.com" target="_blank" aria-label="Email Rose"><i class="ri-mail-line"></i></a></li>
+                                            <li><a href="https://wa.me/255764641547" target="_blank" aria-label="WhatsApp Rose"><i class="ri-phone-line"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 mb-4">
-                                <div class="team-card style1">
-                                    <div><img src="https://ui-avatars.com/api/?name=Samson+Mwalusambo&size=400&background=40865b&color=fff" alt="Samson Mwalusambo (photo coming soon)"></div>
-                                    <div class="team-info">
-                                        <h3>Samson Mwalusambo</h3>
-                                        <span>Agriculture, Livestock &amp; Market Linkage Coordinator</span>
-                                        <p class="small mt-2">Boots-on-the-ground technical expertise. De-risks loans by training borrowers in climate-smart farming and livestock management, and builds farm-to-market pipelines so sustainable products reach profitable buyers.</p>
+                            </article>
+                            <article class="team-card-modern">
+                                <div class="team-card-media">
+                                    <img src="assets/img/team/samson.png" alt="Samson Mwalusambo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                                    <div class="team-avatar-fallback" style="display:none" aria-hidden="true">SM</div>
+                                </div>
+                                <div class="team-card-body">
+                                    <h3>Samson Mwalusambo</h3>
+                                    <span class="team-role">Agriculture, Livestock &amp; Market Linkage Coordinator</span>
+                                    <p class="team-excerpt">Boots-on-the-ground technical expertise. De-risks loans by training borrowers in climate-smart farming and livestock management, and builds farm-to-market pipelines so sustainable products reach profitable buyers.</p>
+                                    <div class="team-card-actions">
                                         <ul class="social-profile style1 list-style">
-                                            <li><a href="mailto:smwalusambo@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
-                                            <li><a href="https://wa.me/255764572393" target="_blank"><i class="ri-phone-line"></i></a></li>
+                                            <li><a href="mailto:smwalusambo@gmail.com" target="_blank" aria-label="Email Samson"><i class="ri-mail-line"></i></a></li>
+                                            <li><a href="https://wa.me/255764572393" target="_blank" aria-label="WhatsApp Samson"><i class="ri-phone-line"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 mb-4">
-                                <div class="team-card style1">
-                                    <div><img src="assets/img/team/rehema.png" alt="Rehema Mwateba"></div>
-                                    <div class="team-info">
-                                        <h3>Rehema Mwateba</h3>
-                                        <span>Women&apos;s Inclusion Advisor</span>
-                                        <p class="small mt-2">Leads the organization&apos;s gender-smart investing mandate. Ensures women entrepreneurs have equal access to capital and designs specific financial products that address the unique climate challenges faced by women-led households and businesses.</p>
+                            </article>
+                            <article class="team-card-modern">
+                                <div class="team-card-media">
+                                    <img src="assets/img/team/rehema.png" alt="Rehema Mwateba">
+                                </div>
+                                <div class="team-card-body">
+                                    <h3>Rehema Mwateba</h3>
+                                    <span class="team-role">Women&apos;s Inclusion Advisor</span>
+                                    <p class="team-excerpt">Leads the organization&apos;s gender-smart investing mandate. Ensures women entrepreneurs have equal access to capital and designs specific financial products that address the unique climate challenges faced by women-led households and businesses.</p>
+                                    <div class="team-card-actions">
                                         <ul class="social-profile style1 list-style">
-                                            <li><a href="mailto:rehema.mwateba@gmail.com" target="_blank"><i class="ri-mail-line"></i></a></li>
-                                            <li><a href="https://wa.me/255757996470" target="_blank"><i class="ri-phone-line"></i></a></li>
+                                            <li><a href="mailto:rehema.mwateba@gmail.com" target="_blank" aria-label="Email Rehema"><i class="ri-mail-line"></i></a></li>
+                                            <li><a href="https://wa.me/255757996470" target="_blank" aria-label="WhatsApp Rehema"><i class="ri-phone-line"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-                        <div class="section-title style1 text-center mt-5 pt-5 team-photo-bottom">
-                            <h4 class="green-dark mb-3">Our Team in the Field</h4>
-                            <p class="text-muted mb-0">Coming soon.</p>
+                        <div class="team-field-coming">
+                            <h4><i class="ri-user-search-line"></i> Our Team in the Field</h4>
+                            <p>Coming soon.</p>
                         </div>
                     </div>
                 </section>
