@@ -87,20 +87,18 @@
         });
     });
     
-    //Hero  Slider 
+    //Hero Slider - autoplay only, no arrows
     $(".hero-slider-one").owlCarousel({
-        nav: true,
+        nav: false,
         dots: false,
         loop: true,
         margin: 20,
         items: 1,
         animateOut: 'fadeOut',
-        thumbs: true,
-        thumbsPrerendered: true, 
-        navText: ['<i class="flaticon-left-arrow"></i>', '<i class="flaticon-right-arrow"></i>'],
+        thumbs: false,
         smartSpeed: 1300,
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 5000,
         autoplayHoverPause: false,
         responsiveClass: true,
         autoHeight: true,
@@ -274,31 +272,24 @@
         }
     });
 
-    //Blog Slider 
+    //Blog Slider (Partners) - autoplay, no nav arrows
     $(".blog-slider-one").owlCarousel({
-        nav: true,
+        nav: false,
         dots: true,
         loop: true,
-        navText: ['<i class="flaticon-left-arrow"></i>', '<i class="flaticon-right-arrow"></i>'],
         margin: 25,
         items: 1,
         thumbs: false,
         smartSpeed: 1300,
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 3500,
         autoplayHoverPause: false,
         responsiveClass: true,
         autoHeight: true,
         responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            1200: {
-                items: 3,
-            }
+            0: { items: 1 },
+            768: { items: 2 },
+            1200: { items: 3 }
         }
     });
 
