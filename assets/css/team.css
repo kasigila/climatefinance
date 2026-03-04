@@ -163,10 +163,17 @@
   line-height: 1.5;
   margin-bottom: 1rem;
   flex: 1;
+}
+/* Executive Leadership only: clamp excerpt (they have View Profile for full bio) */
+.team-page .team-exec-grid .team-excerpt {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+/* Team grid: show full description (no profile pages) */
+.team-page .team-grid-modern .team-excerpt {
+  display: block;
 }
 .team-page .team-card-actions {
   display: flex;
