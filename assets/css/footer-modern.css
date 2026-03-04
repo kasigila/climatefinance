@@ -1,0 +1,207 @@
+/*-----------------------------------------------------------
+   Africa Climate Finance - Modern Footer
+   3-layer: CTA | Main Footer | Bottom Bar
+-----------------------------------------------------------*/
+
+/* Section 1 — Footer CTA */
+.footer-cta {
+  background: linear-gradient(135deg, rgba(15, 21, 18, 0.97) 0%, rgba(45, 90, 61, 0.4) 100%);
+  padding: clamp(48px, 6vw, 72px) 24px;
+  text-align: center;
+}
+.footer-cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-cta h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  color: #eaeaea;
+  margin-bottom: 0.75rem;
+}
+.footer-cta p {
+  font-size: 1rem;
+  color: rgba(234, 234, 234, 0.9);
+  max-width: 42ch;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+.footer-cta-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.footer-cta .btn-primary {
+  background: #40865b;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.footer-cta .btn-primary:hover {
+  background: #2d5a3d;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.footer-cta .btn-secondary {
+  background: transparent;
+  color: #eaeaea;
+  border: 1px solid rgba(234, 234, 234, 0.5);
+  padding: 11px 23px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.footer-cta .btn-secondary:hover {
+  color: #40865b;
+  border-color: #40865b;
+  background: transparent;
+}
+
+/* Section 2 — Main Footer */
+.footer-modern {
+  background: #0f1512;
+  color: #eaeaea;
+  padding: clamp(40px, 5vw, 64px) 24px;
+}
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 40px 32px;
+}
+@media (max-width: 991px) {
+  .footer-main { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 575px) {
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Footer Column */
+.footer-column { }
+.footer-column-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Column 1 — Organization */
+.footer-org .footer-logo {
+  display: block;
+  margin-bottom: 1rem;
+}
+.footer-org .footer-logo img {
+  height: 40px;
+  width: auto;
+}
+.footer-org .footer-mission {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(234, 234, 234, 0.85);
+  margin-bottom: 1.25rem;
+  max-width: 36ch;
+}
+.footer-social {
+  display: flex;
+  gap: 8px;
+}
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.footer-social a:hover {
+  background: #40865b;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Column 2 & 3 — Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li { margin-bottom: 0.5rem; }
+.footer-links li:last-child { margin-bottom: 0; }
+.footer-links a {
+  font-size: 0.9rem;
+  color: rgba(234, 234, 234, 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-links a:hover { color: #40865b; }
+
+/* Column 4 — Contact */
+.footer-contact { }
+.footer-contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.footer-contact-item:last-child { margin-bottom: 0; }
+.footer-contact-item i {
+  color: #40865b;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.footer-contact-item a {
+  color: rgba(234, 234, 234, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-contact-item a:hover { color: #40865b; }
+.footer-contact-item span {
+  color: rgba(234, 234, 234, 0.85);
+}
+
+/* Section 3 — Footer Bottom Bar */
+.footer-bottom-bar {
+  background: #0a0e0c;
+  padding: 14px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer-bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.footer-copyright {
+  font-size: 0.85rem;
+  color: rgba(234, 234, 234, 0.7);
+  margin: 0;
+}
+.footer-powered {
+  font-size: 0.85rem;
+  color: rgba(234, 234, 234, 0.6);
+  margin: 0;
+}
+.footer-powered a {
+  color: rgba(234, 234, 234, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-powered a:hover { color: #40865b; }
