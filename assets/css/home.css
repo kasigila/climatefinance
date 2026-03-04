@@ -102,6 +102,23 @@
 /* ========== Hero Carousel (automatic, no arrows) ========== */
 .home-hero-slider-wrap .hero-slide-item {
   min-height: 70vh;
+  position: relative;
+}
+.home-hero-slider-wrap .hero-slide-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.15) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+.home-hero-slider-wrap .hero-slide-item .container,
+.home-hero-slider-wrap .hero-slide-item .hero-content {
+  position: relative;
+  z-index: 1;
 }
 .home-hero-slider-wrap .hero-content .home-hero-desc {
   font-size: 1rem;
