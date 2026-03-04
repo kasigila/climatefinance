@@ -1,0 +1,270 @@
+/*-----------------------------------------------------------
+   Africa Climate Finance - Contact Page
+   Form, contact card, map layout improvements
+-----------------------------------------------------------*/
+
+.contact-page {
+  --contact-green: #40865b;
+  --contact-green-dark: #2d5a3d;
+  --contact-container: min(1100px, 95vw);
+  --contact-radius: 12px;
+  --contact-input-bg: #fff;
+  --contact-input-border: #d1d9d4;
+  --contact-input-text: #1a2e22;
+}
+
+/* Compact hero */
+.contact-page .breadcrumb-wrap {
+  padding: clamp(32px, 4vh, 56px) 0 !important;
+  min-height: auto !important;
+}
+.contact-page .breadcrumb-wrap.ds-hero-override {
+  padding: clamp(32px, 4vh, 56px) 0 !important;
+}
+
+/* Reduce gap between hero and form section */
+.contact-page .contact-us-wrap {
+  padding-top: clamp(40px, 4vw, 56px) !important;
+  padding-bottom: clamp(48px, 5vw, 72px) !important;
+}
+
+/* Section header */
+.contact-page .contact-us-wrap .section-title {
+  margin-bottom: clamp(32px, 4vw, 48px) !important;
+}
+
+/* Form + contact container: consistent max-width */
+.contact-page .contact-main-row {
+  max-width: var(--contact-container);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== Form UI ========== */
+.contact-page .contact-form input[type="text"],
+.contact-page .contact-form input[type="email"],
+.contact-page .contact-form input[type="tel"],
+.contact-page .contact-form textarea {
+  background: var(--contact-input-bg) !important;
+  border: 1px solid var(--contact-input-border) !important;
+  color: var(--contact-input-text) !important;
+  border-radius: var(--contact-radius) !important;
+  padding: 14px 18px !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+.contact-page .contact-form input::placeholder,
+.contact-page .contact-form textarea::placeholder {
+  color: #6b7c72 !important;
+  opacity: 0.9 !important;
+}
+.contact-page .contact-form input:hover,
+.contact-page .contact-form textarea:hover {
+  border-color: #a8b8ae !important;
+}
+.contact-page .contact-form input:focus,
+.contact-page .contact-form textarea:focus {
+  outline: none !important;
+  border-color: var(--contact-green) !important;
+  box-shadow: 0 0 0 3px rgba(64,134,91,0.15) !important;
+}
+
+.contact-page .contact-form .form-group {
+  margin-bottom: 1.25rem !important;
+}
+.contact-page .contact-form textarea {
+  min-height: 140px !important;
+  resize: vertical !important;
+}
+
+/* Checkbox: aligned and readable */
+.contact-page .contact-form .form-check {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  padding-left: 0 !important;
+}
+.contact-page .contact-form .form-check-input {
+  margin-top: 0.3em !important;
+  margin-left: 0 !important;
+  width: 1.1em !important;
+  height: 1.1em !important;
+  border: 2px solid var(--contact-input-border) !important;
+  border-radius: 4px !important;
+  flex-shrink: 0 !important;
+}
+.contact-page .contact-form .form-check-input:checked {
+  background-color: var(--contact-green) !important;
+  border-color: var(--contact-green) !important;
+}
+.contact-page .contact-form .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(64,134,91,0.2) !important;
+}
+.contact-page .contact-form .form-check-label {
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  color: #3d4f45 !important;
+}
+.contact-page .contact-form .form-check-label a {
+  color: var(--contact-green) !important;
+  text-decoration: underline !important;
+}
+.contact-page .contact-form .form-check-label a:hover {
+  color: var(--contact-green-dark) !important;
+}
+
+/* CTA Button: modern primary */
+.contact-page .contact-form .btn.style1[type="submit"] {
+  padding: 14px 28px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--contact-radius) !important;
+  background: var(--contact-green) !important;
+  border: none !important;
+  transition: background 0.2s, transform 0.02s !important;
+  max-width: 200px !important;
+  margin: 0 !important;
+}
+.contact-page .contact-form .btn.style1[type="submit"]:hover {
+  background: var(--contact-green-dark) !important;
+}
+.contact-page .contact-form .btn.style1[type="submit"]:focus {
+  outline: 2px solid var(--contact-green) !important;
+  outline-offset: 2px !important;
+}
+@media (max-width: 767px) {
+  .contact-page .contact-form .btn.style1[type="submit"] {
+    max-width: 100% !important;
+  }
+}
+
+/* ========== Contact info card ========== */
+.contact-page .contact-item-wrap {
+  background: #fff;
+  border-radius: var(--contact-radius);
+  padding: clamp(24px, 3vw, 32px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  height: 100%;
+}
+
+.contact-page .contact-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eef2ef;
+}
+.contact-page .contact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.contact-page .contact-item:first-child {
+  padding-top: 0;
+}
+
+.contact-page .contact-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--contact-green-dark);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-page .contact-item h3::before {
+  content: '';
+  width: 4px;
+  height: 1em;
+  background: var(--contact-green);
+  border-radius: 2px;
+}
+
+.contact-page .contact-item p,
+.contact-page .contact-item a {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #3d4f45;
+  margin: 0;
+  display: block;
+}
+.contact-page .contact-item a {
+  color: var(--contact-green);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+.contact-page .contact-item a:hover {
+  color: var(--contact-green-dark);
+  text-decoration: underline;
+}
+.contact-page .contact-item a:last-of-type {
+  margin-bottom: 0;
+}
+
+.contact-page .contact-item .social-profile {
+  display: flex;
+  gap: 10px;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.contact-page .contact-item .social-profile a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(64,134,91,0.1);
+  color: var(--contact-green);
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 0 !important;
+}
+.contact-page .contact-item .social-profile a:hover {
+  background: var(--contact-green);
+  color: #fff;
+  text-decoration: none !important;
+}
+
+/* ========== Map section ========== */
+.contact-page .contact-map-section {
+  background: #f6f8f7;
+  padding: clamp(40px, 5vw, 60px) 0;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.contact-page .contact-map-section h3 {
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 600;
+  color: var(--contact-green-dark);
+  text-align: center;
+  margin-bottom: clamp(20px, 2.5vw, 28px);
+}
+
+.contact-page .contact-map-wrap {
+  max-width: var(--contact-container);
+  margin: 0 auto;
+  padding: 0 24px;
+  border-radius: var(--contact-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  background: #fff;
+}
+
+.contact-page .contact-map-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 380px;
+  max-height: min(420px, 50vw);
+  border: 0;
+}
+@media (max-width: 767px) {
+  .contact-page .contact-map-wrap iframe {
+    height: 280px;
+  }
+}
+
+/* Ensure chat widget doesn't cover form on mobile */
+@media (max-width: 480px) {
+  .contact-page .contact-form {
+    padding-bottom: 80px;
+  }
+}
