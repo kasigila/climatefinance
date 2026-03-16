@@ -9,6 +9,9 @@
   var baseUrl = (base && base.href) ? base.href.replace(/\/?$/, '/') : '';
   fetch(baseUrl + 'inc/footer.html')
     .then(function(r) { return r.ok ? r.text() : Promise.reject(); })
-    .then(function(html) { el.innerHTML = html; })
+    .then(function(html) {
+      el.innerHTML = html;
+      if (window.__i18nApplyTranslations) window.__i18nApplyTranslations();
+    })
     .catch(function() {});
 })();

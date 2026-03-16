@@ -375,6 +375,18 @@ img.img-fluid {
   .footer-bottom { padding-bottom: env(safe-area-inset-bottom); }
 }
 
+/* ========== Language Dropdown - No Layout Shift ========== */
+.select-lang .navbar-language .dropdown-toggle .lang-name {
+  min-width: 4.5rem;
+  display: inline-block;
+  text-align: left;
+}
+@media (max-width: 991px) {
+  .header-wrap .header-top-right .select-lang .dropdown-toggle span {
+    min-width: 4.5rem;
+  }
+}
+
 /* ========== Reduced Motion ========== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

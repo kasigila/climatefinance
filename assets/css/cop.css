@@ -272,3 +272,39 @@
   outline: 2px solid var(--cop-green);
   outline-offset: 2px;
 }
+
+/* Impact stories after Key Insights */
+.cop-page .cop-impact-stories {
+  border-top: 1px solid rgba(64,134,91,0.2);
+}
+.cop-page .cop-impact-stories h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cop-green-dark);
+}
+.cop-page .cop-story-card {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.cop-page .cop-story-card:last-child { border-bottom: none; }
+.cop-page .cop-story-images a {
+  display: block;
+  border-radius: var(--cop-radius);
+  overflow: hidden;
+  box-shadow: var(--cop-shadow);
+}
+.cop-page .cop-story-images img {
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+.cop-page .cop-testimonial-quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #3d4f45;
+  padding: 1rem 1.25rem;
+  background: rgba(64,134,91,0.06);
+  border-left: 4px solid var(--cop-green);
+  border-radius: 0 8px 8px 0;
+  margin: 0;
+}

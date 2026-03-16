@@ -324,13 +324,7 @@
 
                                   <li class="nav-item">
 
-                                      <a href="contact.php.html#" class="nav-link">
-
-                                          What We Do
-
-                                          <i class="ri-add-line"></i>
-
-                                      </a>
+                                      <a href="contact.php.html#" class="nav-link"><span data-i18n="nav.whatWeDo">What We Do</span> <i class="ri-add-line"></i></a>
 
                                      
                                       <ul class="dropdown-menu">
@@ -646,13 +640,13 @@
 
                         <div class="breadcrumb-title">
 
-                            <h2>Contact Us</h2>
+                            <h2 data-i18n="contact.title">Contact Us</h2>
 
                             <ul class="breadcrumb-menu list-style">
 
-                                <li><a href="index.html">Home </a></li>
+                                <li><a href="index.html" data-i18n="common.home">Home</a></li>
 
-                                <li>Contact Us</li>
+                                <li data-i18n="contact.title">Contact Us</li>
 
                             </ul>
 
@@ -674,9 +668,9 @@
 
                         <div class="section-title style1 text-center mb-40">
 
-                            <span>Contact Us<img src="assets/img/section-shape.png" alt="Image"></span>
+                            <span data-i18n="contact.title">Contact Us</span><img src="assets/img/section-shape.png" alt="Image">
 
-                            <h2>Get In Touch With Us</h2>
+                            <h2 data-i18n="contact.getInTouch">Get In Touch With Us</h2>
 
                         </div>
 
@@ -696,7 +690,7 @@
 
                                                 <div class="form-group">
 
-                                                    <input type="text" name="name" placeholder="Name*" id="name"
+                                                    <input type="text" name="name" id="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Name*"
 
                                                         required data-error="Please enter your name">
 
@@ -712,7 +706,7 @@
 
                                                     <input type="email" name="email" id="email" required
 
-                                                        placeholder="Email*" data-error="Please enter your email">
+                                                        data-i18n-placeholder="contact.emailPlaceholder" placeholder="Email*" data-error="Please enter your email">
 
                                                     <div class="help-block with-errors"></div>
 
@@ -726,7 +720,7 @@
 
                                                     <input type="tel" name="phone" id="phone" required
 
-                                                        placeholder="Phone*" data-error="Please enter your phone">
+                                                        data-i18n-placeholder="contact.phonePlaceholder" placeholder="Phone*" data-error="Please enter your phone">
 
                                                     <div class="help-block with-errors"></div>
 
@@ -738,7 +732,7 @@
 
                                                 <div class="form-group">
 
-                                                    <input type="text" name="msg_subject" placeholder="Subject*" id="msg_subject" required data-error="Please enter your subject">
+                                                    <input type="text" name="msg_subject" id="msg_subject" data-i18n-placeholder="contact.subjectPlaceholder" placeholder="Subject*" required data-error="Please enter your subject">
 
                                                     <div class="help-block with-errors"></div>
 
@@ -750,7 +744,7 @@
 
                                                 <div class="form-group v1">
 
-                                                    <textarea name="message" id="message" placeholder="Your Messages.." cols="30" rows="10" required data-error="Please enter your message"></textarea>
+                                                    <textarea name="message" id="message" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Your Messages.." cols="30" rows="10" required data-error="Please enter your message"></textarea>
 
                                                     <div class="help-block with-errors"></div>
 
@@ -782,7 +776,7 @@
 
                                                         <label class="form-check-label" for="gridCheck">
 
-                                                            I agree to the <a class="link style1" href="terms-of-service.html">Terms</a> and <a class="link style1" href="privacy-policy.html">Privacy Policy</a>
+                                                            <span data-i18n="contact.agreementBefore">I agree to the</span> <a class="link style1" href="terms-of-service.html" data-i18n="contact.terms">Terms</a> <span data-i18n="contact.agreementAnd">and</span> <a class="link style1" href="privacy-policy.html" data-i18n="contact.privacyPolicy">Privacy Policy</a>
 
                                                         </label>
 
@@ -796,7 +790,7 @@
 
                                             <div class="col-12">
 
-                                                <button type="submit" class="btn style1">Send Message</button>
+                                                <button type="submit" class="btn style1" data-i18n="contact.sendMessage">Send Message</button>
 
                                                 <div id="msgSubmit" class="h3 text-center hidden"></div>
 
@@ -818,7 +812,7 @@
 
                                     <div class="contact-item">
 
-                                        <h3>Our Address</h3>
+                                        <h3 data-i18n="contact.ourAddress">Our Address</h3>
 
                                         <p>Box 82, Rungwe-Mbeya</p>
 
@@ -826,7 +820,7 @@
 
                                     <div class="contact-item">
 
-                                        <h3>Email Address</h3>
+                                        <h3 data-i18n="contact.emailAddress">Email Address</h3>
 
                                         <a href="mailto:info@climatefinance.co.tz">info@climatefinance.co.tz</a>
 
@@ -836,7 +830,7 @@
 
                                     <div class="contact-item">
 
-                                        <h3>24/7 Support</h3>
+                                        <h3 data-i18n="contact.support">24/7 Support</h3>
 
                                         <a href="https://wa.me/255754763558">+255(0) 754 763 558</a> <br>
                                         <a href="https://wa.me/12698613487">+1 (269) 861-3487</a>
@@ -847,7 +841,7 @@
 
                                     <div class="contact-item">
 
-                                        <h3>Follow us</h3>
+                                        <h3 data-i18n="contact.followUs">Follow us</h3>
 
                                         <ul class="social-profile style2 list-style">
 
@@ -910,7 +904,7 @@
                 <!-- Map section: Find Us -->
                 <section class="contact-map-section" aria-labelledby="find-us-heading">
                     <div class="container">
-                        <h3 id="find-us-heading">Find Us</h3>
+                        <h3 id="find-us-heading" data-i18n="contact.findUs">Find Us</h3>
                         <div class="contact-map-wrap">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127385!2d33.667!3d-9.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMTUnMDAuMCJTIDMzwrA0MCcwMC4wIkU!5e0!3m2!1sen!2stz!4v1709481600!5m2!1sen!2stz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Africa Climate Finance location"></iframe>
                         </div>
@@ -969,6 +963,7 @@
 
     <script src="assets/js/tweenmax.min.js"></script>
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 
 
