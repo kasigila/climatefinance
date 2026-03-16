@@ -102,6 +102,7 @@
 @media (min-width: 992px) {
   .cop-page .cop-image-grid.cop-grid-three { grid-template-columns: repeat(3, 1fr); }
   .cop-page .cop-image-grid.cop-grid-four { grid-template-columns: repeat(2, 1fr); }
+  .cop-page .cop-image-grid.cop-grid-many { grid-template-columns: repeat(4, 1fr); }
 }
 
 .cop-page .cop-image-grid a {
