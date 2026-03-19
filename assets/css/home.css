@@ -120,6 +120,9 @@
   position: relative;
   z-index: 1;
 }
+.home-hero-slider-wrap .hero-content h1 {
+  color: #fff;
+}
 .home-hero-slider-wrap .hero-content .home-hero-desc {
   font-size: 1rem;
   color: rgba(255,255,255,0.9);

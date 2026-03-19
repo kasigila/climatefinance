@@ -299,6 +299,11 @@
   width: 100%;
   object-fit: cover;
 }
+.cop-page .cop-story-images--full img {
+  max-height: none;
+  height: auto;
+  object-fit: contain;
+}
 .cop-page .cop-testimonial-quote {
   font-size: 0.95rem;
   font-style: italic;
