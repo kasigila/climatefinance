@@ -542,3 +542,159 @@
     color: #fff;
   }
 }
+
+/* Insights on Climate Policy & Finance (profile + standalone page) */
+.insights-page .insights-inner {
+  max-width: var(--team-container);
+  margin: 0 auto;
+}
+.insights-page .insights-inner h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a2e22;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(64, 134, 91, 0.2);
+}
+.insights-page .insights-inner p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #3d4f45;
+  margin-bottom: 1rem;
+}
+.insights-page .insights-inner p:last-child {
+  margin-bottom: 0;
+}
+.insights-page .insights-inner ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.insights-page .insights-inner ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3d4f45;
+}
+.insights-page .insights-inner ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background: var(--team-green);
+  border-radius: 50%;
+}
+.insights-page .insights-inner strong {
+  color: #1a2e22;
+}
+.insights-page .insights-inner.insights-card {
+  background: #fff;
+  border-radius: var(--team-radius);
+  padding: clamp(24px, 3vw, 32px);
+  box-shadow: var(--team-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.profile-page .profile-insights-section .profile-insights-figure,
+.insights-page .insights-inner .profile-insights-figure {
+  margin: 0 0 1.25rem;
+  border-radius: var(--team-radius);
+  overflow: hidden;
+  box-shadow: var(--team-shadow);
+}
+.profile-page .profile-insights-section .profile-insights-figure a,
+.insights-page .insights-inner .profile-insights-figure a {
+  display: block;
+  line-height: 0;
+}
+.profile-page .profile-insights-section .profile-insights-figure img,
+.insights-page .insights-inner .profile-insights-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.profile-page .profile-insights-section .profile-insights-article-title,
+.insights-page .insights-inner .profile-insights-article-title {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 600;
+  color: var(--team-green-dark);
+  margin: 1.75rem 0 0.85rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  line-height: 1.35;
+}
+.profile-page .profile-insights-section .profile-insights-subhead,
+.insights-page .insights-inner .profile-insights-subhead {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a2e22;
+  margin: 1.35rem 0 0.5rem;
+}
+.profile-page .profile-insights-section .profile-insights-grid,
+.insights-page .insights-inner .profile-insights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--team-gap);
+  margin: 1.25rem 0;
+}
+@media (min-width: 768px) {
+  .profile-page .profile-insights-section .profile-insights-grid,
+  .insights-page .insights-inner .profile-insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.profile-page .profile-insights-section .profile-insights-grid a,
+.insights-page .insights-inner .profile-insights-grid a {
+  display: block;
+  border-radius: var(--team-radius);
+  overflow: hidden;
+  box-shadow: var(--team-shadow);
+  aspect-ratio: 4 / 3;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.profile-page .profile-insights-section .profile-insights-grid a:hover,
+.insights-page .insights-inner .profile-insights-grid a:hover {
+  box-shadow: var(--team-shadow-hover);
+  transform: translateY(-2px);
+}
+.profile-page .profile-insights-section .profile-insights-grid img,
+.insights-page .insights-inner .profile-insights-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.profile-page .profile-insights-section .profile-insights-panel,
+.insights-page .insights-inner .profile-insights-panel {
+  margin: 1.25rem 0 0;
+  border-radius: var(--team-radius);
+  overflow: hidden;
+  box-shadow: var(--team-shadow);
+}
+.profile-page .profile-insights-section .profile-insights-panel a,
+.insights-page .insights-inner .profile-insights-panel a {
+  display: block;
+  line-height: 0;
+}
+.profile-page .profile-insights-section .profile-insights-panel img,
+.insights-page .insights-inner .profile-insights-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.profile-page .profile-insights-section .profile-insights-biofooter,
+.insights-page .insights-inner .profile-insights-biofooter {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3d4f45;
+  font-style: italic;
+  margin-bottom: 0;
+}
