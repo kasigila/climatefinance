@@ -140,6 +140,19 @@
         $('html, body').animate({ scrollTop: target.offset().top - 90 }, 500);
     });
 
+    // Collapse dense editorial cards so pages feel concise by default.
+    $('.cop-card, .cop-story-card, .profile-card').each(function() {
+        var card = $(this);
+        var blocks = card.children('p, ul, blockquote, .cop-takeaways, .problem-solution-grid, .beneficiary-icon-list');
+        if (blocks.length < 4 || card.find('.acf-read-more').length) return;
+        card.addClass('is-collapsible is-collapsed');
+        $('<button type="button" class="acf-read-more">Read more</button>').appendTo(card).on('click', function() {
+            var btn = $(this);
+            card.toggleClass('is-collapsed');
+            btn.text(card.hasClass('is-collapsed') ? 'Read more' : 'Show less');
+        });
+    });
+
     //Testimonial Slider 
     $(".testimonial-slider-one").owlCarousel({
         nav: true,
