@@ -18,6 +18,7 @@
         ourTeam: 'Our Team',
         copEngagements: 'COP Engagements',
         climatePolicyInsights: 'Insights on Climate Policy & Finance',
+        beneficiaries: 'Our Beneficiaries',
         whatWeDo: 'What We Do',
         contactUs: 'Contact Us',
         search: 'Search',
@@ -75,7 +76,7 @@
         emailPlaceholder: 'Email*',
         phonePlaceholder: 'Phone*',
         subjectPlaceholder: 'Subject*',
-        messagePlaceholder: 'Your Messages..',
+        messagePlaceholder: 'Your Message*',
         agreementBefore: 'I agree to the',
         agreementAnd: 'and',
         terms: 'Terms',
@@ -87,12 +88,13 @@
         ctaDesc: 'Partner with Africa Climate Finance to empower communities and scale climate-smart solutions.',
         partnerWithUs: 'Partner With Us',
         contactUs: 'Contact Us',
-        explore: 'Explore',
+        explore: 'Quick Links',
         aboutUs: 'About Us',
         ourTeam: 'Our Team',
         whatWeDo: 'What We Do',
         climatePolicyInsights: 'Insights on Climate Policy & Finance',
         copEngagements: 'COP Engagements',
+        beneficiaries: 'Our Beneficiaries',
         events: 'Events',
         faq: 'FAQ',
         donate: 'Donate',
@@ -112,6 +114,7 @@
         ourTeam: 'Timu Yetu',
         climatePolicyInsights: 'Maarifa ya Sera ya Mazingira na Fedha',
         copEngagements: 'Maandalizi ya COP',
+        beneficiaries: 'Wanufaika Wetu',
         whatWeDo: 'Tunafanya Nini',
         contactUs: 'Wasiliana Nasi',
         search: 'Tafuta',
@@ -169,7 +172,7 @@
         emailPlaceholder: 'Barua pepe*',
         phonePlaceholder: 'Simu*',
         subjectPlaceholder: 'Mada*',
-        messagePlaceholder: 'Ujumbe wako..',
+        messagePlaceholder: 'Ujumbe wako*',
         agreementBefore: 'Nakubali',
         agreementAnd: 'na',
         terms: 'Masharti',
@@ -181,12 +184,13 @@
         ctaDesc: 'Shiriki na Africa Climate Finance kuwezesha jamii na kuongeza suluhu zenye akili ya hali ya hewa.',
         partnerWithUs: 'Shiriki Nasi',
         contactUs: 'Wasiliana Nasi',
-        explore: 'Gundua',
+        explore: 'Viungo vya Haraka',
         aboutUs: 'Kuhusu Sisi',
         ourTeam: 'Timu Yetu',
         climatePolicyInsights: 'Maarifa ya Sera ya Mazingira na Fedha',
         whatWeDo: 'Tunafanya Nini',
         copEngagements: 'Maandalizi ya COP',
+        beneficiaries: 'Wanufaika Wetu',
         events: 'Matukio',
         faq: 'Maswali',
         donate: 'Changia',
@@ -280,7 +284,8 @@
   function initLangDropdown() {
     var menus = document.querySelectorAll('.language-dropdown-menu');
     menus.forEach(function(menu) {
-      menu.innerHTML = '<a class="dropdown-item lang-option" href="#" data-lang="en"><img src="assets/img/uk.png" alt=""> <span>Eng</span></a><a class="dropdown-item lang-option" href="#" data-lang="sw"><span>Swahili</span></a>';
+      var path = window.location.pathname.split('/').pop() || 'index.html';
+      menu.innerHTML = '<a class="dropdown-item lang-option" href="' + path + '?lang=en" data-lang="en"><img src="assets/img/uk.png" alt="English language"> <span>English</span></a><a class="dropdown-item lang-option" href="' + path + '?lang=sw" data-lang="sw"><span>Swahili</span></a>';
 
       menu.querySelectorAll('.lang-option').forEach(function(opt) {
         opt.addEventListener('click', function(e) {

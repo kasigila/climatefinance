@@ -94,6 +94,7 @@
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
+  min-height: 100%;
 }
 .team-page .team-card-modern:hover {
   box-shadow: var(--team-shadow-hover);
@@ -232,6 +233,12 @@
   outline: 2px solid var(--team-green);
   outline-offset: 2px;
 }
+.team-page .team-card-actions--empty {
+  min-height: 36px;
+  color: #7b8a82;
+  font-size: 0.85rem;
+  font-style: italic;
+}
 
 /* Executive row - larger cards, 2 cols */
 .team-page .team-exec-grid {
@@ -264,6 +271,24 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+.profile-page .profile-achievement {
+  margin: 16px 0;
+  padding: 18px;
+  border-radius: 14px;
+  background: #163724;
+  color: #fff;
+}
+.profile-page .profile-achievement strong,
+.profile-page .profile-achievement span {
+  display: block;
+}
+.profile-page .profile-achievement strong {
+  color: #d9911b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  margin-bottom: 6px;
 }
 .team-page .team-field-coming h4 i {
   font-size: 1.2rem;
