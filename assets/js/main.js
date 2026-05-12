@@ -87,10 +87,10 @@
         });
     });
     
-    //Hero Slider - autoplay only, no arrows
+    //Hero Slider
     $(".hero-slider-one").owlCarousel({
-        nav: false,
-        dots: false,
+        nav: true,
+        dots: true,
         loop: true,
         margin: 20,
         items: 1,
@@ -99,9 +99,45 @@
         smartSpeed: 1300,
         autoplay: true,
         autoplayTimeout: 5000,
-        autoplayHoverPause: false,
+        autoplayHoverPause: true,
+        navText: ['<i class="ri-arrow-left-s-line"></i>', '<i class="ri-arrow-right-s-line"></i>'],
         responsiveClass: true,
         autoHeight: true,
+    });
+
+    // Prevent utility anchors from exposing template URLs or jumping unexpectedly.
+    $('a[href="#"].back-to-top, .menu-close a[href="#"], .mobile-menu a[href="#"]').on('click', function(e) {
+        e.preventDefault();
+    });
+
+    // Lightweight YouTube preview: click swaps thumbnail card for an iframe embed.
+    $('.js-video-preview').on('click', function(e) {
+        e.preventDefault();
+        var wrap = $(this);
+        var src = wrap.data('video-src');
+        var title = wrap.data('video-title') || 'Africa Climate Finance video';
+        if (!src) return;
+        wrap.html('<iframe src="' + src + '" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+        wrap.addClass('is-playing');
+    });
+
+    // Home ESG tabs.
+    $('.home-sdg-tab').on('click', function() {
+        var tab = $(this);
+        $('.home-sdg-tab').removeClass('active').attr('aria-selected', 'false');
+        tab.addClass('active').attr('aria-selected', 'true');
+        $('.home-sdg-panel').removeClass('active');
+        $('#' + tab.attr('aria-controls')).addClass('active');
+    });
+
+    // About page section tabs smooth scroll.
+    $('.ds-impact-nav a[href^="#"]').on('click', function(e) {
+        var target = $($(this).attr('href'));
+        if (!target.length) return;
+        e.preventDefault();
+        $('.ds-impact-nav .ds-pill').removeClass('active');
+        $(this).addClass('active');
+        $('html, body').animate({ scrollTop: target.offset().top - 90 }, 500);
     });
 
     //Testimonial Slider 
