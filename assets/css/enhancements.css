@@ -443,6 +443,366 @@
   .donation-use-grid { grid-template-columns: 1fr; }
 }
 
+/* ========== Premium minimal/mobile-first redesign layer ========== */
+:root {
+  --acf-ink: #17231c;
+  --acf-muted: #637168;
+  --acf-soft: #f7f6f1;
+  --acf-line: #e4e0d6;
+  --acf-green: #24573a;
+  --acf-green-2: #3f7b55;
+  --acf-gold: #c58b2a;
+  --acf-radius: 18px;
+  --acf-shadow: 0 18px 45px rgba(23, 35, 28, 0.08);
+}
+
+html { background: var(--acf-soft); }
+body {
+  background: var(--acf-soft) !important;
+  color: var(--acf-ink) !important;
+  font-family: Inter, "Spline Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  letter-spacing: -0.01em;
+}
+p {
+  color: var(--acf-muted) !important;
+  line-height: 1.68 !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--acf-ink) !important;
+  letter-spacing: -0.035em;
+  line-height: 1.08 !important;
+}
+.page-wrapper { background: var(--acf-soft); }
+.container,
+.home-container,
+.ds-container {
+  max-width: 1120px !important;
+}
+
+/* Calm, high-end header */
+.header-wrap {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.header-wrap .header-top {
+  background: #16231b !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 6px 0 !important;
+}
+.header-wrap .header-bottom {
+  background: rgba(255,255,255,0.94) !important;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(36,87,58,0.12);
+  box-shadow: 0 10px 35px rgba(23,35,28,0.06);
+}
+.content-wrapper {
+  margin-top: 112px !important;
+}
+.home-page .content-wrapper {
+  margin-top: 0 !important;
+}
+.navbar-brand img {
+  max-height: 48px !important;
+}
+.header-wrap .navbar .navbar-nav .nav-item a,
+.navbar-nav .nav-link {
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  color: rgba(23,35,28,0.72) !important;
+}
+.navbar-nav .nav-link.active,
+.header-wrap .navbar .navbar-nav .nav-item a:hover {
+  color: var(--acf-green) !important;
+}
+.navbar-nav .nav-link.active::after {
+  left: 16px;
+  right: 16px;
+  bottom: 9px;
+  height: 2px;
+  background: var(--acf-gold);
+}
+.other-options .donate-nav-btn,
+.navbar-nav .donate-nav-btn {
+  background: var(--acf-ink) !important;
+  border: 1px solid var(--acf-ink) !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  padding: 12px 18px !important;
+}
+
+/* Sections: more whitespace, fewer boxes */
+.ptb-100,
+.home-page .home-section,
+.ds-section,
+.about-wrap.style1.ptb-100,
+.contact-us-wrap.ptb-100,
+.project-details-wrap.ptb-100,
+.team-wrap.ptb-100 {
+  padding-top: clamp(56px, 7vw, 96px) !important;
+  padding-bottom: clamp(56px, 7vw, 96px) !important;
+}
+.bg-sand,
+.home-section-alt,
+.ds-section-alt {
+  background: #f0efe7 !important;
+}
+.section-title,
+.home-section-header,
+.ds-section-header,
+.cop-block-header,
+.team-section-header {
+  max-width: 720px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: clamp(28px, 4vw, 44px) !important;
+}
+.section-title span,
+.home-eyebrow,
+.ds-eyebrow,
+.cop-eyebrow,
+.team-eyebrow,
+.cop-intro-label {
+  display: inline-flex !important;
+  align-items: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(36,87,58,0.08);
+  color: var(--acf-green) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+}
+.section-title h2,
+.home-section-header h2,
+.ds-h2,
+.cop-block-header h2,
+.team-section-header h2 {
+  font-size: clamp(30px, 4.2vw, 52px) !important;
+  max-width: 12ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-section-header .home-subtitle,
+.ds-subtitle,
+.team-section-header p,
+.cop-block-header p,
+.section-title p {
+  max-width: 54ch !important;
+  font-size: clamp(15px, 1.4vw, 17px) !important;
+}
+
+/* Cards: one quiet language across pages */
+.home-service-card,
+.home-stat-card,
+.cop-card,
+.cop-intro-card,
+.cop-session-box,
+.cop-event-card,
+.team-card-modern,
+.profile-card,
+.profile-quick-card,
+.contact-form,
+.contact-item-wrap,
+.footer-modern,
+.ds-card,
+.ds-numbered-card,
+.ds-step-card,
+.ds-pillar-card,
+.service-deliverable,
+.donation-panel,
+.donation-form {
+  border: 1px solid rgba(36,87,58,0.12) !important;
+  border-radius: var(--acf-radius) !important;
+  box-shadow: none !important;
+}
+.home-service-card:hover,
+.team-card-modern:hover,
+.ds-card:hover,
+.cop-image-grid a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--acf-shadow) !important;
+}
+.btn,
+.home-btn,
+.footer-cta .btn-primary,
+.footer-cta .btn-secondary,
+.cop-link-buttons a,
+.cop-reference-chips a {
+  border-radius: 999px !important;
+  font-weight: 750 !important;
+}
+.btn.style1,
+.home-btn-primary,
+.footer-cta .btn-primary {
+  background: var(--acf-green) !important;
+  border-color: var(--acf-green) !important;
+}
+.home-btn-secondary,
+.btn.style2 {
+  background: transparent !important;
+  color: var(--acf-green) !important;
+  border-color: rgba(36,87,58,0.28) !important;
+}
+
+/* Readability: stop endless paragraphs from dominating pages */
+.cop-card > p,
+.project-desc > p,
+.profile-card > p,
+.ds-body,
+.about-content p,
+.content-title p {
+  max-width: 66ch;
+}
+.cop-card > p:nth-of-type(n+3),
+.project-desc > p:nth-of-type(n+3),
+.profile-card > p:nth-of-type(n+3) {
+  font-size: 0.95rem !important;
+}
+.service-summary {
+  font-size: clamp(18px, 2vw, 22px) !important;
+  color: var(--acf-ink) !important;
+  line-height: 1.45 !important;
+  max-width: 52ch;
+}
+
+/* Galleries should feel editorial, not dumped onto the page */
+.cop-image-grid,
+.ds-gallery,
+.ds-impact-gallery {
+  gap: 14px !important;
+}
+.cop-image-grid a,
+.ds-gallery-item,
+.ds-impact-gallery a,
+.ds-media-card,
+.home-media-card {
+  border-radius: 16px !important;
+  box-shadow: none !important;
+}
+
+/* Mobile overhaul */
+@media (max-width: 991px) {
+  .header-wrap .header-top { display: none !important; }
+  .content-wrapper,
+  .home-page .content-wrapper {
+    margin-top: 74px !important;
+  }
+  .header-wrap .header-bottom .container {
+    min-height: 74px;
+  }
+  .mobile-bar-wrap {
+    gap: 8px;
+  }
+  .searchbtn.d-lg-none {
+    display: none !important;
+  }
+  .mobile-menu a {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 999px !important;
+    background: #f0efe7 !important;
+    color: var(--acf-ink) !important;
+  }
+  .main-menu-wrap {
+    top: 0 !important;
+    padding: 28px 20px !important;
+    background: #fff !important;
+  }
+  .menu-close a {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background: #f0efe7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-wrap .header-bottom .navbar .navbar-nav .nav-item a {
+    border-bottom: 1px solid rgba(23,35,28,0.08) !important;
+    padding: 14px 0 !important;
+    font-size: 16px !important;
+  }
+  .header-wrap .header-bottom .navbar .navbar-nav .nav-item .dropdown-menu {
+    padding-left: 14px !important;
+    background: transparent !important;
+  }
+  .navbar-nav .donate-nav-btn {
+    justify-content: center !important;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  body { font-size: 15px !important; }
+  .container,
+  .home-container,
+  .ds-container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+  .ptb-100,
+  .home-page .home-section,
+  .ds-section,
+  .about-wrap.style1.ptb-100,
+  .contact-us-wrap.ptb-100,
+  .project-details-wrap.ptb-100,
+  .team-wrap.ptb-100 {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  .section-title h2,
+  .home-section-header h2,
+  .ds-h2,
+  .cop-block-header h2,
+  .team-section-header h2 {
+    font-size: clamp(26px, 9vw, 36px) !important;
+    max-width: 14ch;
+  }
+  .breadcrumb-wrap,
+  .breadcrumb-wrap.ds-hero-override {
+    padding: 48px 0 !important;
+    min-height: 190px !important;
+  }
+  .breadcrumb-title h2,
+  .breadcrumb-wrap.ds-hero-override .breadcrumb-title h2 {
+    font-size: 30px !important;
+  }
+  .home-services-grid,
+  .service-deliverables,
+  .ds-pillar-grid,
+  .cop-stat-grid,
+  .problem-solution-grid,
+  .beneficiary-quote-grid,
+  .team-grid-modern,
+  .team-exec-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .home-service-card .card-img {
+    height: 150px !important;
+  }
+  .home-service-card .card-body,
+  .cop-card,
+  .contact-form,
+  .donation-panel,
+  .donation-form {
+    padding: 20px !important;
+  }
+  .ds-impact-nav {
+    top: 74px;
+    padding: 8px 0;
+  }
+  .ds-impact-nav .ds-nav-pills {
+    justify-content: flex-start !important;
+  }
+}
+
 /* ========== Broader mobile polish ========== */
 @media (max-width: 767px) {
   .breadcrumb-wrap .breadcrumb-title h2 { font-size: 1.35rem; }
@@ -635,3 +995,25 @@ img.img-fluid {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Progressive disclosure for dense pages */
+.is-collapsible { position: relative; }
+.is-collapsible.is-collapsed > p:nth-of-type(n+3),
+.is-collapsible.is-collapsed > ul:nth-of-type(n+2),
+.is-collapsible.is-collapsed > blockquote:nth-of-type(n+2),
+.is-collapsible.is-collapsed > .cop-takeaways,
+.is-collapsible.is-collapsed > .problem-solution-grid,
+.is-collapsible.is-collapsed > .beneficiary-icon-list {
+  display: none !important;
+}
+.acf-read-more {
+  margin-top: 18px;
+  border: 1px solid rgba(36,87,58,0.22);
+  background: #fff;
+  color: var(--acf-green);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 750;
+}
+.acf-read-more:hover { background: var(--acf-green); color: #fff; }
