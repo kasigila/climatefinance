@@ -28,49 +28,33 @@
   font-size: clamp(24px, 3vw, 36px) !important;
 }
 
-/* ========== Our Team page ========== */
-.team-page .team-wrap {
-  padding-top: clamp(40px, 4vw, 64px);
-  padding-bottom: clamp(48px, 5vw, 80px);
-}
-
-.team-page .team-section-header {
-  text-align: center;
-  margin-bottom: clamp(28px, 3vw, 40px);
-}
-.team-page .team-section-header .team-eyebrow {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--team-green);
-  margin-bottom: 0.5rem;
-  display: block;
-}
-.team-page .team-section-header h2 {
-  font-size: clamp(24px, 2.5vw, 34px);
-  font-weight: 600;
-  color: #1a2e22;
-  margin-bottom: 0.5rem;
-}
-.team-page .team-section-header p {
+/* ========== Our Team page (acf-team — isolated from legacy template CSS) ========== */
+.acf-team-intro {
+  max-width: 52ch;
+  margin: 0.75rem auto 0;
   font-size: 1rem;
+  line-height: 1.65;
   color: #5c6f65;
-  max-width: 42ch;
-  margin: 0 auto;
-  line-height: 1.6;
 }
 
-.team-page .team-subsection-title {
-  font-size: 1.1rem;
+.acf-team-group-title {
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--team-green-dark);
   text-align: center;
-  margin-bottom: clamp(20px, 2vw, 28px);
+  margin: 0 0 clamp(20px, 2vw, 28px);
 }
 
-/* Team grid - responsive columns */
-.team-page .team-grid-modern {
+.acf-team-exec {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--team-gap);
+  max-width: var(--team-container);
+  margin: 0 auto clamp(40px, 5vw, 56px);
+  align-items: start;
+}
+
+.acf-team-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--team-gap);
@@ -78,230 +62,188 @@
   margin: 0 auto;
   align-items: start;
 }
-@media (min-width: 768px) {
-  .team-page .team-grid-modern { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 1024px) {
-  .team-page .team-grid-modern.team-grid-three { grid-template-columns: repeat(3, 1fr); }
+
+@media (min-width: 640px) {
+  .acf-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* Team card - natural height per content */
-.team-page .team-card-modern {
+@media (min-width: 768px) {
+  .acf-team-exec {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .acf-team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.acf-team-card {
   background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: var(--team-radius);
-  overflow: hidden;
   box-shadow: var(--team-shadow);
-  border: 1px solid rgba(0,0,0,0.04);
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  overflow: hidden;
 }
-.team-page .team-card-modern:hover {
-  box-shadow: var(--team-shadow-hover);
-  transform: translateY(-2px);
-}
-.team-page .team-card-modern:focus-within {
+
+.acf-team-card:focus-within {
   outline: 2px solid var(--team-green);
   outline-offset: 2px;
 }
 
-/* Image container - 4:5 aspect ratio, object-fit cover */
-.team-page .team-card-media {
-  position: relative;
-  aspect-ratio: 4 / 5;
+.acf-team-photo {
+  display: block;
+  height: 260px;
   overflow: hidden;
-  background: #f0f3f1;
+  background: #eef2ef;
+  line-height: 0;
 }
-.team-page .team-card-media img {
+
+.acf-team-photo img {
   width: 100%;
-  height: 100%;
+  height: 260px;
   object-fit: cover;
   object-position: center top;
   display: block;
 }
-.team-page .team-card-media .team-avatar-fallback {
+
+.acf-team-photo--pending {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--team-green) 0%, var(--team-green-dark) 100%);
-  color: #fff;
-  font-size: clamp(24px, 4vw, 40px);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, #e8eee9 0%, #d4ddd6 100%);
 }
 
-.team-page .team-photo-pending {
+.acf-team-photo-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #e8eee9 0%, #d4ddd6 100%);
-  color: #5c6f65;
-  text-align: center;
-  padding: 1rem;
   gap: 0.5rem;
-}
-.team-page .team-photo-pending i {
-  font-size: 2rem;
-  color: #40865b;
-  opacity: 0.6;
-}
-.team-page .team-photo-pending span {
   font-size: 0.78rem;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5c6f65;
+  line-height: 1.4;
+  text-align: center;
+  padding: 1rem;
 }
 
-.team-page .social-link-pending {
-  opacity: 0.45;
-  cursor: default;
-  pointer-events: none;
+.acf-team-photo-placeholder i {
+  font-size: 2rem;
+  color: var(--team-green);
+  opacity: 0.55;
 }
 
-/* Card body */
-.team-page .team-card-body {
-  padding: clamp(16px, 2vw, 24px);
-  display: flex;
-  flex-direction: column;
+.acf-team-body {
+  padding: clamp(18px, 2vw, 24px);
 }
-.team-page .team-card-body h3 {
-  font-size: clamp(16px, 1.5vw, 18px);
+
+.acf-team-name {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
   font-weight: 600;
-  margin-bottom: 0.25rem;
   line-height: 1.3;
-}
-.team-page .team-card-body h3 a {
+  margin: 0 0 0.35rem;
   color: #1a2e22;
+}
+
+.acf-team-name a {
+  color: inherit;
   text-decoration: none;
 }
-.team-page .team-card-body h3 a:hover {
+
+.acf-team-name a:hover {
   color: var(--team-green);
 }
-.team-page .team-card-body .team-role {
+
+.acf-team-role {
+  margin: 0 0 0.65rem;
   font-size: 0.85rem;
-  color: var(--team-green);
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  color: var(--team-green);
 }
-.team-page .team-card-body .team-excerpt {
-  font-size: 0.9rem;
+
+.acf-team-bio {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
   color: #5c6f65;
-  line-height: 1.5;
-  margin-bottom: 1rem;
 }
-/* Executive Leadership only: clamp excerpt (they have View Profile for full bio) */
-.team-page .team-exec-grid .team-excerpt {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-/* Team grid: show full description (no profile pages) */
-.team-page .team-grid-modern .team-excerpt {
-  display: block;
-}
-.team-page .team-card-actions {
+
+.acf-team-footer {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
-.team-page .team-card-actions .social-profile {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
+.acf-team-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  margin-top: 1rem;
 }
-.team-page .team-card-actions .social-profile li a {
-  display: flex;
+
+.acf-team-footer .acf-team-links {
+  margin-top: 0;
+}
+
+.acf-team-links a {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(64,134,91,0.1);
+  background: rgba(64, 134, 91, 0.1);
   color: var(--team-green);
-  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
-.team-page .team-card-actions .social-profile li a:hover,
-.team-page .team-card-actions .social-profile li a:focus {
+
+.acf-team-links a:hover,
+.acf-team-links a:focus {
   background: var(--team-green);
   color: #fff;
 }
-.team-page .team-card-actions .social-profile li a:focus {
+
+.acf-team-links a:focus {
   outline: 2px solid var(--team-green);
   outline-offset: 2px;
 }
-.team-page .team-card-actions .btn-profile {
+
+.acf-team-link-pending {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: default;
+}
+
+.acf-team-profile-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 18px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--team-green);
-  background: transparent;
+  padding: 9px 16px;
   border: 1px solid var(--team-green);
   border-radius: var(--team-radius-sm);
+  color: var(--team-green);
+  font-size: 0.88rem;
+  font-weight: 500;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-  margin-left: auto;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
 }
-.team-page .team-card-actions .btn-profile:hover,
-.team-page .team-card-actions .btn-profile:focus {
+
+.acf-team-profile-link:hover,
+.acf-team-profile-link:focus {
   background: var(--team-green);
   color: #fff;
 }
-.team-page .team-card-actions .btn-profile:focus {
-  outline: 2px solid var(--team-green);
-  outline-offset: 2px;
-}
-.team-page .team-card-actions--empty {
-  min-height: 36px;
-  color: #7b8a82;
-  font-size: 0.85rem;
-  font-style: italic;
-}
 
-/* Executive row - larger cards, 2 cols */
-.team-page .team-exec-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--team-gap);
-  max-width: var(--team-container);
-  margin: 0 auto clamp(48px, 5vw, 64px);
-  align-items: start;
-}
-@media (min-width: 768px) {
-  .team-page .team-exec-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* Our Team in the Field - Coming soon callout */
-.team-page .team-field-coming {
-  max-width: 520px;
-  margin: clamp(40px, 5vw, 64px) auto 0;
-  padding: clamp(24px, 3vw, 36px);
-  background: linear-gradient(135deg, rgba(64,134,91,0.06) 0%, rgba(45,90,61,0.04) 100%);
-  border: 1px dashed rgba(64,134,91,0.3);
-  border-radius: var(--team-radius);
-  text-align: center;
-}
-.team-page .team-field-coming h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--team-green-dark);
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
 .profile-page .profile-achievement {
   margin: 16px 0;
   padding: 18px;
@@ -319,15 +261,6 @@
   letter-spacing: 0.08em;
   font-size: 0.78rem;
   margin-bottom: 6px;
-}
-.team-page .team-field-coming h4 i {
-  font-size: 1.2rem;
-  color: var(--team-green);
-}
-.team-page .team-field-coming p {
-  font-size: 0.9rem;
-  color: #5c6f65;
-  margin: 0;
 }
 
 /* ========== Profile pages (Kenneth, Karen) ========== */
