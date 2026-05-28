@@ -341,7 +341,7 @@
         }
     });
 
-    // Responsive mmenu
+    // Responsive mmenu — delegated so dynamically loaded header works
     $(window).on('resize', function() {
         if($(window).width() <= 1199) {
             $('.collapse.navbar-collapse').removeClass('collapse');
@@ -349,7 +349,7 @@
             $('.navbar-collapse').addClass('collapse');
         }
     });
-    $('.mobile-menu a').on('click', function() {
+    $(document).on('click', '.mobile-menu a', function() {
         $('.main-menu-wrap').addClass('open');
         $('.collapse.navbar-collapse').removeClass('collapse');
     });
@@ -359,7 +359,7 @@
         $('.main-menu-wrap').toggleClass('open');
     });
 
-    $('.menu-close').on('click', function () {
+    $(document).on('click', '.menu-close a, .menu-close', function () {
         $('.main-menu-wrap').removeClass('open')
     });
     $('.mobile-top-bar').on('click', function () {
@@ -372,7 +372,18 @@
     $offcanvasNavSubMenu = $offcanvasNav.find('.dropdown-menu');
     $offcanvasNavSubMenu.parent().prepend('<span class="menu-expand"><i class="ri-arrow-down-s-line"></i></span>');
     $offcanvasNavSubMenu.slideUp();
-    $offcanvasNav.on('click', 'li a, li .menu-expand', function (e) {
+    function bindOffcanvasNav() {
+      var $nav = $('.navbar-nav');
+      if (!$nav.length || $nav.data('offcanvas-bound')) return;
+      $nav.data('offcanvas-bound', true);
+      var $sub = $nav.find('.dropdown-menu');
+      $sub.parent().each(function() {
+        if (!$(this).children('.menu-expand').length) {
+          $(this).prepend('<span class="menu-expand"><i class="ri-arrow-down-s-line"></i></span>');
+        }
+      });
+      $sub.slideUp();
+      $nav.off('click.offcanvas').on('click.offcanvas', 'li a, li .menu-expand', function (e) {
         var $this = $(this);
         if (($this.attr('href') === '#' || $this.hasClass('menu-expand'))) {
             e.preventDefault();
@@ -389,6 +400,9 @@
             $this.toggleClass('menu-open');
         }
     });
+    }
+    bindOffcanvasNav();
+    document.addEventListener('headerLoaded', bindOffcanvasNav);
 
     // Scroll animation
     AOS.init();

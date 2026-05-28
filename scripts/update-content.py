@@ -1,112 +1,11 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""Slim About page and update key content pages."""
+import re
+from pathlib import Path
 
-<html lang="zxx">
+ROOT = Path(__file__).resolve().parent.parent
 
-
-
-    
-
-<head>
-
-        <!-- Required meta tags -->
-
-        <meta charset="utf-8">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-        <!-- Link of CSS files -->
-
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-
-        <link rel="stylesheet" href="assets/css/remixicon.css">
-
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-
-        <link rel="stylesheet" href="assets/css/owl-theme-default-min.css">
-
-        <link rel="stylesheet" href="assets/css/odometer.min.css">
-
-        <link rel="stylesheet" href="assets/css/fancybox.css">
-
-        <link rel="stylesheet" href="assets/css/aos.css">
-
-        <link rel="stylesheet" href="assets/css/style.css">
-
-        <link rel="stylesheet" href="assets/css/responsive.css">
-
-        <link rel="stylesheet" href="assets/css/dark-theme.css">
-
-    <link rel="stylesheet" href="assets/css/enhancements.css">
-
-    <link rel="stylesheet" href="assets/css/design-system.css">
-
-    <link rel="stylesheet" href="assets/css/footer-modern.css">
-
-    <title>Africa Climate Finance - Tanzania</title>
-
-        <link rel="icon" type="image/png" href="assets/img/favicon-f.png">
-
-    </head>
-
-
-
-    <body class="ds-header-compact about-page ds-page">
-
-
-
-  <!-- Page Wrapper End -->
-
-      <div class="page-wrapper">
-
-
-
-          <!-- Header Section Start -->
-<div id="header-placeholder" data-active="about"></div>
-<script src="assets/js/header-loader.js"></script>
-<!-- Header Section End -->
-
-
-
-            <!-- Content Wrapper Start -->
-
-            <div class="content-wrapper">
-
-
-
-                <!-- Hero / Breadcrumb Start -->
-
-                <div class="breadcrumb-wrap bg-f br-1 ds-hero-override">
-
-                    <div class="container">
-
-                        <div class="breadcrumb-title">
-
-                            <h2>About Us</h2>
-
-                            <ul class="breadcrumb-menu list-style">
-
-                                <li><a href="index.html">Home</a></li>
-
-                                <li>About Us</li>
-
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- Hero / Breadcrumb End -->
-
-
-
+ABOUT_NEW = '''
                 <!-- Who We Are -->
                 <section class="about-wrap style1 ptb-100 ds-section">
                     <div class="container ds-container">
@@ -228,96 +127,155 @@
                         </div>
                     </div>
                 </section>
-</div>
+'''
 
-            <!-- Content wrapper end -->
-
-
-
-        <!-- Footer Section Start -->
-    <div id="footer-placeholder"></div>
-    <script src="assets/js/footer-loader.js"></script>
-        <!-- Footer Section End --></div>
-
-    <!-- Page Wrapper End -->
-
-
-
-    <!-- Back-to-top button Start -->
-
-    <a href="javascript:void(0)" class="back-to-top bounce"><i class="ri-arrow-up-s-line"></i></a>
-
-    <!-- Back-to-top button End -->
+def slim_about():
+    path = ROOT / "about.php.html"
+    text = path.read_text(encoding="utf-8")
+    pattern = re.compile(
+        r"<!-- Climate Challenge Section Start -->.*?<!-- Team Section Start -->",
+        re.DOTALL,
+    )
+    replacement = ABOUT_NEW.strip() + "\n\n                <!-- Team Section Start -->"
+    text = pattern.sub(replacement, text, count=1)
+    path.write_text(text, encoding="utf-8")
+    print("Slimmed about.php.html")
 
 
+SERVICES = {
+    "market-analysis.php.html": {
+        "title": "Market Analysis",
+        "deliverables": [
+            "40-page market demand report with buyer mapping and pricing analysis",
+            "Competitive landscape and go-to-market recommendations",
+            "Demand validation for GCF Concept Notes and Funding Proposals",
+        ],
+        "case_title": "GCF FP223 — US$1.5B project pipeline",
+        "case_text": "Market analysis supporting GCF-referenced projects totalling US$1.7 billion in pipeline value.",
+        "case_link": "cop-engagements.php.html#cop29",
+        "form_subject": "Market Analysis inquiry",
+        "cta": "Request a Market Analysis",
+    },
+    "financial-modelling.php.html": {
+        "title": "Financial Modelling",
+        "deliverables": [
+            "Integrated financial models with cashflow, sensitivity, and scenario analysis",
+            "GCF-aligned cost-benefit and feasibility structures",
+            "Blended finance and de-risking instrument modelling",
+        ],
+        "case_title": "GCF FP179 — US$200M commercial bank proposal",
+        "case_text": "Africa's first GCF-approved commercial bank funding proposal, led by our Group CEO.",
+        "case_link": "kenneth.php.html",
+        "form_subject": "Financial Modelling inquiry",
+        "cta": "Request Financial Modelling",
+    },
+    "microfinance.php.html": {
+        "title": "Microfinance for Climate",
+        "deliverables": [
+            "Climate-smart loan products for cooperatives and SMEs",
+            "Financial literacy training before disbursement",
+            "Portfolio monitoring for climate-resilient outcomes",
+        ],
+        "case_title": "Ginger farmers — Isajilo, Tukuyu",
+        "case_text": "Microfinance enabling organic ginger farming with drought-resilient practices and export premiums.",
+        "case_link": "testimonials.php.html#ginger-story",
+        "form_subject": "Microfinance inquiry",
+        "cta": "Discuss Microfinance Options",
+    },
+    "gender-assessment.php.html": {
+        "title": "Gender Assessment",
+        "deliverables": [
+            "GCF-compliant gender action plans and assessments",
+            "Stakeholder consultations with women-led groups",
+            "Gender-responsive indicators and monitoring frameworks",
+        ],
+        "case_title": "280+ women empowerment programme",
+        "case_text": "Grassroots gender-smart finance training across four villages in Isajilo Ward.",
+        "case_link": "women-empowerment.php.html",
+        "form_subject": "Gender Assessment inquiry",
+        "cta": "Request a Gender Assessment",
+    },
+    "stakeholders-engagement.php.html": {
+        "title": "Stakeholders Engagement",
+        "deliverables": [
+            "Stakeholder mapping and engagement plans for GCF projects",
+            "Consultation surveys and FP stakeholder documentation",
+            "Free, prior, and informed consent processes where required",
+        ],
+        "case_title": "COP29 Tanzania Pavilion — Finance Day",
+        "case_text": "Stakeholder coordination for NDC financing discussions with finance ministers and development banks.",
+        "case_link": "cop-engagements.php.html#cop29",
+        "form_subject": "Stakeholders Engagement inquiry",
+        "cta": "Plan Stakeholder Engagement",
+    },
+    "scientific-assessment.php.html": {
+        "title": "Scientific Assessment",
+        "deliverables": [
+            "Climate impact assessments grounded in IPCC-aligned data",
+            "GHG baseline and mitigation potential calculations",
+            "Adaptation benefit quantification for funding proposals",
+        ],
+        "case_title": "Climate-smart agriculture — Southern Highlands",
+        "case_text": "Scientific grounding for regenerative agriculture programmes financed through our microfinance portfolio.",
+        "case_link": "testimonials.php.html#ginger-story",
+        "form_subject": "Scientific Assessment inquiry",
+        "cta": "Request Scientific Assessment",
+    },
+    "climate-risk.php.html": {
+        "title": "Climate Risk Assessment",
+        "deliverables": [
+            "Physical and transition risk identification and quantification",
+            "Climate risk integration into financial products and operations",
+            "Risk mitigation recommendations for portfolios and projects",
+        ],
+        "case_title": "GCF project risk frameworks",
+        "case_text": "Climate risk assessment supporting FP179 and FP223 GCF-referenced proposals.",
+        "case_link": "cop-engagements.php.html#cop29",
+        "form_subject": "Climate Risk inquiry",
+        "cta": "Request Climate Risk Assessment",
+    },
+}
 
-    <!-- Link of JS files -->
 
-    <script src="assets/js/jquery.min.js"></script>
-
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/form-validator.min.js"></script>
-
-    <script src="assets/js/contact-form-script.js"></script>
-
-    <script src="assets/js/aos.js"></script>
-
-    <script src="assets/js/owl.carousel.min.js"></script>
-
-    <script src="assets/js/owl-thumb.min.js"></script>
-
-    <script src="assets/js/odometer.js"></script>
-
-    <script src="assets/js/circle-progressbar.min.js"></script>
-
-    <script src="assets/js/fancybox.js"></script>
-
-    <script src="assets/js/jquery.appear.js"></script>
-
-    <script src="assets/js/tweenmax.min.js"></script>
-
-    <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/main.js"></script>
-<!-- GetButton.io widget -->
-
-<script type="text/javascript">
-
-    (function () {
-
-        var options = {
-
-            contactform: true, // Show Contact Form Button
-
-            whatsapp: "+255 754 763 558", // WhatsApp number
-
-            call_to_action: "Message us", // Call to action
-
-            button_color: "#40865b", // Color of button
-
-            position: "left", // Position may be 'right' or 'left'
-
-            order: "contactform,whatsapp", // Order of buttons
-
-        };
-
-        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
-
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-
-    })();
-
-</script>
-
-<!-- /GetButton.io widget -->
-    </body>
+def update_service_page(filename, cfg):
+    path = ROOT / filename
+    text = path.read_text(encoding="utf-8")
+    deliverables_html = "".join(f"<li>{d}</li>" for d in cfg["deliverables"])
+    new_desc = f'''
+                                    <h1>{cfg["title"]}</h1>
+                                    <h3 class="green-dark mt-4">What You Get</h3>
+                                    <ul class="ds-deliverables">{deliverables_html}</ul>
+                                    <h3 class="green-dark mt-4">Why It Matters</h3>
+                                    <p>Climate projects fail without credible market data, robust financial structures, and stakeholder alignment. Our {cfg["title"].lower()} service delivers the specific outputs funders and investors require — not abstract recommendations.</p>
+                                    <div class="ds-case-study">
+                                        <h4><i class="ri-award-line"></i> {cfg["case_title"]}</h4>
+                                        <p class="mb-2">{cfg["case_text"]}</p>
+                                        <a href="{cfg["case_link"]}">View case study →</a>
+                                    </div>
+                                    <p class="mt-4 mb-0"><a href="faq.html#how-we-work">How we work with Concept Notes and Funding Proposals →</a></p>
+'''
+    text = re.sub(
+        r"<div class=\"project-desc\">.*?</div>\s*</div>\s*\n\s*</div>",
+        f'<div class="project-desc ds-service-page">{new_desc.strip()}\n                                </div>\n                            </div>\n                        </div>',
+        text,
+        count=1,
+        flags=re.DOTALL,
+    )
+    text = text.replace("Give Us A Message", cfg["cta"])
+    text = text.replace(
+        f'value="Message from {cfg["title"]} page"',
+        f'value="{cfg["form_subject"]}"',
+    )
+    if "design-system.css" not in text:
+        text = text.replace(
+            'href="assets/css/footer-modern.css">',
+            'href="assets/css/footer-modern.css">\n    <link rel="stylesheet" href="assets/css/design-system.css">',
+        )
+    path.write_text(text, encoding="utf-8")
+    print(f"Updated {filename}")
 
 
-
-
-
-</html>
+if __name__ == "__main__":
+    slim_about()
+    for fname, cfg in SERVICES.items():
+        update_service_page(fname, cfg)

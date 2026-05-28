@@ -31,7 +31,13 @@
         genderAssessment: 'Gender Assessment',
         stakeholdersEngagement: 'Stakeholders Engagement',
         scientificAssessment: 'Scientific Assessment',
-        climateRisk: 'Climate Risk'
+        climateRisk: 'Climate Risk',
+        impact: 'Impact',
+        insights: 'Insights',
+        beneficiaries: 'Our Beneficiaries',
+        womenEmpowerment: 'Women Empowerment',
+        loanProgram: 'Loan Program',
+        donate: 'Donate'
       },
       team: {
         title: 'Our Team',
@@ -40,8 +46,7 @@
         execLeadership: 'Executive Leadership',
         teamSection: 'Team',
         viewProfile: 'View Profile',
-        fieldComing: 'Our Team in the Field',
-        fieldComingDesc: 'Coming soon.'
+        intro: 'Our team combines 25+ years of banking, data science, and grassroots finance to deliver climate solutions from village level to global policy forums.'
       },
       profile: {
         teamProfile: 'Team Profile',
@@ -99,6 +104,11 @@
         faq: 'FAQ',
         donate: 'Donate',
         contact: 'Contact',
+        beneficiaries: 'Our Beneficiaries',
+        womenEmpowerment: 'Women Empowerment',
+        loanProgram: 'Loan Program',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service',
         climateResources: 'Climate Resources',
         copyright: '© Africa Climate Finance'
       },
@@ -127,7 +137,13 @@
         genderAssessment: 'Tathmini ya Jinsia',
         stakeholdersEngagement: 'Ushiriki wa Washiriki',
         scientificAssessment: 'Tathmini ya Kisayansi',
-        climateRisk: 'Hatari za Hali ya Hewa'
+        climateRisk: 'Hatari za Hali ya Hewa',
+        impact: 'Athari',
+        insights: 'Maarifa',
+        beneficiaries: 'Wanufaika Wetu',
+        womenEmpowerment: 'Uwezeshaji wa Wanawake',
+        loanProgram: 'Mpango wa Mikopo',
+        donate: 'Changia'
       },
       team: {
         title: 'Timu Yetu',
@@ -136,8 +152,7 @@
         execLeadership: 'Uongozi wa Juu',
         teamSection: 'Timu',
         viewProfile: 'Onyesha Wasifu',
-        fieldComing: 'Timu Yetu Shambani',
-        fieldComingDesc: 'Inakuja hivi karibuni.'
+        intro: 'Timu yetu inachanganya uzoefu wa zaidi ya miaka 25 katika benki, sayansi ya data, na fedha za jamii kutoa suluhu za hali ya hewa kutoka kijijini hadi mijadala ya kimataifa.'
       },
       profile: {
         teamProfile: 'Wasifu wa Mwanachama',
@@ -195,6 +210,11 @@
         faq: 'Maswali',
         donate: 'Changia',
         contact: 'Mawasiliano',
+        beneficiaries: 'Wanufaika Wetu',
+        womenEmpowerment: 'Uwezeshaji wa Wanawake',
+        loanProgram: 'Mpango wa Mikopo',
+        privacy: 'Sera ya Faragha',
+        terms: 'Masharti',
         climateResources: 'Rasilimali za Hali ya Hewa',
         copyright: '© Africa Climate Finance'
       },
@@ -338,4 +358,5 @@
   };
 
   window.__i18nApplyTranslations = applyTranslations;
+  window.__i18nInitLanguageSwitcher = initLangDropdown;
 })();
