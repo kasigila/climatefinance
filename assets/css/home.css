@@ -143,6 +143,15 @@
 }
 .home-hero-single .home-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
+/* Header contact strip over hero — text only (homepage) */
+.home-page .header-wrap .header-top .header-top-left .contact-info li a,
+.home-page .header-wrap .header-top .header-top-left .contact-info li p {
+  color: #000 !important;
+}
+.home-page .header-wrap .header-top .header-top-left .contact-info li a:hover {
+  color: #40865b !important;
+}
+
 /* ========== Hero Carousel (deprecated — kept for fallback) ========== */
 .home-hero-slider-wrap .hero-slide-item {
   min-height: 70vh;
