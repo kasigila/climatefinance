@@ -76,6 +76,7 @@
   gap: var(--team-gap);
   max-width: var(--team-container);
   margin: 0 auto;
+  align-items: start;
 }
 @media (min-width: 768px) {
   .team-page .team-grid-modern { grid-template-columns: repeat(2, 1fr); }
@@ -84,7 +85,7 @@
   .team-page .team-grid-modern.team-grid-three { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Team card - consistent height, uniform styling */
+/* Team card - natural height per content */
 .team-page .team-card-modern {
   background: #fff;
   border-radius: var(--team-radius);
@@ -94,7 +95,6 @@
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
-  min-height: 100%;
 }
 .team-page .team-card-modern:hover {
   box-shadow: var(--team-shadow-hover);
@@ -139,7 +139,6 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  min-height: 220px;
   background: linear-gradient(135deg, #e8eee9 0%, #d4ddd6 100%);
   color: #5c6f65;
   text-align: center;
@@ -169,7 +168,6 @@
   padding: clamp(16px, 2vw, 24px);
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 .team-page .team-card-body h3 {
   font-size: clamp(16px, 1.5vw, 18px);
@@ -195,7 +193,6 @@
   color: #5c6f65;
   line-height: 1.5;
   margin-bottom: 1rem;
-  flex: 1;
 }
 /* Executive Leadership only: clamp excerpt (they have View Profile for full bio) */
 .team-page .team-exec-grid .team-excerpt {
@@ -279,6 +276,7 @@
   gap: var(--team-gap);
   max-width: var(--team-container);
   margin: 0 auto clamp(48px, 5vw, 64px);
+  align-items: start;
 }
 @media (min-width: 768px) {
   .team-page .team-exec-grid { grid-template-columns: repeat(2, 1fr); }
