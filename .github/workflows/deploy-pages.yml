@@ -23,18 +23,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Prepare site for deployment
+
+      - name: Install build tools
+        run: sudo apt-get update && sudo apt-get install -y webp librsvg2-bin
+
+      - name: Build site
+        run: bash scripts/build-site.sh
+        env:
+          BUILD_VERSION: ${{ github.sha }}
+
+      - name: Prepare GitHub Pages artifact
         run: |
           mkdir -p _site
-          cp index.html robots.txt _site/
-          cp *.php.html _site/
+          cp .nojekyll _site/
+          cp CNAME _site/ 2>/dev/null || true
+          cp robots.txt sitemap.xml _site/
+          cp *.html _site/
           cp -r assets _site/
+          test -f _site/404.html || cp _site/error-404.html _site/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
