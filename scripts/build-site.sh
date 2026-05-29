@@ -26,11 +26,14 @@ fi
 
 echo "==> Generating OG image PNG"
 if command -v rsvg-convert >/dev/null 2>&1; then
-  rsvg-convert -w 1200 -h 630 assets/img/og-image.svg -o assets/img/og-image.png
-elif [[ -f assets/img/green.jpg ]]; then
-  sips -z 630 1200 assets/img/green.jpg --out assets/img/og-image.png >/dev/null 2>&1
-else
-  cp assets/img/logo.png assets/img/og-image.png
+  rsvg-convert -w 1200 -h 630 assets/img/og-image.svg -o assets/img/og-image.png 2>/dev/null || true
+fi
+if [[ ! -f assets/img/og-image.png ]]; then
+  if [[ -f assets/img/green.jpg ]]; then
+    sips -z 630 1200 assets/img/green.jpg --out assets/img/og-image.png >/dev/null 2>&1 || cp assets/img/green.jpg assets/img/og-image.png
+  else
+    cp assets/img/logo.png assets/img/og-image.png
+  fi
 fi
 if [[ -f assets/img/og-image.png ]]; then
   cwebp -q 85 assets/img/og-image.png -o assets/img/og-image.webp 2>/dev/null || true
