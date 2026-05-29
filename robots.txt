@@ -3,4 +3,4 @@ Allow: /
 Disallow: /scripts/
 Disallow: /google-apps-script/
 
-Sitemap: https://climatefinance.co.tz/sitemap.xml
+Sitemap: https://climatefinance.co.tz/assets/sitemap.xml
