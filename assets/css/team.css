@@ -87,6 +87,12 @@
   border-radius: var(--team-radius);
   box-shadow: var(--team-shadow);
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.acf-team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--team-shadow-hover);
+  border-color: rgba(64, 134, 91, 0.25);
 }
 
 .acf-team-card:focus-within {
@@ -114,6 +120,10 @@
   object-fit: contain;
   object-position: center center;
   display: block;
+  transition: transform 0.3s ease;
+}
+.acf-team-card:hover .acf-team-photo img {
+  transform: scale(1.03);
 }
 
 .acf-team-photo--pending {
@@ -592,6 +602,34 @@
   padding: clamp(24px, 3vw, 32px);
   box-shadow: var(--team-shadow);
   border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.insights-author-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(64, 134, 91, 0.2);
+}
+
+.insights-author-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.insights-author-card strong {
+  display: block;
+  color: #1a2e22;
+  font-size: 1rem;
+}
+
+.insights-author-card span {
+  font-size: 0.875rem;
+  color: #5c6f65;
 }
 
 .profile-page .profile-insights-section .profile-insights-figure,

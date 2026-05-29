@@ -480,8 +480,13 @@
   font-style: normal;
   font-weight: 700;
 }
-@media (min-width: 992px) {
-  .cop-page .cop-image-grid.cop-grid-two { grid-template-columns: repeat(2, 1fr); }
+.cop-page .cop-image-grid.cop-grid-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 767px) {
+  .cop-page .cop-image-grid.cop-grid-two {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 767px) {
   .cop-page .problem-solution-grid,

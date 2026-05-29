@@ -2,6 +2,7 @@
    Africa Climate Finance - Production Enhancements
    Responsive, callouts, accordions, touch targets, mobile-first
 -----------------------------------------------------------*/
+@import url('mobile.css');
 
 /* ========== Grassroots Section Cards ========== */
 .grassroots-section { padding: 0 0.25rem; }
@@ -486,9 +487,7 @@ img.img-fluid {
 
 /* ========== Service page sidebar - main content first on mobile ========== */
 @media (max-width: 1199px) {
-  .project-details-wrap .row.gx-5 { flex-direction: column; }
-  .project-details-wrap .col-xl-4 { order: 2; margin-top: 1.5rem; }
-  .project-details-wrap .col-xl-8 { order: 1; }
+  .project-details-wrap .col-xl-4.order-2 { margin-top: 1.5rem; }
 }
 
 /* ========== Solutions pages - Not textbook style ========== */
@@ -551,6 +550,34 @@ img.img-fluid {
   .project-desc { padding-right: 0; }
   .project-desc h3 { margin-top: 1.5rem; padding-top: 0.75rem; }
   .sidebar .sidebar-widget { margin-bottom: 1.5rem; }
+}
+
+/* Sidebar contact forms — visible, tappable fields on all service pages */
+.project-details-wrap .register-widget .form-group input,
+.project-details-wrap .register-widget .form-group textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 12px 14px;
+  border: 1px solid #d1d9d4;
+  border-radius: 10px;
+  background: #fff;
+  color: #1a2e22;
+  margin-bottom: 0;
+}
+
+.project-details-wrap .register-widget .form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.project-details-wrap .register-widget .form-group {
+  margin-bottom: 1rem;
+}
+
+.project-details-wrap .register-widget .btn.style1 {
+  min-height: 48px;
 }
 
 /* ========== Nav Overflow - Mobile Menu ========== */

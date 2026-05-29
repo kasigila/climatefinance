@@ -9,7 +9,7 @@
   var base = document.querySelector('base');
   var baseUrl = (base && base.href) ? base.href.replace(/\/?$/, '/') : '';
 
-  fetch(baseUrl + 'inc/header.html')
+  fetch(baseUrl + 'assets/inc/header.html')
     .then(function(r) { return r.ok ? r.text() : Promise.reject(); })
     .then(function(html) {
       el.outerHTML = html;

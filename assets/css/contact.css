@@ -215,6 +215,22 @@
   margin-bottom: 0;
 }
 
+.contact-page .contact-email-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-page .contact-whatsapp-promo {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .contact-page .contact-whatsapp-promo {
+    display: flex;
+  }
+}
+
 .contact-page .contact-item .social-profile {
   display: flex;
   gap: 10px;

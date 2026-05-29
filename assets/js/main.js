@@ -362,23 +362,18 @@
     $(document).on('click', '.menu-close a, .menu-close', function () {
         $('.main-menu-wrap').removeClass('open')
     });
-    $('.mobile-top-bar').on('click', function () {
-        $('.header-top').addClass('open')
-    });
-    $('.close-header-top button').on('click', function () {
-        $('.header-top').removeClass('open')
-    });
-    var $offcanvasNav = $('.navbar-nav'),
-    $offcanvasNavSubMenu = $offcanvasNav.find('.dropdown-menu');
-    $offcanvasNavSubMenu.parent().prepend('<span class="menu-expand"><i class="ri-arrow-down-s-line"></i></span>');
-    $offcanvasNavSubMenu.slideUp();
     function bindOffcanvasNav() {
       var $nav = $('.navbar-nav');
       if (!$nav.length || $nav.data('offcanvas-bound')) return;
       $nav.data('offcanvas-bound', true);
+
+      if ($(window).width() <= 991 && $nav.find('.has-dropdown').length) {
+        return;
+      }
+
       var $sub = $nav.find('.dropdown-menu');
       $sub.parent().each(function() {
-        if (!$(this).children('.menu-expand').length) {
+        if (!$(this).children('.menu-expand').length && !$(this).hasClass('has-dropdown')) {
           $(this).prepend('<span class="menu-expand"><i class="ri-arrow-down-s-line"></i></span>');
         }
       });
@@ -394,9 +389,9 @@
                 $this.siblings('ul').slideDown('slow');
             }
         }
-        if ($this.is('a') || $this.is('span') || $this.attr('class').match(/\b(menu-expand)\b/)) {
+        if ($this.is('a') || $this.is('span') || ($this.attr('class') || '').match(/\b(menu-expand)\b/)) {
             $this.parent().toggleClass('menu-open');
-        } else if ($this.is('li') && $this.attr('class').match(/\b('dropdown-menu')\b/)) {
+        } else if ($this.is('li') && ($this.attr('class') || '').match(/\b('dropdown-menu')\b/)) {
             $this.toggleClass('menu-open');
         }
     });
@@ -404,16 +399,151 @@
     bindOffcanvasNav();
     document.addEventListener('headerLoaded', bindOffcanvasNav);
 
+    // Mobile submenu: chevron toggles only; parent link navigates
+    function bindMobileSubmenus() {
+      var $nav = $('.navbar-nav');
+      if (!$nav.length) return;
+
+      $nav.find('.has-dropdown > .dropdown-menu').each(function() {
+        if ($(window).width() <= 991 && !$(this).data('mobile-init')) {
+          $(this).hide().data('mobile-init', true);
+        }
+      });
+
+      if ($nav.data('mobile-submenu-bound')) return;
+      $nav.data('mobile-submenu-bound', true);
+
+      $nav.on('click.mobileSubmenu', '.nav-submenu-toggle', function(e) {
+        if ($(window).width() > 991) return;
+        e.preventDefault();
+        e.stopPropagation();
+        var $item = $(this).closest('.has-dropdown');
+        var $menu = $item.children('.dropdown-menu');
+        var isOpen = $item.hasClass('menu-open');
+        $nav.find('.has-dropdown').not($item).removeClass('menu-open').children('.dropdown-menu').slideUp(200);
+        $nav.find('.nav-submenu-toggle').not(this).attr('aria-expanded', 'false');
+        if (isOpen) {
+          $item.removeClass('menu-open');
+          $menu.slideUp(200);
+          $(this).attr('aria-expanded', 'false');
+        } else {
+          $item.addClass('menu-open');
+          $menu.slideDown(200);
+          $(this).attr('aria-expanded', 'true');
+        }
+      });
+    }
+    bindMobileSubmenus();
+    document.addEventListener('headerLoaded', bindMobileSubmenus);
+    $(window).on('resize', function() {
+      if ($(window).width() <= 991) bindMobileSubmenus();
+    });
+
+    // Entire service/impact cards tappable on mobile
+    function bindMobileCardTap() {
+      if ($(window).width() > 767) return;
+      $('.ds-card, .ds-service-icon-card').each(function() {
+        var $card = $(this);
+        if ($card.data('tap-bound')) return;
+        var $link = $card.find('h3 a, .link, .ds-card-title a').first();
+        if (!$link.length) return;
+        $card.data('tap-bound', true).addClass('is-tappable').on('click', function(e) {
+          if ($(e.target).closest('a').length) return;
+          window.location.href = $link.attr('href');
+        });
+      });
+    }
+    bindMobileCardTap();
+    $(window).on('resize', bindMobileCardTap);
+
+    // COP global forums — show more photos on mobile
+    $(document).on('click', '.cop-show-more-btn', function() {
+      var $btn = $(this);
+      var $gallery = $($btn.data('target'));
+      var expanded = $gallery.toggleClass('is-expanded').hasClass('is-expanded');
+      $btn.text(expanded ? 'Show Fewer Photos' : 'Show More Photos').attr('aria-expanded', expanded ? 'true' : 'false');
+    });
+
+    // Donation page — scroll to partnership form
+    $(document).on('click', '.donation-cta-scroll', function(e) {
+      var $target = $('#donation-form');
+      if (!$target.length) return;
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $target.offset().top - 80 }, 500);
+    });
+
+    // Homepage — show/hide extra service cards on mobile
+    $(document).on('click', '#home-services-toggle', function() {
+      var $btn = $(this);
+      var $grid = $('#home-services-grid');
+      var expanded = $grid.toggleClass('is-expanded').hasClass('is-expanded');
+      $btn.text(expanded ? 'Show Fewer Services' : 'Show All Services').attr('aria-expanded', expanded ? 'true' : 'false');
+    });
+
+    // Scroll reveal (IntersectionObserver)
+    (function initReveal() {
+        if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
+            return;
+        }
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+    })();
+
+    // Animated stat counters
+    (function initStatCounters() {
+        var stats = document.querySelectorAll('.ds-stat-dark .num[data-count]');
+        if (!stats.length) return;
+        function animate(el) {
+            if (el.dataset.animated) return;
+            el.dataset.animated = '1';
+            var target = parseFloat(el.getAttribute('data-count') || '0');
+            var prefix = el.getAttribute('data-prefix') || '';
+            var suffix = el.getAttribute('data-suffix') || '';
+            var isFloat = String(target).indexOf('.') > -1 || el.getAttribute('data-count').indexOf('.') > -1;
+            var start = performance.now();
+            var duration = 1500;
+            function frame(now) {
+                var p = Math.min((now - start) / duration, 1);
+                var eased = 1 - Math.pow(1 - p, 3);
+                var value = target * eased;
+                el.textContent = prefix + (isFloat ? value.toFixed(1) : Math.round(value)) + suffix;
+                if (p < 1) requestAnimationFrame(frame);
+            }
+            requestAnimationFrame(frame);
+        }
+        if (!('IntersectionObserver' in window)) {
+            stats.forEach(animate);
+            return;
+        }
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    animate(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        stats.forEach(function(el) { obs.observe(el); });
+    })();
+
     // Scroll animation
-    AOS.init();
+    if (typeof AOS !== 'undefined') AOS.init();
 
     //Back To top
     function BackToTop() {
-        $('.back-to-top').on('click', function () {
+        $('.back-to-top').on('click', function (e) {
+            e.preventDefault();
             $('html, body').animate({
                 scrollTop: 0
             }, 100);
-            return false;
         });
 
         $(document).scroll(function () {
@@ -448,11 +578,12 @@ function toggleTheme() {
 
 // Immediately invoked function to set the theme on initial load
 (function () {
+    var slider = document.getElementById('slider');
     if (localStorage.getItem('clim_theme') === 'theme-dark') {
         setTheme('theme-dark');
-        document.getElementById('slider').checked = false;
+        if (slider) slider.checked = false;
     } else {
         setTheme('theme-light');
-        document.getElementById('slider').checked = true;
+        if (slider) slider.checked = true;
     }
 })();
