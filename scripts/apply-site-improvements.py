@@ -39,8 +39,8 @@ CUSTOM_CSS_LINKS = [
 ]
 
 DEFAULT_DESC = (
-    "Africa Climate Finance bridges the climate finance gap in Africa — "
-    "from village-level microfinance to GCF project preparation and billion-dollar funding proposals."
+    "Africa Climate Finance bridges the climate finance gap in Africa by empowering "
+    "vulnerable communities through microfinance, education, and climate-smart initiatives."
 )
 
 PAGE_META = {
@@ -313,16 +313,6 @@ def enhance_404_content(text: str, name: str) -> str:
 
 
 def fix_stat_counters(text: str, name: str) -> str:
-    if name != "index.html":
-        return text
-    mapping = [
-        ('<div class="num">280+</div>', '<div class="num" data-count="280" data-suffix="+">0</div>'),
-        ('<div class="num">7</div>', '<div class="num" data-count="7">0</div>'),
-        ('<div class="num">US$1.7B</div>', '<div class="num" data-count="1.7" data-prefix="US$" data-suffix="B">0</div>'),
-        ('<div class="num">2</div>', '<div class="num" data-count="2">0</div>'),
-    ]
-    for old, new in mapping:
-        text = text.replace(old, new)
     return text
 
 
