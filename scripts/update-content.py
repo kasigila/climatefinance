@@ -60,7 +60,7 @@ ABOUT_NEW = '''
                         <div class="ds-section-header">
                             <span class="ds-eyebrow">Leadership</span>
                             <h2 class="ds-h2">Kenneth Davis Kasigila</h2>
-                            <p class="ds-subtitle">Group CEO &amp; Founder — GCF Focal Point, climate finance strategist, and grassroots advocate</p>
+                            <p class="ds-subtitle">Group CEO &amp; Founder — climate finance strategist and grassroots advocate</p>
                         </div>
                         <div class="ds-leadership">
                             <div class="ds-leadership-photo">
