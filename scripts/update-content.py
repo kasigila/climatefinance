@@ -145,27 +145,23 @@ def slim_about():
 SERVICES = {
     "market-analysis.php.html": {
         "title": "Market Analysis",
+        "minimal": True,
         "deliverables": [
             "40-page market demand report with buyer mapping and pricing analysis",
             "Competitive landscape and go-to-market recommendations",
-            "Demand validation for GCF Concept Notes and Funding Proposals",
+            "Demand validation for climate project concept notes and funding proposals",
         ],
-        "case_title": "GCF FP223 — US$1.5B project pipeline",
-        "case_text": "Market analysis supporting GCF-referenced projects totalling US$1.7 billion in pipeline value.",
-        "case_link": "cop-engagements.php.html#cop29",
         "form_subject": "Market Analysis inquiry",
         "cta": "Request a Market Analysis",
     },
     "financial-modelling.php.html": {
         "title": "Financial Modelling",
+        "minimal": True,
         "deliverables": [
             "Integrated financial models with cashflow, sensitivity, and scenario analysis",
-            "GCF-aligned cost-benefit and feasibility structures",
+            "Investment-ready cost-benefit and feasibility structures",
             "Blended finance and de-risking instrument modelling",
         ],
-        "case_title": "GCF FP179 — US$200M commercial bank proposal",
-        "case_text": "Africa's first GCF-approved commercial bank funding proposal, led by our Group CEO.",
-        "case_link": "kenneth.php.html",
         "form_subject": "Financial Modelling inquiry",
         "cta": "Request Financial Modelling",
     },
@@ -241,7 +237,14 @@ def update_service_page(filename, cfg):
     path = ROOT / filename
     text = path.read_text(encoding="utf-8")
     deliverables_html = "".join(f"<li>{d}</li>" for d in cfg["deliverables"])
-    new_desc = f'''
+    if cfg.get("minimal"):
+        new_desc = f'''
+                                    <h1>{cfg["title"]}</h1>
+                                    <h3 class="green-dark mt-4">What You Get</h3>
+                                    <ul class="ds-deliverables">{deliverables_html}</ul>
+'''
+    else:
+        new_desc = f'''
                                     <h1>{cfg["title"]}</h1>
                                     <h3 class="green-dark mt-4">What You Get</h3>
                                     <ul class="ds-deliverables">{deliverables_html}</ul>
