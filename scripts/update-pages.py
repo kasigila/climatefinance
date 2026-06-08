@@ -78,11 +78,14 @@ INSIGHTS_BODY = '''
                         </div>
 
                         <article class="ds-article-block">
-                            <div class="ds-article-meta"><span class="badge-date">2025</span><span>UNDP · Tanzania National BIOFIN Technical Committee</span></div>
-                            <h3 class="ds-h3 green-dark">Member, Tanzania National BIOFIN Technical Committee</h3>
-                            <p class="ds-body"><strong>Kenneth Davis Kasigila</strong> serves on Tanzania&apos;s National Biodiversity Finance Initiative (BIOFIN) Technical Committee under UNDP — connecting biodiversity finance policy with climate finance implementation on the ground.</p>
-                            <p class="ds-body">This role bridges national biodiversity finance planning with the microfinance and GCF project work Africa Climate Finance delivers across Tanzania&apos;s Southern Highlands.</p>
-                            <div class="ds-takeaways"><h4>Why this matters</h4><ul><li>BIOFIN aligns biodiversity and climate finance at the national policy level</li><li>Connects institutional frameworks to grassroots microfinance delivery</li><li>Strengthens Tanzania&apos;s capacity to mobilize finance for nature and climate</li></ul></div>
+                            <div class="ds-article-meta"><span class="badge-date">2025</span><span>United Nations Development Programme (UNDP) Initiative</span></div>
+                            <h3 class="ds-h3 green-dark">Tanzania National BIOFIN Technical Committee</h3>
+                            <div class="ds-article-photo">
+                                <a href="assets/img/stories/biofin-launch-tanzania.png" data-fancybox="insights-biofin"><img src="assets/img/stories/biofin-launch-tanzania.png" alt="Launch of Biodiversity Finance Initiative in Tanzania with UNDP"></a>
+                            </div>
+                            <p class="ds-body"><strong>Kenneth Davis Kasigila</strong> participated in the initial working group for Tanzania&apos;s National Biodiversity Finance Initiative (BIOFIN) Technical Committee under the UNDP.</p>
+                            <p class="ds-body">His involvement centers on connecting national biodiversity finance policy with practical climate finance implementation. This role serves as a functional bridge between high-level biodiversity finance planning and day-to-day microfinance operations, ensuring that national conservation strategies are actively supported by financial institutions.</p>
+                            <div class="ds-takeaways"><h4>Core Focus Areas</h4><ul><li><strong>Policy Implementation:</strong> Translating national biodiversity targets into actionable frameworks for financial institutions.</li><li><strong>Microfinance Integration:</strong> Connecting macro-level environmental finance planning with grassroots microfinance solutions.</li><li><strong>Framework Alignment:</strong> Ensuring that biodiversity objectives align seamlessly with Tanzania&apos;s existing climate finance initiatives.</li></ul></div>
                         </article>
 
                         <article class="ds-article-block">
