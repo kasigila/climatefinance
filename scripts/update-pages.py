@@ -142,15 +142,6 @@ BENEFICIARY_PATCHES = [
         '''<blockquote class="ds-pull-quote">&quot;We financed him for making spices to improve food security and navigate climate shocks.&quot;<cite>— Africa Climate Finance, Nyasa Masala beneficiary</cite></blockquote>
                                     <h5 class="text-success mb-3">Nyasa Masala: Spicing Up Climate Resilience and Nutrition in Tanzania</h5>''',
     ),
-    (
-        '<h5 class="text-success mb-3">Empowering Student Success and Climate Action in Iringa</h5>',
-        '''<blockquote class="ds-pull-quote">&quot;Power Porridge gives students the nutrition to learn — and me the livelihood to grow.&quot;<cite>— Aswile Francis Mwaihola, Iringa</cite></blockquote>
-                                    <h5 class="text-success mb-3">Empowering Student Success and Climate Action in Iringa</h5>
-                                    <div class="ds-metrics-row mb-4">
-                                        <div class="ds-metric"><div class="val">Power Porridge</div><div class="lbl">Student nutrition product</div></div>
-                                        <div class="ds-metric"><div class="val">Iringa</div><div class="lbl">Delivery by motorcycle</div></div>
-                                    </div>''',
-    ),
 ]
 
 
