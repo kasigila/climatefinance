@@ -94,6 +94,12 @@
   font-weight: 700;
   color: #1a2e22;
 }
+.cop-page .cop-block-header .cop-hero-subtitle {
+  color: #5c6f65;
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
 
 /* Image grid: 3 desktop, 2 tablet, 1 mobile */
 .cop-page .cop-image-grid {
