@@ -12,13 +12,13 @@ ABOUT_NEW = '''
                         <div class="ds-section-header">
                             <span class="ds-eyebrow">Who We Are</span>
                             <h2 class="ds-h2">Bridging Climate Finance in Africa</h2>
-                            <p class="ds-subtitle">Africa Climate Finance connects village-level microfinance with institutional climate capital — from Rungwe cooperatives to GCF funding proposals.</p>
+                            <p class="ds-subtitle">Africa Climate Finance connects village-level microfinance with institutional climate capital — from Rungwe cooperatives to major funding proposals.</p>
                         </div>
                         <div class="ds-two-col">
                             <div class="ds-media-card"><img src="assets/img/abouut.png" alt="Africa Climate Finance community work"></div>
                             <div>
-                                <p class="ds-body ds-mb">We fill the gap of climate finance in Africa via microfinance for private and vulnerable communities — while preparing bankable projects for the Green Climate Fund and other climate action funders.</p>
-                                <p class="ds-body ds-mb-0">Our work spans financial literacy training, climate-smart lending, market analysis, and GCF project preparation — keeping 1.5°C alive through both grassroots action and institutional partnerships.</p>
+                                <p class="ds-body ds-mb">We fill the gap of climate finance in Africa via microfinance for private and vulnerable communities — while preparing bankable projects for climate action funders.</p>
+                                <p class="ds-body ds-mb-0">Our work spans financial literacy training, climate-smart lending, market analysis, and project preparation — keeping 1.5°C alive through both grassroots action and institutional partnerships.</p>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ ABOUT_NEW = '''
                             <span class="ds-model-arrow">→</span>
                             <span class="ds-model-step">Project Preparation</span>
                             <span class="ds-model-arrow">→</span>
-                            <span class="ds-model-step">GCF &amp; Climate Funds</span>
+                            <span class="ds-model-step">Climate Funds</span>
                         </div>
                         <div class="row gx-5">
                             <div class="col-lg-6">
@@ -67,10 +67,10 @@ ABOUT_NEW = '''
                                 <a href="kenneth.php.html"><img src="assets/img/team/kenneth.png" alt="Kenneth Davis Kasigila"></a>
                             </div>
                             <div>
-                                <p class="ds-body">Kenneth leads Africa Climate Finance with 25+ years in banking and deep expertise in GCF project preparation. He led Africa&apos;s first GCF-approved commercial bank funding proposal (US$200M) and serves on Tanzania&apos;s National BIOFIN Technical Committee.</p>
+                                <p class="ds-body">Kenneth leads Africa Climate Finance with 25+ years in banking and deep expertise in climate project preparation. He led a US$200M commercial bank climate funding proposal and serves on Tanzania&apos;s National BIOFIN Technical Committee.</p>
                                 <div class="ds-credential-pills">
-                                    <span class="ds-credential-pill">GCF Focal Point — CRDB Bank</span>
-                                    <span class="ds-credential-pill">US$200M+ GCF Proposals</span>
+                                    <span class="ds-credential-pill">Climate Finance — CRDB Bank</span>
+                                    <span class="ds-credential-pill">US$200M+ Climate Proposals</span>
                                     <span class="ds-credential-pill">BIOFIN National Committee — UNDP</span>
                                     <span class="ds-credential-pill">COP29 &amp; COP30 Panelist</span>
                                 </div>
@@ -181,7 +181,7 @@ SERVICES = {
     "gender-assessment.php.html": {
         "title": "Gender Assessment",
         "deliverables": [
-            "GCF-compliant gender action plans and assessments",
+            "Gender action plans and assessments for climate finance proposals",
             "Stakeholder consultations with women-led groups",
             "Gender-responsive indicators and monitoring frameworks",
         ],
@@ -194,7 +194,7 @@ SERVICES = {
     "stakeholders-engagement.php.html": {
         "title": "Stakeholders Engagement",
         "deliverables": [
-            "Stakeholder mapping and engagement plans for GCF projects",
+            "Stakeholder mapping and engagement plans for climate projects",
             "Consultation surveys and FP stakeholder documentation",
             "Free, prior, and informed consent processes where required",
         ],
@@ -224,8 +224,8 @@ SERVICES = {
             "Climate risk integration into financial products and operations",
             "Risk mitigation recommendations for portfolios and projects",
         ],
-        "case_title": "GCF project risk frameworks",
-        "case_text": "Climate risk assessment supporting FP179 and FP223 GCF-referenced proposals.",
+        "case_title": "Project risk frameworks",
+        "case_text": "Climate risk assessment supporting FP179 and FP223 climate finance proposals.",
         "case_link": "cop-engagements.php.html#cop29",
         "form_subject": "Climate Risk inquiry",
         "cta": "Request Climate Risk Assessment",

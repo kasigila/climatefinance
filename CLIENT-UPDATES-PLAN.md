@@ -68,7 +68,7 @@ This plan summarizes all content received from your client (via WhatsApp) and pr
 
 ### Event Participation Images (13 images, no text)
 Use on **COP Engagements page** (`cop-engagements.html`) to enrich existing COP29/COP30 sections:
-- COP29 banner, Nest Climate Campus, Namibia Programme, UN Azerbaijan, FAO, LSE, UNCCD, CGAP, Tanzania flag, GCF panel, Jamaica Climate Resilience flyer
+- COP29 banner, Nest Climate Campus, Namibia Programme, UN Azerbaijan, FAO, LSE, UNCCD, CGAP, Tanzania flag, climate finance panel, Jamaica Climate Resilience flyer
 - Consider a new "Event Highlights" gallery or integrate into existing COP sections
 
 ### LSE Engagement
