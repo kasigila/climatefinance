@@ -341,7 +341,7 @@
         }
     });
 
-    // Responsive mmenu — delegated so dynamically loaded header works
+    // Responsive mmenu - delegated so dynamically loaded header works
     $(window).on('resize', function() {
         if($(window).width() <= 1199) {
             $('.collapse.navbar-collapse').removeClass('collapse');
@@ -456,7 +456,7 @@
     bindMobileCardTap();
     $(window).on('resize', bindMobileCardTap);
 
-    // COP global forums — show more photos on mobile
+    // COP global forums - show more photos on mobile
     $(document).on('click', '.cop-show-more-btn', function() {
       var $btn = $(this);
       var $gallery = $($btn.data('target'));
@@ -464,7 +464,7 @@
       $btn.text(expanded ? 'Show Fewer Photos' : 'Show More Photos').attr('aria-expanded', expanded ? 'true' : 'false');
     });
 
-    // Donation page — scroll to partnership form
+    // Donation page - scroll to partnership form
     $(document).on('click', '.donation-cta-scroll', function(e) {
       var $target = $('#donation-form');
       if (!$target.length) return;
@@ -472,7 +472,7 @@
       $('html, body').animate({ scrollTop: $target.offset().top - 80 }, 500);
     });
 
-    // Homepage — show/hide extra service cards on mobile
+    // Homepage - show/hide extra service cards on mobile
     $(document).on('click', '#home-services-toggle', function() {
       var $btn = $(this);
       var $grid = $('#home-services-grid');

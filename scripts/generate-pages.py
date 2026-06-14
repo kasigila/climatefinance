@@ -54,7 +54,7 @@ WOMEN_BODY = '''
   <div class="container">
     <div class="breadcrumb-title">
       <h2>Women Empowerment</h2>
-      <p class="cop-hero-subtitle">280+ women trained in financial literacy and climate-smart practices — Isajilo Ward, January 2026</p>
+      <p class="cop-hero-subtitle">280+ women trained in financial literacy and climate-smart practices in Isajilo Ward, January 2026</p>
       <ul class="breadcrumb-menu list-style"><li><a href="index.html">Home</a></li><li>Women Empowerment</li></ul>
     </div>
   </div>
@@ -64,7 +64,7 @@ WOMEN_BODY = '''
     <div class="ds-section-header">
       <span class="ds-eyebrow">Our Impact</span>
       <h2 class="ds-h2">Women Economic Empowerment</h2>
-      <span class="badge bg-success rounded-pill mt-2">Empowering 280+ Women — January 2026</span>
+      <span class="badge bg-success rounded-pill mt-2">Empowering 280+ Women, January 2026</span>
     </div>
     <h3 class="ds-h3 green-dark text-center ds-mb">Taking Climate Finance to the Grassroots</h3>
     <div class="ds-numbered-cards ds-mb-lg">
@@ -74,12 +74,12 @@ WOMEN_BODY = '''
     </div>
     <h3 class="ds-h3 green-dark text-center ds-mb" id="women-gallery">Classroom &amp; Community Engagement</h3>
     <div class="ds-gallery-captioned ds-mb-lg">
-      <figure><a href="assets/img/highlights/women-280-community.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-community.png" alt="CEO with teachers and parents"></a><figcaption>Group CEO with school teachers and parents — Isajilo Ward</figcaption></figure>
-      <figure><a href="assets/img/highlights/women-280-group.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-group.png" alt="Women from four villages"></a><figcaption>Women representatives from four villages — Rungwe District</figcaption></figure>
-      <figure><a href="assets/img/highlights/women-280-session.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-session.png" alt="Education session"></a><figcaption>Financial literacy session — January 2026</figcaption></figure>
+      <figure><a href="assets/img/highlights/women-280-community.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-community.png" alt="CEO with teachers and parents"></a><figcaption>Group CEO with school teachers and parents, Isajilo Ward</figcaption></figure>
+      <figure><a href="assets/img/highlights/women-280-group.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-group.png" alt="Women from four villages"></a><figcaption>Women representatives from four villages, Rungwe District</figcaption></figure>
+      <figure><a href="assets/img/highlights/women-280-session.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-session.png" alt="Education session"></a><figcaption>Financial literacy session, January 2026</figcaption></figure>
       <figure><a href="assets/img/highlights/women-280-outdoor-tree.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-outdoor-tree.png" alt="Outdoor session"></a><figcaption>Outdoor climate-smart training session</figcaption></figure>
       <figure><a href="assets/img/highlights/women-280-questionnaire.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-questionnaire.png" alt="Needs assessment"></a><figcaption>Grassroots questionnaire on finance and climate</figcaption></figure>
-      <figure><a href="assets/img/highlights/women-280-women-seated.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-women-seated.png" alt="Women in session"></a><figcaption>Community participants — Mbeya Region</figcaption></figure>
+      <figure><a href="assets/img/highlights/women-280-women-seated.png" data-fancybox="classroom"><img src="assets/img/highlights/women-280-women-seated.png" alt="Women in session"></a><figcaption>Community participants, Mbeya Region</figcaption></figure>
     </div>
     <div class="text-center"><a href="testimonials.php.html" class="btn style2 rounded-pill">Read Beneficiary Stories</a></div>
   </div>

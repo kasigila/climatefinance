@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------
-   Africa Climate Finance — Mobile-First UX (≤767px / ≤991px nav)
+   Africa Climate Finance - Mobile-First UX (≤767px / ≤991px nav)
    Touch targets, typography, layout, and page-specific polish
 -----------------------------------------------------------*/
 
@@ -198,7 +198,7 @@
   }
 }
 
-/* ========== Touch targets — cards & links ========== */
+/* ========== Touch targets - cards & links ========== */
 @media (max-width: 767px) {
   .ds-card,
   .ds-service-icon-card,

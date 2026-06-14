@@ -18,11 +18,11 @@ Africa Climate Finance helps develop and manage projects that advance Climate Ac
 
 ## Features
 
-- **Services overview** — Market analysis, financial modelling, microfinance, gender assessment, stakeholder engagement, scientific assessment, climate risk
-- **Responsive layout** — Mobile-friendly with dark/light theme toggle
-- **Language switcher** — English / Swahili (i18n) with `?lang=en` or `?lang=sw` URL support — see [I18N-README.md](I18N-README.md) for adding translations
-- **Contact & about** — Clear calls to action and company information
-- **Form handling** — Google Apps Script (replaces Formspree); styled HTML emails to you and confirmation to submitters — see `google-apps-script/README.md` for setup
+- **Services overview**: Market analysis, financial modelling, microfinance, gender assessment, stakeholder engagement, scientific assessment, climate risk
+- **Responsive layout**: Mobile-friendly with dark/light theme toggle
+- **Language switcher**: English / Swahili (i18n) with `?lang=en` or `?lang=sw` URL support; see [I18N-README.md](I18N-README.md) for adding translations
+- **Contact & about**: Clear calls to action and company information
+- **Form handling**: Google Apps Script (replaces Formspree); styled HTML emails to you and confirmation to submitters; see `google-apps-script/README.md` for setup
 
 ## Run Locally
 

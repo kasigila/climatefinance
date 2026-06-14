@@ -92,15 +92,15 @@ INSIGHTS_BODY = '''
                             <div class="ds-article-photo">
                                 <a href="assets/img/stories/WhatsApp_Image_2026-03-06_at_13.41.52-9e6c26f4-14bd-4513-98c7-ef6327128158.png" data-fancybox="insights-lse"><img src="assets/img/stories/WhatsApp_Image_2026-03-06_at_13.41.52-9e6c26f4-14bd-4513-98c7-ef6327128158.png" alt="Kenneth Kasigila at LSE panel"></a>
                             </div>
-                            <p class="ds-body">At the London School of Economics, Kenneth presented on embedding climate-smart agriculture into banking practice — demonstrating how finance professionals can connect high-level policy with on-the-ground farming impact.</p>
-                            <div class="ds-takeaways"><h4>Key takeaways</h4><ul><li>Climate finance theory must connect to agricultural practice</li><li>Bankers as farmers — a model for authentic climate leadership</li><li>Academic partnerships strengthen policy-to-practice bridges</li></ul></div>
+                            <p class="ds-body">At the London School of Economics, Kenneth presented on embedding climate-smart agriculture into banking practice, demonstrating how finance professionals can connect high-level policy with on-the-ground farming impact.</p>
+                            <div class="ds-takeaways"><h4>Key takeaways</h4><ul><li>Climate finance theory must connect to agricultural practice</li><li>Bankers as farmers: a model for authentic climate leadership</li><li>Academic partnerships strengthen policy-to-practice bridges</li></ul></div>
                         </article>
 
                         <article class="ds-article-block">
                             <div class="ds-article-meta"><span class="badge-date">2026</span><span>Mbeya, Tanzania · Field visit</span></div>
                             <h3 class="ds-h3 green-dark">Cultivating Change: Global Sustainability with Local Roots</h3>
-                            <p class="ds-body">At Africa Climate Finance, sustainability is grown from the ground up. A recent visit to a C.A.F.E. Practices model farm in Mbeya reinforced how conglomerate-backed organic initiatives drive sustainable agriculture — and how climate finance must connect boardroom strategy to field practice.</p>
-                            <p class="ds-body mb-0"><a href="kenneth.php.html">Full profile — Kenneth Davis Kasigila →</a> · <a href="cop-engagements.php.html">COP engagements →</a></p>
+                            <p class="ds-body">At Africa Climate Finance, sustainability is grown from the ground up. A recent visit to a C.A.F.E. Practices model farm in Mbeya reinforced how conglomerate-backed organic initiatives drive sustainable agriculture, and how climate finance must connect boardroom strategy to field practice.</p>
+                            <p class="ds-body mb-0"><a href="kenneth.php.html">Full profile: Kenneth Davis Kasigila →</a> · <a href="cop-engagements.php.html">COP engagements →</a></p>
                         </article>
                     </div>
                 </section>
@@ -123,12 +123,12 @@ def patch_insights():
 
 BENEFICIARY_PATCHES = [
     (
-        '<div class="cop-block-header">\n                            <span class="cop-eyebrow">Impact Story</span>\n                            <h2>Climate Finance for Ginger Farmers — Isajilo, Tukuyu</h2>\n                        </div>',
+        '<div class="cop-block-header">\n                            <span class="cop-eyebrow">Impact Story</span>\n                            <h2>Climate Finance for Ginger Farmers in Isajilo, Tukuyu</h2>\n                        </div>',
         '''<div class="cop-block-header">
                             <span class="cop-eyebrow">Impact Story</span>
-                            <h2>Climate Finance for Ginger Farmers — Isajilo, Tukuyu</h2>
+                            <h2>Climate Finance for Ginger Farmers in Isajilo, Tukuyu</h2>
                         </div>
-                        <blockquote class="ds-pull-quote">&quot;Before, one bad rain meant one lost season. With organic ginger and a financial buffer, we can plan beyond the next storm.&quot;<cite>— Ginger farmer, Isajilo Ward</cite></blockquote>
+                        <blockquote class="ds-pull-quote">&quot;Before, one bad rain meant one lost season. With organic ginger and a financial buffer, we can plan beyond the next storm.&quot;<cite>Ginger farmer, Isajilo Ward</cite></blockquote>
                         <div class="ds-metrics-row">
                             <div class="ds-metric"><div class="val">Organic</div><div class="lbl">Certified farming transition</div></div>
                             <div class="ds-metric"><div class="val">Export</div><div class="lbl">Premium market access</div></div>
@@ -137,7 +137,7 @@ BENEFICIARY_PATCHES = [
     ),
     (
         '<h5 class="text-success mb-3">Nyasa Masala: Spicing Up Climate Resilience and Nutrition in Tanzania</h5>',
-        '''<blockquote class="ds-pull-quote">&quot;We financed him for making spices to improve food security and navigate climate shocks.&quot;<cite>— Africa Climate Finance, Nyasa Masala beneficiary</cite></blockquote>
+        '''<blockquote class="ds-pull-quote">&quot;We financed him for making spices to improve food security and navigate climate shocks.&quot;<cite>Africa Climate Finance, Nyasa Masala beneficiary</cite></blockquote>
                                     <h5 class="text-success mb-3">Nyasa Masala: Spicing Up Climate Resilience and Nutrition in Tanzania</h5>''',
     ),
 ]
@@ -179,9 +179,9 @@ FAQ_SECTION = '''
                             <h2 class="ds-h2">From Concept Note to Funding Proposal</h2>
                         </div>
                         <div class="ds-card ds-mb">
-                            <p class="ds-body mb-2"><strong>Concept Notes (CNs)</strong> are early project summaries submitted to climate funders — outlining objectives, beneficiaries, and estimated impact.</p>
-                            <p class="ds-body mb-2"><strong>Project Preparation Facilities (PPFs)</strong> provide funding to develop a full Funding Proposal — including feasibility studies, environmental and social safeguards, and stakeholder engagement.</p>
-                            <p class="ds-body mb-0"><strong>Funding Proposals (FPs)</strong> are comprehensive applications for climate finance — such as FP179 (US$200M) and FP223 (US$1.5B pipeline) that our leadership has supported.</p>
+                            <p class="ds-body mb-2"><strong>Concept Notes (CNs)</strong> are early project summaries submitted to climate funders, outlining objectives, beneficiaries, and estimated impact.</p>
+                            <p class="ds-body mb-2"><strong>Project Preparation Facilities (PPFs)</strong> provide funding to develop a full Funding Proposal, including feasibility studies, environmental and social safeguards, and stakeholder engagement.</p>
+                            <p class="ds-body mb-0"><strong>Funding Proposals (FPs)</strong> are comprehensive applications for climate finance, such as FP179 (US$200M) and FP223 (US$1.5B pipeline) that our leadership has supported.</p>
                         </div>
                     </div>
                 </section>
@@ -211,12 +211,12 @@ def patch_cop_gallery():
     # Wrap each forum image with figure - simpler: add caption class via CSS on alt as title attribute visible
     # Add timeline date to COP30 header
     text = text.replace(
-        '<h2>COP30 Brazil — Belém 2025</h2>',
-        '<div class="ds-timeline-date">November 2025 · Most Recent</div><h2>COP30 Brazil — Belém 2025</h2>',
+        '<h2>COP30 Brazil: Belém 2025</h2>',
+        '<div class="ds-timeline-date">November 2025 · Most Recent</div><h2>COP30 Brazil: Belém 2025</h2>',
     )
     text = text.replace(
-        '<h2>COP29 Azerbaijan — Baku 2024</h2>',
-        '<div class="ds-timeline-date">November 2024</div><h2>COP29 Azerbaijan — Baku 2024</h2>',
+        '<h2>COP29 Azerbaijan: Baku 2024</h2>',
+        '<div class="ds-timeline-date">November 2024</div><h2>COP29 Azerbaijan: Baku 2024</h2>',
     )
     path.write_text(text, encoding="utf-8")
     print("Updated cop-engagements.php.html")

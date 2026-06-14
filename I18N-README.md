@@ -57,5 +57,5 @@ Wrap only the translatable text in a `<span>` so the icon is not replaced:
 
 1. Open any page, click the language dropdown (Eng ▼), choose **Swahili**.
 2. All `[data-i18n]` elements should update immediately.
-3. Refresh the page — Swahili should persist.
-4. Add `?lang=sw` to the URL — it overrides localStorage on load.
+3. Refresh the page - Swahili should persist.
+4. Add `?lang=sw` to the URL - it overrides localStorage on load.
