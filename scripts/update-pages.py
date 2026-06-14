@@ -73,7 +73,6 @@ INSIGHTS_BODY = '''
                             <span>Recognition &amp; Affiliations</span>
                             <strong>UNDP BIOFIN</strong>
                             <strong>London School of Economics</strong>
-                            <strong>Global Center on Adaptation</strong>
                         </div>
 
                         <article class="ds-article-block">
