@@ -12,13 +12,13 @@ ABOUT_NEW = '''
                         <div class="ds-section-header">
                             <span class="ds-eyebrow">Who We Are</span>
                             <h2 class="ds-h2">Bridging Climate Finance in Africa</h2>
-                            <p class="ds-subtitle">Africa Climate Finance connects village-level microfinance with institutional climate capital — from Rungwe cooperatives to major funding proposals.</p>
+                            <p class="ds-subtitle">Africa Climate Finance connects village-level microfinance with institutional climate capital, from Rungwe cooperatives to major funding proposals.</p>
                         </div>
                         <div class="ds-two-col">
                             <div class="ds-media-card"><img src="assets/img/abouut.png" alt="Africa Climate Finance community work"></div>
                             <div>
-                                <p class="ds-body ds-mb">We fill the gap of climate finance in Africa via microfinance for private and vulnerable communities — while preparing bankable projects for climate action funders.</p>
-                                <p class="ds-body ds-mb-0">Our work spans financial literacy training, climate-smart lending, market analysis, and project preparation — keeping 1.5°C alive through both grassroots action and institutional partnerships.</p>
+                                <p class="ds-body ds-mb">We fill the gap of climate finance in Africa via microfinance for private and vulnerable communities while preparing bankable projects for climate action funders.</p>
+                                <p class="ds-body ds-mb-0">Our work spans financial literacy training, climate-smart lending, market analysis, and project preparation, keeping 1.5°C alive through both grassroots action and institutional partnerships.</p>
                             </div>
                         </div>
                     </div>
@@ -43,11 +43,11 @@ ABOUT_NEW = '''
                         <div class="row gx-5">
                             <div class="col-lg-6">
                                 <h3 class="ds-h3 green-dark">Our Mission</h3>
-                                <p class="ds-body">We fill the gap of climate finance in Africa via microfinance for vulnerable communities — aligned with low-carbon, climate-resilient pathways and SDG 13.</p>
+                                <p class="ds-body">We fill the gap of climate finance in Africa via microfinance for vulnerable communities aligned with low-carbon, climate-resilient pathways and SDG 13.</p>
                             </div>
                             <div class="col-lg-6">
                                 <h3 class="ds-h3 green-dark">Our Pathway</h3>
-                                <p class="ds-body">We establish the Climate-Smart Microfinance Initiative in Tanzania, using Central Bank licensing to de-risk and scale climate investment — then replicate proven models across Africa.</p>
+                                <p class="ds-body">We establish the Climate-Smart Microfinance Initiative in Tanzania, using Central Bank licensing to de-risk and scale climate investment, then replicate proven models across Africa.</p>
                                 <a href="microfinance.php.html" class="btn style2 mt-2">Explore Microfinance for Climate</a>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ ABOUT_NEW = '''
                         <div class="ds-section-header">
                             <span class="ds-eyebrow">Leadership</span>
                             <h2 class="ds-h2">Kenneth Davis Kasigila</h2>
-                            <p class="ds-subtitle">Group CEO &amp; Founder — climate finance strategist and grassroots advocate</p>
+                            <p class="ds-subtitle">Group CEO &amp; Founder, climate finance strategist and grassroots advocate</p>
                         </div>
                         <div class="ds-leadership">
                             <div class="ds-leadership-photo">
@@ -69,9 +69,9 @@ ABOUT_NEW = '''
                             <div>
                                 <p class="ds-body">Kenneth leads Africa Climate Finance with 25+ years in banking and deep expertise in climate project preparation. He led a US$200M commercial bank climate funding proposal and serves on Tanzania&apos;s National BIOFIN Technical Committee.</p>
                                 <div class="ds-credential-pills">
-                                    <span class="ds-credential-pill">Climate Finance — CRDB Bank</span>
+                                    <span class="ds-credential-pill">Climate Finance, CRDB Bank</span>
                                     <span class="ds-credential-pill">US$200M+ Climate Proposals</span>
-                                    <span class="ds-credential-pill">BIOFIN National Committee — UNDP</span>
+                                    <span class="ds-credential-pill">BIOFIN National Committee, UNDP</span>
                                     <span class="ds-credential-pill">COP29 &amp; COP30 Panelist</span>
                                 </div>
                                 <a href="kenneth.php.html" class="btn style2 mt-3">Read Full Bio</a>
@@ -91,13 +91,13 @@ ABOUT_NEW = '''
                             <div class="ds-card">
                                 <div class="ds-card-icon"><i class="ri-heart-line"></i></div>
                                 <h3 class="ds-card-title"><a href="testimonials.php.html">Our Beneficiaries</a></h3>
-                                <p class="ds-card-desc">Ginger farmers, spice entrepreneurs, and community nutrition programmes — real stories from Tukuyu to Iringa.</p>
+                                <p class="ds-card-desc">Ginger farmers, spice entrepreneurs, and community nutrition programmes with real stories from Tukuyu to Iringa.</p>
                                 <a href="testimonials.php.html" class="link">Read stories →</a>
                             </div>
                             <div class="ds-card">
                                 <div class="ds-card-icon"><i class="ri-women-line"></i></div>
                                 <h3 class="ds-card-title"><a href="women-empowerment.php.html">Women Empowerment</a></h3>
-                                <p class="ds-card-desc">280+ women trained in financial literacy and climate-smart practices — January 2026, Isajilo Ward.</p>
+                                <p class="ds-card-desc">280+ women trained in financial literacy and climate-smart practices in January 2026, Isajilo Ward.</p>
                                 <a href="women-empowerment.php.html" class="link">View programme →</a>
                             </div>
                             <div class="ds-card">
@@ -120,7 +120,7 @@ ABOUT_NEW = '''
                 <section class="about-wrap style1 ptb-60 ds-section ds-section-compact">
                     <div class="container ds-container text-center">
                         <h3 class="ds-h3 green-dark ds-mb">Ready to partner?</h3>
-                        <p class="ds-subtitle mx-auto ds-mb">Whether you are a community group, project developer, or institutional partner — we would like to hear from you.</p>
+                        <p class="ds-subtitle mx-auto ds-mb">Whether you are a community group, project developer, or institutional partner, we would like to hear from you.</p>
                         <div class="d-flex gap-3 justify-content-center flex-wrap">
                             <a href="contact.php.html" class="btn style1 rounded-pill px-4">Partner With Us</a>
                             <a href="testimonials.php.html" class="btn style2 rounded-pill px-4">Explore Our Impact</a>
@@ -172,7 +172,7 @@ SERVICES = {
             "Financial literacy training before disbursement",
             "Portfolio monitoring for climate-resilient outcomes",
         ],
-        "case_title": "Ginger farmers — Isajilo, Tukuyu",
+        "case_title": "Ginger farmers in Isajilo, Tukuyu",
         "case_text": "Microfinance enabling organic ginger farming with drought-resilient practices and export premiums.",
         "case_link": "testimonials.php.html#ginger-story",
         "form_subject": "Microfinance inquiry",
@@ -198,7 +198,7 @@ SERVICES = {
             "Consultation surveys and FP stakeholder documentation",
             "Free, prior, and informed consent processes where required",
         ],
-        "case_title": "COP29 Tanzania Pavilion — Finance Day",
+        "case_title": "COP29 Tanzania Pavilion: Finance Day",
         "case_text": "Stakeholder coordination for NDC financing discussions with finance ministers and development banks.",
         "case_link": "cop-engagements.php.html#cop29",
         "form_subject": "Stakeholders Engagement inquiry",
@@ -211,7 +211,7 @@ SERVICES = {
             "GHG baseline and mitigation potential calculations",
             "Adaptation benefit quantification for funding proposals",
         ],
-        "case_title": "Climate-smart agriculture — Southern Highlands",
+        "case_title": "Climate-smart agriculture - Southern Highlands",
         "case_text": "Scientific grounding for regenerative agriculture programmes financed through our microfinance portfolio.",
         "case_link": "testimonials.php.html#ginger-story",
         "form_subject": "Scientific Assessment inquiry",
@@ -249,7 +249,7 @@ def update_service_page(filename, cfg):
                                     <h3 class="green-dark mt-4">What You Get</h3>
                                     <ul class="ds-deliverables">{deliverables_html}</ul>
                                     <h3 class="green-dark mt-4">Why It Matters</h3>
-                                    <p>Climate projects fail without credible market data, robust financial structures, and stakeholder alignment. Our {cfg["title"].lower()} service delivers the specific outputs funders and investors require — not abstract recommendations.</p>
+                                    <p>Climate projects fail without credible market data, robust financial structures, and stakeholder alignment. Our {cfg["title"].lower()} service delivers the specific outputs funders and investors require, not abstract recommendations.</p>
                                     <div class="ds-case-study">
                                         <h4><i class="ri-award-line"></i> {cfg["case_title"]}</h4>
                                         <p class="mb-2">{cfg["case_text"]}</p>

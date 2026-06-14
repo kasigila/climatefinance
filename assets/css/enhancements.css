@@ -552,7 +552,7 @@ img.img-fluid {
   .sidebar .sidebar-widget { margin-bottom: 1.5rem; }
 }
 
-/* Sidebar contact forms — visible, tappable fields on all service pages */
+/* Sidebar contact forms - visible, tappable fields on all service pages */
 .project-details-wrap .register-widget .form-group input,
 .project-details-wrap .register-widget .form-group textarea {
   display: block;
@@ -590,7 +590,7 @@ img.img-fluid {
   .main-menu-wrap .navbar-nav { padding-bottom: 1.5rem; }
 }
 
-/* ========== Footer — All content, less overwhelming ========== */
+/* ========== Footer - All content, less overwhelming ========== */
 .footer-wrap .footer-top { padding-top: 2.5rem !important; padding-bottom: 2rem !important; }
 .footer-wrap .footer-main-row { align-items: flex-start; }
 .footer-wrap .comp-desc {
@@ -612,7 +612,7 @@ img.img-fluid {
 .footer-wrap .footer-widget .contact-info p,
 .footer-wrap .footer-widget .contact-info a { font-size: 0.85rem; }
 
-/* Resources grid — compact multi-column, low visual weight */
+/* Resources grid - compact multi-column, low visual weight */
 .footer-resources-full { padding-left: 0.5rem; }
 .footer-resources-full .footer-widget-title { margin-bottom: 0.5rem; }
 .footer-resource-grid {

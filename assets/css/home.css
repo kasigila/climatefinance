@@ -143,7 +143,7 @@
 }
 .home-hero-single .home-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-/* Header contact strip over hero — text only (homepage) */
+/* Header contact strip over hero - text only (homepage) */
 .home-page .header-wrap .header-top .header-top-left .contact-info li a,
 .home-page .header-wrap .header-top .header-top-left .contact-info li p {
   color: #000 !important;
@@ -152,7 +152,7 @@
   color: #40865b !important;
 }
 
-/* ========== Hero Carousel (deprecated — kept for fallback) ========== */
+/* ========== Hero Carousel (deprecated - kept for fallback) ========== */
 .home-hero-slider-wrap .hero-slide-item {
   min-height: 70vh;
   position: relative;
@@ -267,7 +267,7 @@
   .home-hero-media::after { background: linear-gradient(180deg, rgba(15,21,18,0.3) 0%, transparent 50%); }
 }
 
-/* ========== Mission Stats — dark strip on homepage ========== */
+/* ========== Mission Stats - dark strip on homepage ========== */
 .home-stats-dark { margin: 0; padding: 0; }
 .home-page .home-stats-dark .ds-stats-dark { margin-top: 0; }
 
