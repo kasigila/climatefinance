@@ -179,9 +179,9 @@ FAQ_SECTION = '''
                             <h2 class="ds-h2">From Concept Note to Funding Proposal</h2>
                         </div>
                         <div class="ds-card ds-mb">
-                            <p class="ds-body mb-2"><strong>Concept Notes (CNs)</strong> are early project summaries submitted to climate funders like the GCF — outlining objectives, beneficiaries, and estimated impact.</p>
+                            <p class="ds-body mb-2"><strong>Concept Notes (CNs)</strong> are early project summaries submitted to climate funders — outlining objectives, beneficiaries, and estimated impact.</p>
                             <p class="ds-body mb-2"><strong>Project Preparation Facilities (PPFs)</strong> provide funding to develop a full Funding Proposal — including feasibility studies, environmental and social safeguards, and stakeholder engagement.</p>
-                            <p class="ds-body mb-0"><strong>Funding Proposals (FPs)</strong> are comprehensive applications for climate finance — such as GCF FP179 (US$200M) and FP223 (US$1.5B pipeline) that our leadership has supported.</p>
+                            <p class="ds-body mb-0"><strong>Funding Proposals (FPs)</strong> are comprehensive applications for climate finance — such as FP179 (US$200M) and FP223 (US$1.5B pipeline) that our leadership has supported.</p>
                         </div>
                     </div>
                 </section>
