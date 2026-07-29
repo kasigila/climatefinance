@@ -111,7 +111,8 @@
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
         climateResources: 'Climate Resources',
-        copyright: '© Africa Climate Finance'
+        copyright: '© Africa Climate Finance',
+        operatedBy: 'Operated by'
       },
       common: {
         home: 'Home',
@@ -218,7 +219,8 @@
         privacy: 'Sera ya Faragha',
         terms: 'Masharti',
         climateResources: 'Rasilimali za Hali ya Hewa',
-        copyright: '© Africa Climate Finance'
+        copyright: '© Africa Climate Finance',
+        operatedBy: 'Inaendeshwa na'
       },
       common: {
         home: 'Nyumbani',
