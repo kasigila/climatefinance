@@ -36,6 +36,7 @@
         insights: 'Insights',
         internationalEngagement: 'International Engagement',
         beneficiaries: 'Our Beneficiaries',
+        carbonMarket: 'Carbon Market',
         womenEmpowerment: 'Women Empowerment',
         loanProgram: 'Loan Program',
         donate: 'Donate'
@@ -106,6 +107,7 @@
         donate: 'Donate',
         contact: 'Contact',
         beneficiaries: 'Our Beneficiaries',
+        carbonMarket: 'Carbon Market',
         womenEmpowerment: 'Women Empowerment',
         loanProgram: 'Loan Program',
         privacy: 'Privacy Policy',
@@ -144,6 +146,7 @@
         insights: 'Maarifa',
         internationalEngagement: 'Ushiriki wa Kimataifa',
         beneficiaries: 'Wanufaika Wetu',
+        carbonMarket: 'Soko la Carbon',
         womenEmpowerment: 'Uwezeshaji wa Wanawake',
         loanProgram: 'Mpango wa Mikopo',
         donate: 'Changia'
@@ -214,6 +217,7 @@
         donate: 'Changia',
         contact: 'Mawasiliano',
         beneficiaries: 'Wanufaika Wetu',
+        carbonMarket: 'Soko la Carbon',
         womenEmpowerment: 'Uwezeshaji wa Wanawake',
         loanProgram: 'Mpango wa Mikopo',
         privacy: 'Sera ya Faragha',

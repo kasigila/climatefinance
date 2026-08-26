@@ -861,6 +861,51 @@ body.women-empowerment-page .ds-container {
   padding-right: 16px;
 }
 
+/* ========== Carbon Market ========== */
+@media (max-width: 767px) {
+  .carbon-market-page .breadcrumb-title h2 {
+    font-size: clamp(26px, 7vw, 32px) !important;
+    line-height: 1.2;
+  }
+
+  .carbon-market-page .carbon-market-main {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .carbon-market-page .carbon-market-photos {
+    margin-left: -16px;
+    margin-right: -16px;
+    gap: 0;
+  }
+
+  .carbon-market-page .carbon-market-photos a {
+    border-radius: 0;
+    border-bottom: 1px solid #e5ebe8;
+  }
+
+  .carbon-market-page .carbon-market-photos img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .carbon-market-page .carbon-photo-caption {
+    padding: 10px 16px 14px;
+    font-size: 13px !important;
+  }
+
+  .carbon-market-page .carbon-market-body p,
+  .carbon-market-page .carbon-market-block > p {
+    font-size: 16px !important;
+    line-height: 1.7;
+  }
+
+  .carbon-market-page .carbon-market-cta .btn.style2 {
+    background: #fff !important;
+    color: #2d5a3d !important;
+    border: 2px solid #40865b !important;
+  }
+}
+
 @keyframes mobileFadeUp {
   from {
     opacity: 0;

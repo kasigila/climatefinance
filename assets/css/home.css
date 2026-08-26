@@ -246,6 +246,26 @@
 @media (max-width: 991px) {
   .home-hero-btns { justify-content: center; }
 }
+.home-feature-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.home-feature-btns .home-btn {
+  width: 100%;
+  justify-content: center;
+  min-height: 48px;
+}
+@media (min-width: 768px) {
+  .home-feature-btns {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .home-feature-btns .home-btn {
+    width: auto;
+  }
+}
 .home-hero-media {
   position: relative;
   min-height: 320px;

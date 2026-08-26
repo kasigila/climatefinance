@@ -544,3 +544,183 @@ body.ds-page { padding-bottom: 80px; }
 
 /* Hide legacy cruft */
 .loader.js-preloader, .switch-theme-mode { display: none !important; }
+
+/* ========== Carbon Market (mobile-first) ========== */
+.carbon-market-page .ds-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 720px;
+}
+
+.carbon-market-intro {
+  margin-bottom: 1.5rem;
+}
+
+.carbon-market-intro .ds-h2 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  line-height: 1.2;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.carbon-market-lede {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--text-muted, #55665c);
+  margin: 0;
+}
+
+.carbon-market-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 0 1.75rem;
+}
+
+.carbon-market-photos a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3f6f4;
+}
+
+.carbon-market-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.carbon-photo-caption {
+  display: block;
+  padding: 10px 12px 12px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: #55665c;
+  font-weight: 500;
+}
+
+.carbon-market-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1.1rem;
+}
+
+.carbon-market-block {
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(45, 90, 61, 0.12);
+}
+
+.carbon-market-block .ds-h3 {
+  font-size: clamp(1.35rem, 4.5vw, 1.75rem);
+  margin: 0 0 0.85rem;
+}
+
+.carbon-market-block > p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.carbon-market-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carbon-market-points li {
+  padding: 14px 16px;
+  background: #f8faf9;
+  border: 1px solid #e5ebe8;
+  border-radius: 12px;
+  line-height: 1.55;
+}
+
+.carbon-market-impact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carbon-market-impact li {
+  padding: 16px;
+  background: #f8faf9;
+  border: 1px solid #e5ebe8;
+  border-radius: 12px;
+}
+
+.carbon-market-impact h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brand-green, #2d5a3d);
+  margin: 0 0 0.4rem;
+  font-family: Inter, sans-serif;
+}
+
+.carbon-market-impact p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.carbon-market-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.carbon-market-cta .btn {
+  width: 100%;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .carbon-market-page .ds-container {
+    max-width: 960px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .carbon-market-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .carbon-market-cta {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .carbon-market-cta .btn {
+    width: auto;
+    min-width: 220px;
+  }
+}
+
+@media (min-width: 992px) {
+  .carbon-market-photos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .carbon-market-photos a:first-child {
+    grid-column: span 2;
+  }
+
+  .carbon-market-photos a:first-child img {
+    aspect-ratio: 16 / 9;
+  }
+}

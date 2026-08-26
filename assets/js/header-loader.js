@@ -25,6 +25,7 @@
         cop: ['insights', 'cop'],
         beneficiaries: ['impact'],
         testimonials: ['impact'],
+        'carbon-market': ['impact'],
         'women-empowerment': ['impact'],
         'loan-program': ['impact'],
         contact: ['contact'],
