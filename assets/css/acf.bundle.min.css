@@ -4657,23 +4657,26 @@ img.img-fluid {
 /*-----------------------------------------------------------
   Africa Climate Finance — visual identity
   Editorial, institutional, contemporary. Not a template.
+  Brand colours: green (#2d5a3d / #40865b) on white. Do not replace.
 -----------------------------------------------------------*/
 
 :root {
-  --paper: #f3efe6;
-  --paper-2: #ebe4d6;
-  --ink: #1b1714;
-  --ink-soft: #3d3832;
-  --muted: #6b645b;
-  --rule: #d4cbb8;
-  --rule-strong: #b9ad96;
-  --laterite: #9a3b24;
-  --laterite-hover: #7a2d1b;
-  --charcoal: #161310;
-  --charcoal-2: #221e1a;
-  --on-dark: #f3efe6;
-  --on-dark-muted: rgba(243, 239, 230, 0.72);
-  --focus: #9a3b24;
+  --paper: #ffffff;
+  --paper-2: #f8faf9;
+  --ink: #1a2e22;
+  --ink-soft: #2d5a3d;
+  --muted: #5c6f65;
+  --rule: #e5ebe8;
+  --rule-strong: #c5d4cb;
+  --laterite: #2d5a3d;
+  --laterite-hover: #40865b;
+  --brand: #40865b;
+  --brand-dark: #2d5a3d;
+  --charcoal: #1a2e22;
+  --charcoal-2: #0f1512;
+  --on-dark: #ffffff;
+  --on-dark-muted: rgba(255, 255, 255, 0.72);
+  --focus: #40865b;
 
   --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   --font-body: "Source Sans 3", "Source Sans Pro", "Segoe UI", sans-serif;
@@ -4927,9 +4930,9 @@ p { color: var(--ink-soft); max-width: var(--measure); }
 .acf-btn-primary,
 .ds-donate-btn,
 .header-wrap .btn.style1 {
-  background: var(--ink) !important;
-  color: var(--paper) !important;
-  border: 1px solid var(--ink) !important;
+  background: var(--brand) !important;
+  color: #fff !important;
+  border: 1px solid var(--brand) !important;
 }
 
 .btn.style1:hover,
@@ -4937,9 +4940,9 @@ p { color: var(--ink-soft); max-width: var(--measure); }
 .footer-cta .btn-primary:hover,
 .acf-btn-primary:hover,
 .ds-donate-btn:hover {
-  background: var(--laterite) !important;
-  border-color: var(--laterite) !important;
-  color: var(--paper) !important;
+  background: var(--brand-dark) !important;
+  border-color: var(--brand-dark) !important;
+  color: #fff !important;
 }
 
 .btn.style2,
@@ -4981,20 +4984,20 @@ p { color: var(--ink-soft); max-width: var(--measure); }
 .donation-page .contact-form .btn.style1[type="submit"],
 button.btn.style1,
 .form-wrap .btn.style1 {
-  background: var(--ink) !important;
-  background-color: var(--ink) !important;
-  color: var(--paper) !important;
-  border: 1px solid var(--ink) !important;
+  background: var(--brand) !important;
+  background-color: var(--brand) !important;
+  color: #fff !important;
+  border: 1px solid var(--brand) !important;
   border-radius: 0 !important;
 }
 
 .contact-page .contact-form .btn.style1[type="submit"]:hover,
 .project-details-wrap .register-widget .btn.style1:hover,
 button.btn.style1:hover {
-  background: var(--laterite) !important;
-  background-color: var(--laterite) !important;
-  border-color: var(--laterite) !important;
-  color: var(--paper) !important;
+  background: var(--brand-dark) !important;
+  background-color: var(--brand-dark) !important;
+  border-color: var(--brand-dark) !important;
+  color: #fff !important;
 }
 
 /* Header -------------------------------------------------- */
@@ -5004,14 +5007,14 @@ button.btn.style1:hover {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(243, 239, 230, 0.97) !important;
+  background: rgba(255, 255, 255, 0.97) !important;
   border-bottom: 1px solid var(--rule);
   box-shadow: none !important;
   overflow: visible !important;
 }
 
 .header-wrap.sticky {
-  background: rgba(243, 239, 230, 0.97) !important;
+  background: rgba(255, 255, 255, 0.97) !important;
 }
 
 .header-wrap .header-top { display: none !important; }
@@ -5046,7 +5049,7 @@ button.btn.style1:hover {
 
 .acf-wordmark {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.85rem;
   text-decoration: none !important;
   color: var(--ink) !important;
@@ -5055,7 +5058,9 @@ button.btn.style1:hover {
 
 .acf-wordmark img,
 .header-wrap .navbar-brand img {
-  display: none;
+  display: block;
+  height: 2.25rem;
+  width: auto;
 }
 
 .acf-wordmark-name {
@@ -5126,7 +5131,7 @@ button.btn.style1:hover {
   border-radius: 0 !important;
   background: var(--paper) !important;
   background-color: var(--paper) !important;
-  box-shadow: 0 16px 40px rgba(27, 23, 20, 0.08) !important;
+  box-shadow: 0 16px 40px rgba(45, 90, 61, 0.10) !important;
   padding: 0.75rem 0 !important;
   min-width: 16rem;
   margin-top: 0 !important;
@@ -5323,7 +5328,7 @@ button.btn.style1:hover {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #fff;
-  background: rgba(22, 19, 16, 0.45);
+  background: rgba(26, 46, 34, 0.55);
   padding: 0.4rem 0.6rem;
 }
 
@@ -5564,7 +5569,7 @@ button.btn.style1:hover {
   list-style: none;
   padding: 0;
   margin: 1.75rem 0;
-  border-top: 1px solid rgba(243, 239, 230, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .acf-meta-list li {
@@ -5572,7 +5577,7 @@ button.btn.style1:hover {
   grid-template-columns: 7rem 1fr;
   gap: 1rem;
   padding: 0.7rem 0;
-  border-bottom: 1px solid rgba(243, 239, 230, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 0.95rem;
 }
 
@@ -5588,7 +5593,7 @@ button.btn.style1:hover {
 
 .acf-story-body .acf-text-link,
 .acf-story-body a.acf-text-link { color: var(--on-dark); border-color: var(--on-dark); }
-.acf-story-body .acf-text-link:hover { color: #e8c4b6; border-color: #e8c4b6; }
+.acf-story-body .acf-text-link:hover { color: #9fd4b0; border-color: #9fd4b0; }
 
 @media (max-width: 899px) {
   .acf-story { grid-template-columns: 1fr; }
@@ -5738,7 +5743,7 @@ button.btn.style1:hover {
 
 .acf-close .acf-btn-ghost {
   color: var(--on-dark) !important;
-  border-color: rgba(243, 239, 230, 0.45) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
 }
 .acf-close .acf-btn-ghost:hover {
   background: var(--paper) !important;
@@ -5765,11 +5770,12 @@ button.btn.style1:hover {
   gap: 2.5rem 2rem;
 }
 
-.footer-logo img {
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  position: absolute;
+.footer-logo img,
+.footer-org .acf-wordmark img {
+  height: 2.25rem;
+  width: auto;
+  position: static;
+  overflow: visible;
 }
 
 .footer-org .acf-wordmark-name { color: var(--on-dark); }
@@ -5800,7 +5806,7 @@ button.btn.style1:hover {
   display: inline-block;
   padding: 0.22rem 0;
 }
-.footer-links a:hover { color: #e8c4b6 !important; }
+.footer-links a:hover { color: #9fd4b0 !important; }
 
 .footer-contact-item {
   color: var(--on-dark-muted);
@@ -5823,7 +5829,7 @@ button.btn.style1:hover {
   width: min(100% - 2.5rem, var(--wide));
   margin: 2.5rem auto 0;
   background: transparent !important;
-  border-top: 1px solid rgba(243, 239, 230, 0.14) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
   color: var(--on-dark-muted) !important;
   font-family: var(--font-meta);
   font-size: var(--meta);
@@ -5837,7 +5843,7 @@ button.btn.style1:hover {
 
 .footer-bottom-bar {
   background: var(--charcoal) !important;
-  border-top: 1px solid rgba(243, 239, 230, 0.14);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   padding: 1.1rem 0 1.6rem !important;
 }
 
@@ -6379,7 +6385,7 @@ button.btn.style1:hover {
 
 .cookie-consent-btn { border-radius: 0 !important; font-family: var(--font-body); }
 .cookie-consent-accept { background: var(--paper) !important; color: var(--ink) !important; }
-.cookie-consent-decline { border-color: rgba(243, 239, 230, 0.35) !important; }
+.cookie-consent-decline { border-color: rgba(255, 255, 255, 0.35) !important; }
 
 .back-to-top {
   background: var(--ink) !important;
