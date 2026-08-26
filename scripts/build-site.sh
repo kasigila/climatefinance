@@ -50,7 +50,7 @@ echo "==> Minifying custom CSS"
 }
 
 echo "==> Minifying custom JS"
-cat assets/js/cookie-consent.js assets/js/contact-form-script.js assets/js/main.js assets/js/acf-ui.js 2>/dev/null | npx --yes terser --compress --mangle -o assets/js/acf.bundle.min.js 2>/dev/null || cat assets/js/cookie-consent.js assets/js/contact-form-script.js assets/js/main.js assets/js/acf-ui.js > assets/js/acf.bundle.min.js
+cat assets/js/cookie-consent.js assets/js/acf-ui.js assets/js/contact-form-script.js assets/js/main.js 2>/dev/null | npx --yes terser --compress --mangle -o assets/js/acf.bundle.min.js 2>/dev/null || cat assets/js/cookie-consent.js assets/js/acf-ui.js assets/js/contact-form-script.js assets/js/main.js > assets/js/acf.bundle.min.js
 
 echo "==> Generating sitemap.xml"
 python3 scripts/generate-sitemap.py

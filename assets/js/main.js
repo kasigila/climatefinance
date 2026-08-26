@@ -1,6 +1,13 @@
 (function ($) {
     "use strict";
 
+    // Pages that omit template plugins (homepage, etc.) must not abort this file.
+    ['owlCarousel', 'appear', 'owlCarouselThumbs'].forEach(function (fn) {
+        if (typeof $.fn[fn] !== 'function') {
+            $.fn[fn] = function () { return this; };
+        }
+    });
+
     // Buy Now Btn
     // $('body').append("<a href='#' class='buy-now-btn' target='_blank'><img src='assets/img/envato.png' alt='envato'/>Buy Now</a>"); 
     
