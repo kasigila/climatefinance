@@ -44,18 +44,24 @@ echo "==> Minifying custom CSS"
   cat assets/css/mobile.css
   cat assets/css/design-system.css
   sed '/@import url/d' assets/css/enhancements.css
-  cat assets/css/footer-modern.css assets/css/home.css assets/css/contact.css assets/css/team.css assets/css/cop.css assets/css/cookie-consent.css
+  cat assets/css/footer-modern.css assets/css/home.css assets/css/contact.css assets/css/team.css assets/css/cop.css assets/css/cookie-consent.css assets/css/acf-identity.css
 } | npx --yes clean-css-cli -o assets/css/acf.bundle.min.css 2>/dev/null || {
-  cat assets/css/mobile.css assets/css/design-system.css assets/css/enhancements.css assets/css/footer-modern.css assets/css/home.css assets/css/contact.css assets/css/team.css assets/css/cop.css assets/css/cookie-consent.css > assets/css/acf.bundle.min.css
+  cat assets/css/mobile.css assets/css/design-system.css assets/css/enhancements.css assets/css/footer-modern.css assets/css/home.css assets/css/contact.css assets/css/team.css assets/css/cop.css assets/css/cookie-consent.css assets/css/acf-identity.css > assets/css/acf.bundle.min.css
 }
 
 echo "==> Minifying custom JS"
-cat assets/js/cookie-consent.js assets/js/contact-form-script.js assets/js/main.js 2>/dev/null | npx --yes terser --compress --mangle -o assets/js/acf.bundle.min.js 2>/dev/null || cp assets/js/main.js assets/js/acf.bundle.min.js
+cat assets/js/cookie-consent.js assets/js/contact-form-script.js assets/js/main.js assets/js/acf-ui.js 2>/dev/null | npx --yes terser --compress --mangle -o assets/js/acf.bundle.min.js 2>/dev/null || cat assets/js/cookie-consent.js assets/js/contact-form-script.js assets/js/main.js assets/js/acf-ui.js > assets/js/acf.bundle.min.js
 
 echo "==> Generating sitemap.xml"
 python3 scripts/generate-sitemap.py
 
 echo "==> Applying HTML improvements"
 python3 scripts/apply-site-improvements.py
+
+echo "==> Syncing HTML partials"
+cp inc/header.html assets/inc/header.html
+cp inc/footer.html assets/inc/footer.html
+cp inc/service-cta.html assets/inc/service-cta.html
+cp inc/service-related.html assets/inc/service-related.html
 
 echo "==> Build complete"

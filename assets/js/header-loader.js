@@ -19,7 +19,7 @@
       var map = {
         home: ['home'],
         about: ['about'],
-        team: ['team'],
+        team: ['insights'],
         insights: ['insights'],
         'climate-policy': ['insights'],
         cop: ['insights', 'cop'],
@@ -30,6 +30,8 @@
         contact: ['contact'],
         donate: ['donate'],
         faq: ['faq'],
+        'what-we-do': ['services'],
+        services: ['services'],
         'market-analysis': ['services'],
         'financial-modelling': ['services'],
         microfinance: ['services'],
@@ -43,7 +45,7 @@
       groups.forEach(function(group) {
         var item = header.querySelector('[data-nav="' + group + '"]');
         if (item) {
-          var link = item.querySelector(':scope > .nav-link');
+          var link = item.querySelector(':scope > .nav-link, :scope > .nav-link-row > .nav-link');
           if (link) link.classList.add('active');
         }
       });

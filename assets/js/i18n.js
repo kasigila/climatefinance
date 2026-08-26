@@ -33,6 +33,7 @@
         scientificAssessment: 'Scientific Assessment',
         climateRisk: 'Climate Risk',
         impact: 'Impact',
+        ourWork: 'Our Work',
         insights: 'Insights',
         internationalEngagement: 'International Engagement',
         beneficiaries: 'Our Beneficiaries',
@@ -72,7 +73,7 @@
       },
       contact: {
         title: 'Contact Us',
-        getInTouch: 'Get In Touch With Us',
+        getInTouch: 'Write to us. We respond within 24 hours.',
         ourAddress: 'Our Address',
         emailAddress: 'Email Address',
         support: '24/7 Support',
@@ -141,6 +142,7 @@
         scientificAssessment: 'Tathmini ya Kisayansi',
         climateRisk: 'Hatari za Hali ya Hewa',
         impact: 'Athari',
+        ourWork: 'Kazi Yetu',
         insights: 'Maarifa',
         internationalEngagement: 'Ushiriki wa Kimataifa',
         beneficiaries: 'Wanufaika Wetu',
@@ -180,7 +182,7 @@
       },
       contact: {
         title: 'Wasiliana Nasi',
-        getInTouch: 'Wasiliana Nasi',
+        getInTouch: 'Tuandikie. Tunajibu ndani ya masaa 24.',
         ourAddress: 'Mahali Tulipo',
         emailAddress: 'Barua pepe',
         support: 'Msaada 24/7',
@@ -299,7 +301,7 @@
 
   function updateLangDropdown() {
     var lang = getLanguage();
-    var label = lang === 'sw' ? 'Swahili' : 'Eng';
+    var label = lang === 'sw' ? 'SW' : 'EN';
     document.querySelectorAll('.lang-name').forEach(function(el) {
       el.textContent = label;
     });
@@ -309,7 +311,7 @@
     var menus = document.querySelectorAll('.language-dropdown-menu');
     menus.forEach(function(menu) {
       var path = window.location.pathname.split('/').pop() || 'index.html';
-      menu.innerHTML = '<a class="dropdown-item lang-option" href="' + path + '?lang=en" data-lang="en"><img src="assets/img/uk.png" alt="English language"> <span>English</span></a><a class="dropdown-item lang-option" href="' + path + '?lang=sw" data-lang="sw"><span>Swahili</span></a>';
+      menu.innerHTML = '<a class="dropdown-item lang-option" href="' + path + '?lang=en" data-lang="en">English</a><a class="dropdown-item lang-option" href="' + path + '?lang=sw" data-lang="sw">Kiswahili</a>';
 
       menu.querySelectorAll('.lang-option').forEach(function(opt) {
         opt.addEventListener('click', function(e) {

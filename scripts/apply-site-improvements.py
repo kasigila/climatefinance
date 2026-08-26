@@ -39,8 +39,14 @@ CUSTOM_CSS_LINKS = [
 ]
 
 DEFAULT_DESC = (
-    "Africa Climate Finance bridges the climate finance gap in Africa by empowering "
-    "vulnerable communities through microfinance, education, and climate-smart initiatives."
+    "Africa Climate Finance structures climate capital in Tanzania, from CBT-licensed "
+    "microfinance in Rungwe to bankable projects for institutional funds."
+)
+
+FONTS_HREF = (
+    "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;"
+    "0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@"
+    "0,400;0,500;0,600;0,700;1,400&display=swap"
 )
 
 PAGE_META = {
@@ -48,6 +54,10 @@ PAGE_META = {
         "title": "Africa Climate Finance - Tanzania",
         "description": DEFAULT_DESC,
         "schema": "Organization",
+    },
+    "what-we-do.php.html": {
+        "title": "What We Do | Africa Climate Finance",
+        "description": "Seven climate-finance services: market analysis, financial modelling, microfinance, gender assessment, stakeholder engagement, scientific assessment, and climate risk.",
     },
     "about.php.html": {"title": "About Us | Africa Climate Finance", "description": "Learn how Africa Climate Finance connects grassroots microfinance with institutional climate capital across Tanzania and Africa."},
     "contact.php.html": {"title": "Contact Us | Africa Climate Finance", "description": "Partner with Africa Climate Finance. We respond within 24 hours to project and partnership inquiries."},
@@ -165,6 +175,23 @@ def inject_meta(text: str, name: str) -> str:
     text = re.sub(r"<title>[^<]+</title>", f"<title>{meta['title']}</title>", text, count=1)
     if "<title>" in text:
         text = re.sub(r"(<title>[^<]+</title>)", r"\1\n" + block, text, count=1)
+    return text
+
+
+def inject_fonts(text: str) -> str:
+    text = re.sub(
+        r'href="https://fonts\.googleapis\.com/css2\?[^"]+"',
+        f'href="{FONTS_HREF}"',
+        text,
+    )
+    return text
+
+
+def add_main_id(text: str) -> str:
+    if 'id="main"' in text:
+        return text
+    if 'class="content-wrapper"' in text:
+        return text.replace('class="content-wrapper"', 'class="content-wrapper" id="main"', 1)
     return text
 
 
@@ -328,6 +355,8 @@ def process_file(path: Path) -> None:
     text = remove_httrack(text)
     text = fix_lang(text)
     text = inject_meta(text, name)
+    text = inject_fonts(text)
+    text = add_main_id(text)
     text = add_bundle_css(text)
     text = use_js_bundle(text)
     text = cleanup_artifacts(text)
