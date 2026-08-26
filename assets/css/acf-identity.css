@@ -464,10 +464,12 @@ button.btn.style1:hover {
   line-height: 1;
 }
 
-.header-wrap .dropdown-menu {
+.header-wrap .dropdown-menu,
+.navbar-nav .dropdown-menu {
   border: 1px solid var(--rule) !important;
   border-radius: 0 !important;
   background: var(--paper) !important;
+  background-color: var(--paper) !important;
   box-shadow: 0 16px 40px rgba(27, 23, 20, 0.08) !important;
   padding: 0.75rem 0 !important;
   min-width: 16rem;
@@ -549,8 +551,15 @@ button.btn.style1:hover {
 
 @media (min-width: 992px) {
   .header-wrap .has-dropdown:hover > .dropdown-menu,
-  .header-wrap .has-dropdown:focus-within > .dropdown-menu {
-    display: block;
+  .header-wrap .has-dropdown:focus-within > .dropdown-menu,
+  .navbar-nav .has-dropdown:hover > .dropdown-menu,
+  .navbar-nav .has-dropdown:focus-within > .dropdown-menu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    background: var(--paper) !important;
+    background-color: var(--paper) !important;
   }
 }
 
@@ -1611,6 +1620,22 @@ button.btn.style1:hover {
 }
 
 .contact-page .social-profile { display: none; }
+
+.form-group input,
+.form-group textarea,
+.form-wrap input,
+.form-wrap textarea,
+.register-widget input,
+.register-widget textarea {
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--rule-strong) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--ink) !important;
+  font-family: var(--font-body) !important;
+  padding: 0.85rem 0 !important;
+}
 
 .form-group input:focus,
 .form-group textarea:focus {
