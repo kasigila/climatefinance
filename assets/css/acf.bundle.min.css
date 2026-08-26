@@ -5211,7 +5211,10 @@ button.btn.style1:hover {
 }
 
 @media (max-width: 991px) {
-  .header-wrap .main-menu-wrap {
+  body.acf-nav-open { overflow: hidden; }
+  .main-menu-wrap,
+  .header-wrap .main-menu-wrap,
+  body > .main-menu-wrap {
     background: var(--paper) !important;
     border-left: 0;
     position: fixed !important;
@@ -5225,8 +5228,12 @@ button.btn.style1:hover {
     flex-direction: column;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 0;
+    visibility: visible;
   }
-  .header-wrap .main-menu-wrap.open {
+  .main-menu-wrap.open,
+  .header-wrap .main-menu-wrap.open,
+  body.acf-nav-open .main-menu-wrap {
     left: 0 !important;
     padding: 4rem 1.5rem 2rem;
   }
