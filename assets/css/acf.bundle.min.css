@@ -6248,21 +6248,25 @@ button.btn.style1:hover {
 
 /* Forms --------------------------------------------------- */
 
-.form-group input,
-.form-group textarea,
-.form-wrap input,
-.form-wrap textarea,
-.register-widget input,
-.register-widget textarea {
+.contact-page .contact-form input[type="text"],
+.contact-page .contact-form input[type="email"],
+.contact-page .contact-form input[type="tel"],
+.contact-page .contact-form textarea {
   background: transparent !important;
   border: 0 !important;
   border-bottom: 1px solid var(--rule-strong) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  color: var(--ink) !important;
-  font-family: var(--font-body) !important;
-  padding: 0.85rem 0 !important;
 }
+
+.contact-page .contact-item-wrap {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.contact-page .social-profile { display: none; }
 
 .form-group input:focus,
 .form-group textarea:focus {
