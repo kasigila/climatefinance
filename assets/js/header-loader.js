@@ -27,6 +27,7 @@
         testimonials: ['impact'],
         'women-empowerment': ['impact'],
         'loan-program': ['impact'],
+        'carbon-market': ['impact'],
         contact: ['contact'],
         donate: ['donate'],
         faq: ['faq'],
