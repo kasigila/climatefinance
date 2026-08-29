@@ -997,9 +997,14 @@ button.btn.style1:hover {
 .acf-proof .v {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  line-height: 1;
+  line-height: 1.15;
   color: var(--ink);
   margin-bottom: 0.45rem;
+}
+
+.acf-proof .v-text {
+  font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+  line-height: 1.2;
 }
 
 .acf-proof .l {

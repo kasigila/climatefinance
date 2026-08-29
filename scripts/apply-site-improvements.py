@@ -39,7 +39,7 @@ CUSTOM_CSS_LINKS = [
 ]
 
 DEFAULT_DESC = (
-    "Africa Climate Finance structures climate capital in Tanzania, from CBT-licensed "
+    "Africa Climate Finance structures climate capital in Tanzania, from Central Bank of Tanzania-licensed "
     "microfinance in Rungwe to bankable projects for institutional funds."
 )
 
@@ -61,7 +61,7 @@ PAGE_META = {
     },
     "about.php.html": {"title": "About Us | Africa Climate Finance", "description": "Learn how Africa Climate Finance connects grassroots microfinance with institutional climate capital across Tanzania and Africa."},
     "contact.php.html": {"title": "Contact Us | Africa Climate Finance", "description": "Partner with Africa Climate Finance. We respond within 24 hours to project and partnership inquiries."},
-    "microfinance.php.html": {"title": "Microfinance for Climate | Africa Climate Finance", "description": "CBT-licensed climate-smart microfinance for cooperatives, SMEs, and vulnerable communities in Tanzania.", "schema": "Service", "service": "Microfinance for Climate"},
+    "microfinance.php.html": {"title": "Microfinance for Climate | Africa Climate Finance", "description": "Central Bank of Tanzania-licensed climate-smart microfinance for cooperatives, SMEs, and vulnerable communities in Tanzania.", "schema": "Service", "service": "Microfinance for Climate"},
     "market-analysis.php.html": {"title": "Market Analysis | Africa Climate Finance", "description": "Demand studies, buyer mapping, and pricing analysis for bankable climate projects.", "schema": "Service", "service": "Market Analysis"},
     "financial-modelling.php.html": {"title": "Financial Modelling | Africa Climate Finance", "description": "Feasibility models, cashflow projections, and investment-ready financial structures.", "schema": "Service", "service": "Financial Modelling"},
     "gender-assessment.php.html": {"title": "Gender Assessment | Africa Climate Finance", "description": "Gender action plans and women-led enterprise assessments for climate finance proposals.", "schema": "Service", "service": "Gender Assessment"},
