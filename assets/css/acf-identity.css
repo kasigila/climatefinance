@@ -848,6 +848,66 @@ button.btn.style1:hover {
   .acf-approach { grid-template-columns: 1fr; }
 }
 
+/* Who we are ---------------------------------------------- */
+
+.acf-who-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.acf-who-grid > div:first-child p {
+  max-width: 42rem;
+}
+
+.acf-span-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  border-top: 1px solid var(--ink);
+}
+
+.acf-span-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.acf-who-grid .ds-pull-quote,
+.acf-who-rest .ds-pull-quote {
+  margin: 0;
+}
+
+.acf-who-rest {
+  margin-top: var(--space-5);
+}
+
+.acf-who-rest .acf-span-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.acf-who-rest > p.ds-body {
+  max-width: 42rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 767px) {
+  .acf-who-grid,
+  .acf-who-rest .acf-span-list { grid-template-columns: 1fr; }
+}
+
+#who-we-are,
+#the-model {
+  scroll-margin-top: var(--header-h);
+}
+
 /* Services index ------------------------------------------ */
 
 .acf-index {
