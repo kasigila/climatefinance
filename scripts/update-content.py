@@ -147,7 +147,7 @@ SERVICES = {
         "title": "Market Analysis",
         "minimal": True,
         "deliverables": [
-            "40-page market demand report with buyer mapping and pricing analysis",
+            "Market demand report with buyer mapping and pricing analysis",
             "Competitive landscape and go-to-market recommendations",
             "Demand validation for climate project concept notes and funding proposals",
         ],
