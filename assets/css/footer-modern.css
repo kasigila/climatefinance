@@ -108,7 +108,7 @@
   line-height: 1.6;
   color: rgba(234, 234, 234, 0.85);
   margin-bottom: 1.25rem;
-  max-width: 36ch;
+  max-width: 42ch;
 }
 .footer-social {
   display: flex;
